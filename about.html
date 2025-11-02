@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemify - Premium Shopify Apps to Supercharge Your Store</title>
+    <link rel="icon" type="image/x-icon" href="resources/gemify.ico">
+    <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Segoe UI', sans-serif;
+            color: #202223;
+            line-height: 1.6;
+            background: #F6F6F7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 24px 32px;
+            background: linear-gradient(180deg, #F6F6F7 0%, #FFFFFF 100%);
+        }
+
+        .hero-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 24px;
+        }
+
+        .hero-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #202223;
+        }
+
+        .hero-tagline {
+            font-size: 24px;
+            color: #6D7175;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: #6D7175;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Featured App Section */
+        .featured-app {
+            padding: 40px 24px;
+            background: #FFFFFF;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            color: #202223;
+        }
+
+        .app-card-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #202223;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-icon {
+            color: #00A87B;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 60px 24px;
+            background: #FFFFFF;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #6D7175;
+            margin-bottom: 24px;
+        }
+
+        /* Our Apps Section */
+        .our-apps {
+            padding: 60px 24px;
+            background: #F6F6F7;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .app-card-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-card-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #202223;
+        }
+
+        .app-card-description {
+            font-size: 16px;
+            color: #6D7175;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background: #F6F6F7;
+            color: #6D7175;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 24px;
+            background: #FFFFFF;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #202223;
+        }
+
+        .form-input,
+        .form-textarea {
+            padding: 12px 16px;
+            border: 1px solid #C9CCCF;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #00A87B;
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-button {
+            background: #00A87B;
+            color: #FFFFFF;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .form-button:hover {
+            background: #008060;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 60px 24px;
+            background: linear-gradient(135deg, #00A87B 0%, #008060 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-choose::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .why-choose .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-choose .section-title {
+            color: #FFFFFF;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #00A87B 0%, #008060 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .benefit-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #202223;
+        }
+
+        .benefit-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #6D7175;
+        }
+
+        /* Footer */
+        footer {
+            background: #202223;
+            color: #FFFFFF;
+            padding: 48px 24px 32px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00A87B;
+        }
+
+        .footer-email {
+            color: #6D7175;
+            font-size: 14px;
+        }
+
+        .footer-email a {
+            color: #00A87B;
+            text-decoration: none;
+        }
+
+        .copyright {
+            color: #6D7175;
+            font-size: 14px;
+            margin-top: 24px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-tagline {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .app-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .app-title {
+                font-size: 24px;
+            }
+
+            .footer-links {
+                gap: 16px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-card {
+                padding: 32px 24px;
+            }
+
+            .benefit-title {
+                font-size: 20px;
+            }
+
+            .benefit-description {
+                font-size: 15px;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text {
+                font-size: 16px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero, .app-card-wrapper, .benefits-grid > * {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .app-card-wrapper {
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .benefits-grid > *:nth-child(1) {
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .benefits-grid > *:nth-child(2) {
+            animation-delay: 0.3s;
+            animation-fill-mode: both;
+        }
+
+        .benefits-grid > *:nth-child(3) {
+            animation-delay: 0.4s;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-icon">
+            <img src="resources/gemify.png" alt="Gemify Logo">
+        </div>
+        <h1 class="hero-title">Gemify</h1>
+        <p class="hero-tagline">Simple, powerful apps for Shopify merchants</p>
+        <p class="hero-description">
+            Built by developers who understand your needs. No fluff, just tools that work.
+        </p>
+    </section>
+
+    <!-- Featured App Section -->
+    <section class="featured-app">
+        <div class="container">
+            <h2 class="section-title">Featured App</h2>
+            <div class="app-card-wrapper">
+                <s-section>
+                    <div class="app-header">
+                        <div class="app-icon">
+                            <img src="resources/bulk_delete_orders.png" alt="Bulk Delete Orders">
+                        </div>
+                        <div>
+                            <h3 class="app-title">Bulk Delete Orders</h3>
+                        </div>
+                    </div>
+                    <s-stack gap="base">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Use filters to precisely target specific orders for deletion</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Orders are automatically cancelled before deletion - no manual steps required</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Track all deletion jobs and export reports in Job History</span>
+                            </li>
+                        </ul>
+                        <s-button variant="primary" href="#">View on Shopify App Store</s-button>
+                    </s-stack>
+                </s-section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Gemify Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Gemify</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3 class="benefit-title">Built by Shopify Experts</h3>
+                    <p class="benefit-description">
+                        Our team has years of experience building high-quality apps for the Shopify ecosystem.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3 class="benefit-title">Reliable and Secure</h3>
+                    <p class="benefit-description">
+                        Enterprise-grade security and reliability you can trust with your store data.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3 class="benefit-title">Excellent Support</h3>
+                    <p class="benefit-description">
+                        Dedicated support team ready to help you succeed with our apps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about">
+        <div class="container">
+            <h2 class="section-title">About Gemify</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Gemify was founded by a team of experienced Shopify developers who understand the challenges merchants face every day. We're passionate about creating simple, powerful tools that solve real problems.
+                </p>
+                <p class="about-text">
+                    Our mission is to build apps that are intuitive, reliable, and genuinely helpful. No bloated features, no confusing interfaces—just clean, efficient solutions that help your business thrive.
+                </p>
+                <p class="about-text">
+                    Every app we create is built with the same attention to detail and commitment to quality that we'd demand for our own stores. When you choose Gemify, you're choosing a partner dedicated to your success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Apps Section -->
+    <section class="our-apps" id="apps">
+        <div class="container">
+            <h2 class="section-title">Our Apps</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-card-icon">
+                        <img src="resources/bulk_delete_orders.png" alt="Bulk Delete Orders">
+                    </div>
+                    <h3 class="app-card-title">Bulk Delete Orders</h3>
+                    <p class="app-card-description">
+                        Efficiently manage your store by deleting multiple orders at once with powerful filtering options and automatic cancellation.
+                    </p>
+                    <s-button variant="primary" href="#">View App</s-button>
+                </div>
+                <div class="app-card">
+                    <div class="app-card-icon">
+                        <img src="resources/gemify.png" alt="Coming Soon">
+                    </div>
+                    <h3 class="app-card-title">More Apps Coming Soon</h3>
+                    <p class="app-card-description">
+                        We're working on exciting new tools to help you manage and grow your Shopify store. Stay tuned for updates!
+                    </p>
+                    <span class="coming-soon">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-input" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject</label>
+                        <input class="form-input" type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-textarea" id="message" name="message" required></textarea>
+                    </div>
+                    <button class="form-button" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#apps">Our Apps</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-email">
+                Email: <a href="mailto:support@gemify.com">support@gemify.com</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Gemify. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
