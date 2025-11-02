@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Gemify</title>
+    <link rel="icon" type="image/x-icon" href="resources/gemify.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Segoe UI', sans-serif;
+            color: #202223;
+            line-height: 1.6;
+            background: #F6F6F7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: #FFFFFF;
+            padding: 24px 0;
+            border-bottom: 1px solid #E1E3E5;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #202223;
+            text-decoration: none;
+        }
+
+        /* Content */
+        .content {
+            background: #FFFFFF;
+            margin: 40px auto;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #202223;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #6D7175;
+            margin-bottom: 48px;
+            text-align: center;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #E1E3E5;
+        }
+
+        .faq-section {
+            margin-bottom: 48px;
+        }
+
+        .faq-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #202223;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #00A87B;
+        }
+
+        .faq-item {
+            margin-bottom: 24px;
+            padding: 24px;
+            background: #F6F6F7;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #202223;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .faq-question::before {
+            content: "Q:";
+            color: #00A87B;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            color: #202223;
+            line-height: 1.7;
+            padding-left: 32px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 12px;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer ul {
+            margin: 12px 0;
+            padding-left: 20px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .faq-answer strong {
+            font-weight: 600;
+            color: #202223;
+        }
+
+        .faq-answer a {
+            color: #00A87B;
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #00A87B 0%, #008060 100%);
+            color: #FFFFFF;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .contact-box h2 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            background: #FFFFFF;
+            color: #00A87B;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-box a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #202223;
+            color: #FFFFFF;
+            padding: 32px 24px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00A87B;
+        }
+
+        .copyright {
+            color: #6D7175;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                padding: 32px 24px;
+                margin: 24px 16px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .faq-question {
+                font-size: 16px;
+            }
+
+            .faq-answer {
+                font-size: 15px;
+                padding-left: 28px;
+            }
+
+            .contact-box {
+                padding: 24px;
+            }
+
+            .contact-box h2 {
+                font-size: 20px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="resources/gemify.png" alt="Gemify Logo">
+            </div>
+            <a href="index.html" class="site-title">Gemify</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+            <h1>Frequently Asked Questions</h1>
+            <p class="intro">
+                Find answers to common questions about Gemify and our apps. Can't find what you're looking for? Contact us at <a href="mailto:sean.gemify@gmail.com">sean.gemify@gmail.com</a>
+            </p>
+
+            <!-- General Questions -->
+            <div class="faq-section">
+                <h2 class="section-title">General Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">What is Gemify?</div>
+                    <div class="faq-answer">
+                        <p>Gemify is a Shopify app development company focused on creating simple, powerful tools for merchants. We build apps that solve real problems without unnecessary complexity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Are your apps safe to use?</div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. All our apps follow Shopify's best practices and security guidelines. We use industry-standard encryption, secure authentication, and never share your data with third parties. Your store data is protected at all times.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I get support?</div>
+                    <div class="faq-answer">
+                        <p>You can reach our support team by emailing <a href="mailto:sean.gemify@gmail.com">sean.gemify@gmail.com</a>. We typically respond within 24 hours during business days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer refunds?</div>
+                    <div class="faq-answer">
+                        <p>Our apps follow Shopify's standard refund policy. If you're not satisfied with any of our apps, please contact us and we'll work with you to resolve any issues or process a refund if appropriate.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bulk Delete Orders App -->
+            <div class="faq-section">
+                <h2 class="section-title">Bulk Delete Orders App</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">What does the Bulk Delete Orders app do?</div>
+                    <div class="faq-answer">
+                        <p>Bulk Delete Orders allows you to efficiently delete multiple orders from your Shopify store at once. You can use powerful filters to target specific orders by status, date, tags, or other criteria. The app automatically cancels orders before deletion, saving you time and manual work.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is it safe to delete orders?</div>
+                    <div class="faq-answer">
+                        <p>Yes, but please be careful. The app will automatically cancel orders before deleting them to ensure proper handling. However, once orders are deleted, they cannot be recovered. We recommend:</p>
+                        <ul>
+                            <li>Using filters carefully to select only the orders you want to delete</li>
+                            <li>Starting with a small test batch first</li>
+                            <li>Exporting your orders as a backup before bulk deletion</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I undo a deletion?</div>
+                    <div class="faq-answer">
+                        <p>No, once orders are deleted from Shopify, they cannot be restored through our app or Shopify's admin. This is why we recommend being very careful with your filters and starting with small test batches.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What filters are available?</div>
+                    <div class="faq-answer">
+                        <p>You can filter orders by:</p>
+                        <ul>
+                            <li>Order status (pending, paid, fulfilled, etc.)</li>
+                            <li>Financial status (paid, pending, refunded, etc.)</li>
+                            <li>Fulfillment status (unfulfilled, fulfilled, partially fulfilled)</li>
+                            <li>Date range (created date, updated date)</li>
+                            <li>Order tags</li>
+                            <li>And more</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to delete orders?</div>
+                    <div class="faq-answer">
+                        <p>Deletion speed depends on the number of orders and Shopify's API rate limits. The app processes deletions in the background, and you can track progress in the Job History section. For large batches, it may take several minutes to hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I track deletion jobs?</div>
+                    <div class="faq-answer">
+                        <p>Yes! The app includes a Job History feature where you can view all deletion jobs, their status, and export reports for your records.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Will this affect my Shopify analytics?</div>
+                    <div class="faq-answer">
+                        <p>Yes, deleting orders will remove them from your Shopify analytics and reports. The data associated with those orders will no longer appear in your store's statistics. This is why we recommend carefully considering which orders you want to delete.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What happens to customer information when I delete orders?</div>
+                    <div class="faq-answer">
+                        <p>Deleting an order removes the order record but does not delete the customer account. Customer profiles remain in your store unless you separately delete them through Shopify's customer management.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I delete draft orders or abandoned checkouts?</div>
+                    <div class="faq-answer">
+                        <p>The Bulk Delete Orders app is specifically designed for completed orders. For draft orders and abandoned checkouts, you may need to use Shopify's native tools or contact us for feature requests.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing & Billing -->
+            <div class="faq-section">
+                <h2 class="section-title">Pricing & Billing</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How much do your apps cost?</div>
+                    <div class="faq-answer">
+                        <p>Pricing varies by app. You can view pricing details on each app's listing page in the Shopify App Store. Most of our apps offer a free trial period so you can test them before committing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How am I billed?</div>
+                    <div class="faq-answer">
+                        <p>All billing is handled through Shopify. App charges appear on your regular Shopify invoice and follow Shopify's billing cycle. You can cancel at any time through your Shopify admin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is there a free trial?</div>
+                    <div class="faq-answer">
+                        <p>Many of our apps offer a free trial period. Check the specific app listing in the Shopify App Store for trial availability and duration.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I cancel anytime?</div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel any of our apps at any time through your Shopify admin. Simply uninstall the app and you won't be charged for the next billing cycle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy & Security -->
+            <div class="faq-section">
+                <h2 class="section-title">Privacy & Security</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">What data do you collect?</div>
+                    <div class="faq-answer">
+                        <p>We only collect the minimum data necessary to provide our app services. This typically includes store information and the specific data needed for the app to function (e.g., order data for Bulk Delete Orders). For complete details, please read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you sell my data?</div>
+                    <div class="faq-answer">
+                        <p>No, never. We do not sell, rent, or trade your data to third parties. Your store data is used solely to provide the app services you've installed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How is my data protected?</div>
+                    <div class="faq-answer">
+                        <p>We use industry-standard security measures including:</p>
+                        <ul>
+                            <li>Encryption in transit (TLS 1.2+) and at rest (AES-256)</li>
+                            <li>Secure authentication via OAuth 2.0</li>
+                            <li>Regular security audits</li>
+                            <li>Strict access controls</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What happens to my data if I uninstall an app?</div>
+                    <div class="faq-answer">
+                        <p>When you uninstall one of our apps, we retain minimal data (store ID and access tokens) for 30 days to facilitate potential reinstallation. After 30 days, all your data is permanently deleted from our systems.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Are you GDPR compliant?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we comply with GDPR, CPRA, and other privacy regulations. We subscribe to Shopify's mandatory compliance webhooks and handle data subject requests appropriately. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-section">
+                <h2 class="section-title">Technical Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Which Shopify plans are supported?</div>
+                    <div class="faq-answer">
+                        <p>Our apps work with all Shopify plans, including Basic, Shopify, Advanced, and Shopify Plus. Some features may vary based on your plan's API access.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do your apps work with Shopify Plus?</div>
+                    <div class="faq-answer">
+                        <p>Yes, all our apps are fully compatible with Shopify Plus stores.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Will your apps slow down my store?</div>
+                    <div class="faq-answer">
+                        <p>No, our apps are designed to be lightweight and efficient. They operate primarily on the backend and don't add any code to your storefront, so there's no impact on your store's loading speed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do I need technical knowledge to use your apps?</div>
+                    <div class="faq-answer">
+                        <p>No technical knowledge is required. Our apps are designed to be user-friendly and intuitive. If you can use Shopify's admin, you can use our apps. We also provide support if you need help.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I use multiple Gemify apps together?</div>
+                    <div class="faq-answer">
+                        <p>Yes, our apps are designed to work independently and won't conflict with each other. You can install and use as many Gemify apps as you need.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Box -->
+            <div class="contact-box">
+                <h2>Still Have Questions?</h2>
+                <p>Can't find the answer you're looking for? We're here to help!</p>
+                <a href="mailto:sean.gemify@gmail.com">Contact Support</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="faq.html">FAQ</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Gemify. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
