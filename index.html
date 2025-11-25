@@ -556,10 +556,10 @@
         </p>
     </section>
 
-    <!-- Featured App Section -->
+    <!-- Featured Apps Section -->
     <section class="featured-app">
         <div class="container">
-            <h2 class="section-title">Featured App</h2>
+            <h2 class="section-title">Featured Apps</h2>
             <div class="app-card-wrapper">
                 <s-section>
                     <div class="app-header">
@@ -585,7 +585,36 @@
                                 <span>Track all deletion jobs and export reports in Job History</span>
                             </li>
                         </ul>
-                        <s-button variant="primary" href="#">View on Shopify App Store</s-button>
+                        <s-button variant="primary" href="https://apps.shopify.com/bulk-delete-orders">View on Shopify App Store</s-button>
+                    </s-stack>
+                </s-section>
+            </div>
+            <div class="app-card-wrapper" style="margin-top: 2rem;">
+                <s-section>
+                    <div class="app-header">
+                        <div class="app-icon">
+                            <img src="resources/default_address_lock.png" alt="Default Address Lock">
+                        </div>
+                        <div>
+                            <h3 class="app-title">Default Address Lock</h3>
+                        </div>
+                    </div>
+                    <s-stack gap="base">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Prevent Shopify from overwriting customer default addresses after orders</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Smart detection distinguishes order-triggered changes from manual updates</span>
+                            </li>
+                            <li class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Perfect for gift stores, B2B merchants, and CRM-integrated shops</span>
+                            </li>
+                        </ul>
+                        <s-button variant="primary" disabled>Coming Soon</s-button>
                     </s-stack>
                 </s-section>
             </div>
@@ -653,7 +682,17 @@
                     <p class="app-card-description">
                         Efficiently manage your store by deleting multiple orders at once with powerful filtering options and automatic cancellation.
                     </p>
-                    <s-button variant="primary" href="#">View App</s-button>
+                    <s-button variant="primary" href="https://apps.shopify.com/bulk-delete-orders">View App</s-button>
+                </div>
+                <div class="app-card">
+                    <div class="app-card-icon">
+                        <img src="resources/default_address_lock.png" alt="Default Address Lock">
+                    </div>
+                    <h3 class="app-card-title">Default Address Lock</h3>
+                    <p class="app-card-description">
+                        Protect your customers' default addresses from being overwritten when they ship orders to different locations. Smart detection, automatic restoration.
+                    </p>
+                    <s-button variant="primary" disabled>Coming Soon</s-button>
                 </div>
                 <div class="app-card">
                     <div class="app-card-icon">
@@ -663,7 +702,7 @@
                     <p class="app-card-description">
                         We're working on exciting new tools to help you manage and grow your Shopify store. Stay tuned for updates!
                     </p>
-                    <span class="coming-soon">Coming Soon</span>
+                    <s-button variant="primary" disabled>Coming Soon</s-button>
                 </div>
             </div>
         </div>
