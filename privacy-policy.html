@@ -179,6 +179,16 @@
             color: #00A87B;
         }
 
+        .footer-email {
+            color: #6D7175;
+            font-size: 14px;
+        }
+
+        .footer-email a {
+            color: #00A87B;
+            text-decoration: none;
+        }
+
         .copyright {
             color: #6D7175;
             font-size: 14px;
@@ -222,7 +232,7 @@
             <h1>Privacy Policy</h1>
             <p class="last-updated">Last Updated: January 2, 2025</p>
 
-            <p>At Gemify ("we," "us," or "our"), we take your privacy seriously. This Privacy Policy explains how our Shopify applications, including Bulk Delete Orders (collectively, "our Apps"), collect, use, store, and protect your information when you use our services.</p>
+            <p>At Gemify ("we," "us," or "our"), we take your privacy seriously. This Privacy Policy explains how our Shopify applications, including Bulk Delete Orders and Default Address Lock (collectively, "our Apps"), collect, use, store, and protect your information when you use our services.</p>
 
             <div class="highlight-box">
                 <p><strong>Key Points:</strong></p>
@@ -241,6 +251,7 @@
             <ul>
                 <li><strong>Store Information:</strong> Store name, store domain, store owner email, and store timezone</li>
                 <li><strong>Order Data:</strong> Order details including order numbers, dates, statuses, financial status, and fulfillment status (for Bulk Delete Orders app)</li>
+                <li><strong>Customer Data:</strong> Customer IDs and address IDs only (for Default Address Lock app) - we never store personal information such as names, addresses, or contact details</li>
                 <li><strong>API Access Tokens:</strong> Tokens necessary to authenticate and communicate with your Shopify store</li>
             </ul>
 
@@ -253,10 +264,10 @@
             </ul>
 
             <h3>1.3 Information Collected From Merchants' Customers</h3>
-            <p>Our Apps are designed to minimize the collection of end-customer data. For the Bulk Delete Orders app:</p>
+            <p>Our Apps are designed to minimize the collection of end-customer data:</p>
             <ul>
-                <li>We do not directly access or store customer personal information (such as names, addresses, or payment details)</li>
-                <li>Order data accessed through Shopify's APIs may contain references to customers, but we do not separately store or process customer personal data</li>
+                <li><strong>Bulk Delete Orders:</strong> We do not directly access or store customer personal information (such as names, addresses, or payment details). Order data accessed through Shopify's APIs may contain references to customers, but we do not separately store or process customer personal data.</li>
+                <li><strong>Default Address Lock:</strong> Privacy-first design - we only store customer IDs and address IDs to enable the address locking functionality. We never store personal information (names, addresses, phone numbers, etc.). All personal data remains securely within Shopify.</li>
                 <li>We do not use cookies or tracking technologies on customer-facing storefronts</li>
             </ul>
 
@@ -276,6 +287,7 @@
             <ul>
                 <li>To operate our Apps and provide the features you request</li>
                 <li>To process order deletions and other operations (for Bulk Delete Orders app)</li>
+                <li>To manage customer address locking preferences (for Default Address Lock app)</li>
                 <li>To authenticate your store and maintain secure access</li>
                 <li>To monitor and improve app performance and reliability</li>
             </ul>
@@ -509,10 +521,14 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="index.html">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#apps">Our Apps</a>
+                <a href="faq.html">FAQ</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
                 <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-email">
+                Email: <a href="mailto:sean.gemify@gmail.com">sean.gemify@gmail.com</a>
             </div>
             <div class="copyright">
                 &copy; 2025 Gemify. All rights reserved.
