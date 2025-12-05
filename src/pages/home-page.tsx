@@ -222,76 +222,53 @@ function AppsSection() {
   );
 }
 
-interface TestimonialCardProps {
-  quote: string;
-  name: string;
-  role: string;
-  rating?: number;
-}
-
-function TestimonialCard({ quote, name, role, rating = 5 }: TestimonialCardProps) {
-  return (
-    <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 relative">
-      {/* Decorative quote mark */}
-      <Quote
-        className="absolute top-5 left-5 w-6 h-6 text-[#00A87B]/20"
-        aria-hidden="true"
-      />
-
-      {/* Star rating */}
-      {rating > 0 && (
-        <div className="flex items-center gap-1 mb-3 text-[#F5C518]">
-          {Array.from({ length: rating }).map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-current" />
-          ))}
-        </div>
-      )}
-
-      {/* Quote text */}
-      <blockquote className="text-base text-[#202223] leading-relaxed mb-4 pl-3">
-        "{quote}"
-      </blockquote>
-
-      {/* Attribution */}
-      <div className="flex items-center gap-3">
-        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#00A87B] to-[#008060] flex items-center justify-center text-white font-semibold text-sm">
-          {name.charAt(0)}
-        </div>
-        <div>
-          <div className="font-semibold text-[#202223] text-sm">{name}</div>
-          <div className="text-xs text-[#616569]">{role}</div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function TestimonialsSection() {
+  const testimonials = [
+    {
+      quote: "Your app saved my team about 8 hours of clicking buttons in Shopify, and turned it into a 5 minute project.",
+      name: "Jared",
+      role: "Store Owner",
+    },
+    {
+      quote: "Finally, apps that just work without complicated setup. The support team is incredibly responsive too.",
+      name: "Michael T.",
+      role: "Shopify Plus Merchant",
+    },
+  ];
+
   return (
-    <section className="py-12 md:py-16 px-6 bg-[#F6F6F7]">
-      <div className="max-w-[1200px] mx-auto">
-        {/* Section header */}
-        <div className="text-center mb-8">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
-            What Merchants Say
-          </h2>
-          <p className="text-lg text-[#616569] max-w-[600px] mx-auto">
-            Don't just take our word for it
-          </p>
+    <section className="py-10 px-6 bg-white border-y border-[#E1E3E5]">
+      <div className="max-w-[1000px] mx-auto">
+        {/* Compact header */}
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="flex items-center gap-0.5 text-[#F5C518]">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-current" />
+            ))}
+          </div>
+          <span className="text-sm font-medium text-[#202223]">5-star rated on Shopify App Store</span>
         </div>
 
-        {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-[900px] mx-auto">
-          <TestimonialCard
-            quote="Your app saved my team about 8 hours of clicking buttons in Shopify, and turned it into a 5 minute project. Thanks, and good luck!"
-            name="Jared"
-            role="Store Owner"
-          />
-          <TestimonialCard
-            quote="Finally, apps that just work without complicated setup. The support team is incredibly responsive too."
-            name="Michael T."
-            role="Shopify Plus Merchant"
-          />
+        {/* Testimonials - horizontal layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {testimonials.map((t, i) => (
+            <div key={i} className="flex gap-4">
+              <Quote className="w-8 h-8 text-[#00A87B]/30 shrink-0 mt-1" aria-hidden="true" />
+              <div>
+                <p className="text-[#202223] text-sm leading-relaxed mb-3 italic">
+                  "{t.quote}"
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#00A87B] to-[#008060] flex items-center justify-center text-white text-xs font-semibold">
+                    {t.name.charAt(0)}
+                  </div>
+                  <span className="text-xs text-[#616569]">
+                    <strong className="text-[#202223] font-medium">{t.name}</strong> · {t.role}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
