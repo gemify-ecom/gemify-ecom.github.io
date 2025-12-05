@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckCircle } from 'lucide-react';
+import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckCircle, Trash2, MapPin, ArrowRight, Sparkles } from 'lucide-react';
 
 function HeroSection() {
   return (
@@ -58,85 +58,103 @@ function HeroSection() {
   );
 }
 
-interface FeatureItemProps {
-  text: string;
-}
-
-function FeatureItem({ text }: FeatureItemProps) {
-  return (
-    <li className="flex items-start gap-3 mb-3 last:mb-0">
-      <span className="text-[#00A87B] text-xl shrink-0 mt-0.5">&#10003;</span>
-      <span>{text}</span>
-    </li>
-  );
-}
-
 interface AppCardProps {
   icon: string;
   title: string;
-  features: string[];
+  tagline: string;
+  features: { icon: React.ReactNode; text: string }[];
   buttonText: string;
   buttonHref?: string;
   buttonDisabled?: boolean;
   detailsLink?: string;
   rating?: number;
+  installs?: string;
   isComingSoon?: boolean;
+  accentColor?: string;
 }
 
 function AppCard({
   icon,
   title,
+  tagline,
   features,
   buttonText,
   buttonHref,
   buttonDisabled = false,
   detailsLink,
   rating,
+  installs,
   isComingSoon = false,
+  accentColor = '#00A87B',
 }: AppCardProps) {
   return (
-    <div className={`bg-white rounded-2xl p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${isComingSoon ? 'relative overflow-hidden' : ''}`}>
+    <div
+      className={`group relative bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#E1E3E5] cursor-pointer
+        transition-all duration-200 ease-out
+        hover:shadow-xl hover:shadow-black/5 hover:border-[#00A87B]/20 hover:scale-[1.02]
+        ${isComingSoon ? 'overflow-hidden' : ''}`}
+    >
+      {/* Subtle gradient overlay on hover */}
+      <div
+        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
+        style={{ background: `linear-gradient(135deg, ${accentColor}05 0%, transparent 50%)` }}
+      />
+
       {/* Coming Soon badge */}
       {isComingSoon && (
-        <div className="absolute top-3 right-3 px-3 py-1 bg-[#FFF3CD] text-[#856404] text-xs font-semibold rounded-full">
+        <div className="absolute top-4 right-4 px-3 py-1.5 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-200">
           Coming Soon
         </div>
       )}
 
-      <div className="flex items-center gap-5 mb-5 md:flex-col md:text-center">
-        <div className={`w-20 h-20 rounded-xl shrink-0 overflow-hidden shadow-sm ${isComingSoon ? 'opacity-80' : ''}`}>
-          <img
-            src={icon}
-            alt={title}
-            width={80}
-            height={80}
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div>
-          <div className="flex items-center gap-3 md:justify-center">
-            <h3 className="text-2xl font-bold text-[#202223]">{title}</h3>
-            {rating && (
-              <div className="flex items-center gap-1 px-2 py-1 bg-[#FFF8E1] rounded-lg">
-                <Star className="w-4 h-4 text-[#F5C518] fill-current" />
-                <span className="text-sm font-semibold text-[#202223]">{rating.toFixed(1)}</span>
-              </div>
-            )}
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="flex items-start gap-4 mb-5">
+          <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl shrink-0 overflow-hidden shadow-md ring-1 ring-black/5 ${isComingSoon ? 'opacity-70' : ''}`}>
+            <img
+              src={icon}
+              alt={title}
+              width={80}
+              height={80}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="text-xl md:text-2xl font-bold text-[#202223] mb-1">{title}</h3>
+            <p className="text-sm text-[#616569] mb-2">{tagline}</p>
+            <div className="flex items-center gap-3 flex-wrap">
+              {rating && (
+                <div className="inline-flex items-center gap-1 px-2 py-1 bg-amber-50 rounded-lg">
+                  <Star className="w-3.5 h-3.5 text-amber-500 fill-current" />
+                  <span className="text-xs font-semibold text-[#202223]">{rating.toFixed(1)}</span>
+                </div>
+              )}
+              {installs && (
+                <span className="text-xs text-[#616569]">{installs} installs</span>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-4">
-        <ul className="list-none p-0 m-0">
+
+        {/* Features with icons */}
+        <ul className="space-y-3 mb-6">
           {features.map((feature, index) => (
-            <FeatureItem key={index} text={feature} />
+            <li key={index} className="flex items-start gap-3">
+              <span className="w-5 h-5 rounded-md bg-[#E8F5F1] flex items-center justify-center shrink-0 mt-0.5">
+                <span className="text-[#00A87B] w-3.5 h-3.5">{feature.icon}</span>
+              </span>
+              <span className="text-sm text-[#474D52] leading-relaxed">{feature.text}</span>
+            </li>
           ))}
         </ul>
-        <div className="flex gap-3 flex-wrap">
+
+        {/* CTAs */}
+        <div className="flex items-center gap-3 flex-wrap">
           {buttonDisabled ? (
             <button
               disabled
-              className="bg-[#C9CCCF] text-white px-6 py-3.5 rounded-xl text-base font-semibold cursor-not-allowed"
+              className="inline-flex items-center gap-2 bg-gray-200 text-gray-500 px-5 py-2.5 rounded-xl text-sm font-semibold cursor-not-allowed"
             >
               {buttonText}
             </button>
@@ -145,15 +163,20 @@ function AppCard({
               href={buttonHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#00A87B] text-white px-6 py-3.5 rounded-xl text-base font-semibold cursor-pointer hover:bg-[#008060] hover:shadow-lg transition-all duration-200 no-underline"
+              className="inline-flex items-center gap-2 bg-[#00A87B] text-white px-5 py-2.5 rounded-xl text-sm font-semibold
+                hover:bg-[#008060] hover:shadow-lg hover:shadow-[#00A87B]/20
+                transition-all duration-200 no-underline group/btn"
             >
               {buttonText}
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
             </a>
           )}
           {detailsLink && (
             <Link
               to={detailsLink}
-              className="bg-white border-2 border-[#00A87B] text-[#00A87B] px-6 py-3 rounded-xl text-base font-semibold hover:bg-[#00A87B] hover:text-white transition-all duration-200 no-underline"
+              className="inline-flex items-center gap-1.5 text-[#00A87B] px-4 py-2.5 text-sm font-semibold
+                hover:text-[#008060] hover:bg-[#E8F5F1] rounded-xl
+                transition-all duration-200 no-underline"
             >
               Learn More
             </Link>
@@ -166,40 +189,47 @@ function AppCard({
 
 function AppsSection() {
   return (
-    <section id="apps" className="py-12 md:py-16 px-6 bg-[#F6F6F7]">
-      <div className="max-w-[1200px] mx-auto">
+    <section id="apps" className="py-12 md:py-20 px-6 bg-gradient-to-b from-[#F6F6F7] to-white">
+      <div className="max-w-[1100px] mx-auto">
         {/* Section header */}
-        <div className="text-center mb-8">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-[#E8F5F1] text-[#00A87B] rounded-full text-sm font-medium">
+            <Sparkles className="w-4 h-4" />
+            Free to Install
+          </div>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#202223]">
             Our Shopify Apps
           </h2>
-          <p className="text-lg text-[#616569] max-w-[600px] mx-auto">
-            Simple, powerful tools to streamline your store operations
+          <p className="text-lg text-[#616569] max-w-[550px] mx-auto">
+            Simple, powerful tools that solve real merchant problems
           </p>
         </div>
 
-        {/* Apps grid */}
-        <div className="max-w-[900px] mx-auto space-y-6">
+        {/* Bento-style apps grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AppCard
             icon="/resources/bulk_delete_orders.png"
             title="Bulk Delete Orders"
+            tagline="Clean up test orders and unwanted data in seconds"
             features={[
-              'Use filters to precisely target specific orders for deletion',
-              'Orders are automatically cancelled before deletion - no manual steps required',
-              'Track all deletion jobs and export reports in Job History',
+              { icon: <Trash2 className="w-full h-full" />, text: 'Filter and target specific orders for bulk deletion' },
+              { icon: <CheckCircle className="w-full h-full" />, text: 'Auto-cancels orders before deletion — no manual steps' },
+              { icon: <Clock className="w-full h-full" />, text: 'Track jobs and export reports in Job History' },
             ]}
             buttonText="Install Free"
             buttonHref="https://apps.shopify.com/bulk-delete-orders"
             rating={5.0}
+            installs="200+"
             detailsLink="/apps/bulk-delete-orders"
           />
           <AppCard
             icon="/resources/default_address_lock.png"
             title="Default Address Lock"
+            tagline="Keep customer default addresses intact after orders"
             features={[
-              "Prevent Shopify from overwriting customer default addresses after orders",
-              'Smart detection distinguishes order-triggered changes from manual updates',
-              'Perfect for gift stores, B2B merchants, and CRM-integrated shops',
+              { icon: <MapPin className="w-full h-full" />, text: 'Prevent Shopify from overwriting default addresses' },
+              { icon: <Shield className="w-full h-full" />, text: 'Smart detection for order vs. manual changes' },
+              { icon: <Store className="w-full h-full" />, text: 'Perfect for gift stores and B2B merchants' },
             ]}
             buttonText="Install Free"
             buttonHref="https://apps.shopify.com/default-address-lock"
@@ -207,28 +237,95 @@ function AppsSection() {
           />
         </div>
 
-        {/* Mid-page CTA */}
-        <div className="text-center mt-8">
-          <p className="text-lg text-[#616569] mb-3">More apps in development</p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 text-[#00A87B] font-semibold hover:text-[#008060] transition-colors"
-          >
-            Get notified when we launch new apps →
-          </a>
-        </div>
       </div>
     </section>
   );
 }
 
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  url?: string;
+  avatar?: string;
+  highlight?: string;
+}
+
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  const { quote, name, role, url, avatar, highlight } = testimonial;
+
+  return (
+    <div className="group relative bg-white rounded-2xl p-6 md:p-8 border border-[#E1E3E5] shadow-sm hover:shadow-lg hover:border-[#00A87B]/20 transition-all duration-200">
+      {/* Decorative quote mark */}
+      <div className="absolute -top-3 -left-2 w-10 h-10 bg-[#00A87B] rounded-xl flex items-center justify-center shadow-lg shadow-[#00A87B]/20 rotate-3 group-hover:rotate-0 transition-transform duration-200">
+        <Quote className="w-5 h-5 text-white" aria-hidden="true" />
+      </div>
+
+      {/* Rating stars */}
+      <div className="flex items-center gap-0.5 mb-4 ml-6">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="w-4 h-4 text-amber-400 fill-current" />
+        ))}
+      </div>
+
+      {/* Quote text */}
+      <blockquote className="mb-5">
+        <p className="text-[#202223] text-base md:text-lg leading-relaxed">
+          "{quote}"
+        </p>
+        {highlight && (
+          <span className="inline-block mt-3 px-3 py-1 bg-[#E8F5F1] text-[#00A87B] text-sm font-medium rounded-full">
+            {highlight}
+          </span>
+        )}
+      </blockquote>
+
+      {/* Author info */}
+      <div className="flex items-center gap-3 pt-4 border-t border-[#E1E3E5]">
+        {avatar ? (
+          <img
+            src={avatar}
+            alt={name}
+            className="w-10 h-10 rounded-full object-cover ring-2 ring-[#E8F5F1]"
+          />
+        ) : (
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00A87B] to-[#008060] flex items-center justify-center text-white text-sm font-semibold ring-2 ring-[#E8F5F1]">
+            {name.charAt(0)}
+          </div>
+        )}
+        <div className="flex-1 min-w-0">
+          <div className="font-semibold text-[#202223] text-sm">{name}</div>
+          {url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-[#00A87B] hover:text-[#008060] hover:underline transition-colors"
+            >
+              {role}
+            </a>
+          ) : (
+            <div className="text-xs text-[#616569]">{role}</div>
+          )}
+        </div>
+        {/* Verified badge */}
+        <div className="flex items-center gap-1 px-2 py-1 bg-[#E8F5F1] rounded-full">
+          <CheckCircle className="w-3 h-3 text-[#00A87B]" />
+          <span className="text-xs font-medium text-[#00A87B]">Verified</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TestimonialsSection() {
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       quote: "Your app saved my team about 8 hours of clicking buttons in Shopify, and turned it into a 5 minute project.",
       name: "Jared",
       role: "Barbell Standard",
       url: "https://barbellstandard.com",
+      highlight: "8 hours → 5 minutes",
     },
     {
       quote: "Finally, apps that just work without complicated setup. The support team is incredibly responsive too.",
@@ -238,44 +335,28 @@ function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-10 px-6 bg-white border-y border-[#E1E3E5]">
+    <section className="py-12 md:py-16 px-6 bg-gradient-to-b from-white to-[#F6F6F7]">
       <div className="max-w-[1000px] mx-auto">
-        {/* Compact header */}
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <div className="flex items-center gap-0.5 text-[#F5C518]">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-current" />
-            ))}
+        {/* Section header */}
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-amber-50 text-amber-700 rounded-full text-sm font-medium border border-amber-200">
+            <div className="flex items-center gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-3 h-3 fill-current" />
+              ))}
+            </div>
+            5.0 on Shopify App Store
           </div>
-          <span className="text-sm font-medium text-[#202223]">5-star rated on Shopify App Store</span>
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#202223] mb-2">
+            Trusted by Merchants
+          </h2>
+          <p className="text-[#616569]">See what store owners are saying about our apps</p>
         </div>
 
-        {/* Testimonials - horizontal layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Testimonials grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="flex gap-4">
-              <Quote className="w-8 h-8 text-[#00A87B]/30 shrink-0 mt-1" aria-hidden="true" />
-              <div>
-                <p className="text-[#202223] text-sm leading-relaxed mb-3 italic">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#00A87B] to-[#008060] flex items-center justify-center text-white text-xs font-semibold">
-                    {t.name.charAt(0)}
-                  </div>
-                  <span className="text-xs text-[#616569]">
-                    <strong className="text-[#202223] font-medium">{t.name}</strong> ·{' '}
-                    {t.url ? (
-                      <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-[#00A87B] hover:underline">
-                        {t.role}
-                      </a>
-                    ) : (
-                      t.role
-                    )}
-                  </span>
-                </div>
-              </div>
-            </div>
+            <TestimonialCard key={i} testimonial={t} />
           ))}
         </div>
       </div>
@@ -350,26 +431,23 @@ function WhyChooseSection() {
 
 function AboutSection() {
   return (
-    <section id="about" className="py-10 px-6 bg-white">
-      <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-center text-3xl font-bold mb-8 text-[#202223]">
-          About Gemify
-        </h2>
-        <div className="max-w-[800px] mx-auto text-center">
-          <p className="text-base leading-relaxed text-[#616569] mb-4">
-            Gemify was founded by experienced Shopify developers who understand
-            the challenges merchants face. We&apos;re passionate about creating
-            simple, powerful tools that solve real problems.
-          </p>
-          <p className="text-base leading-relaxed text-[#616569] mb-4">
-            Our mission: intuitive, reliable apps. No bloated features or confusing interfaces.
-            Just clean, efficient solutions that help your business thrive.
-          </p>
-          <p className="text-base leading-relaxed text-[#616569]">
-            Every app is built with the same attention to detail we&apos;d demand for our own stores.
-            When you choose Gemify, you&apos;re choosing a partner dedicated to your success.
-          </p>
-        </div>
+    <section id="about" className="py-12 px-6 bg-[#F6F6F7]">
+      <div className="max-w-[700px] mx-auto text-center">
+        <h2 className="text-3xl font-bold text-[#202223] mb-6">About Gemify</h2>
+
+        <p className="text-lg leading-relaxed text-[#474B4F] mb-5">
+          Founded by experienced Shopify developers who understand the challenges merchants face.
+        </p>
+
+        <p className="text-base leading-relaxed text-[#616569] mb-5">
+          Our mission is simple: <span className="font-medium text-[#202223]">intuitive, reliable apps</span>.
+          No bloated features. No confusing interfaces. Just clean solutions that help your business thrive.
+        </p>
+
+        <p className="text-base leading-relaxed text-[#616569]">
+          Every app is built with the same care we&apos;d demand for our own stores.
+          When you choose Gemify, you&apos;re choosing a <span className="font-medium text-[#202223]">partner dedicated to your success</span>.
+        </p>
       </div>
     </section>
   );
