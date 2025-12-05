@@ -234,7 +234,6 @@ See [Project Roadmap](./docs/project-overview-pdr.md#roadmap) for full details.
 
 ## Deployment
 
-### GitHub Pages (Current)
 Automatically deployed via GitHub Actions on push to `master` branch.
 
 **URL:** https://gemify-ecom.github.io
@@ -243,21 +242,6 @@ Automatically deployed via GitHub Actions on push to `master` branch.
 - Builds with Node 20
 - Deploys to GitHub Pages
 - Includes 404.html for SPA routing
-
-### Alternative: Vercel
-```bash
-npm i -g vercel && vercel
-```
-
-### Alternative: Netlify
-```bash
-npm i -g netlify-cli && netlify deploy --prod --dir dist
-```
-
-### Any Static Host
-1. Run `npm run build`
-2. Deploy `dist/` folder
-3. Configure for SPA routing (fallback to index.html)
 
 ---
 
