@@ -4,25 +4,25 @@ import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckC
 
 function HeroSection() {
   return (
-    <section className="relative text-center py-16 md:py-24 lg:py-32 px-6 overflow-hidden animate-fade-in-up">
+    <section className="relative text-center py-12 md:py-16 lg:py-20 px-6 overflow-hidden animate-fade-in-up">
       {/* Decorative gradient orbs - hidden from screen readers */}
       <div aria-hidden="true" className="absolute top-0 right-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-gradient-radial from-[#00A87B]/10 via-[#00BFA5]/5 to-transparent rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none will-change-transform" />
       <div aria-hidden="true" className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-gradient-radial from-[#00A87B]/5 to-transparent rounded-full translate-y-1/2 -translate-x-1/3 pointer-events-none will-change-transform" />
 
       <div className="relative z-10 max-w-[900px] mx-auto">
         {/* Social proof badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-[#E8F5F1] text-[#00A87B] rounded-full text-sm font-medium animate-fade-in-up-delay-1">
+        <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 bg-[#E8F5F1] text-[#00A87B] rounded-full text-sm font-medium animate-fade-in-up-delay-1">
           <span className="w-2 h-2 bg-[#00A87B] rounded-full animate-pulse" />
           Trusted by 500+ Shopify merchants
         </div>
 
         {/* Headline */}
-        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-[#202223] leading-[1.05] tracking-tight animate-fade-in-up-delay-1">
+        <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-[#202223] leading-[1.05] tracking-tight animate-fade-in-up-delay-1">
           Apps That Actually Help Your Shopify Store
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl text-[#616569] mb-10 max-w-[700px] mx-auto leading-relaxed animate-fade-in-up-delay-2">
+        <p className="text-lg md:text-xl text-[#616569] mb-8 max-w-[700px] mx-auto leading-relaxed animate-fade-in-up-delay-2">
           Simple, powerful tools built by developers who understand merchant needs. No fluff, just results.
         </p>
 
@@ -43,7 +43,7 @@ function HeroSection() {
         </div>
 
         {/* Trust badge */}
-        <div className="flex items-center justify-center gap-2 mt-8 text-sm text-[#616569] animate-fade-in-up-delay-3">
+        <div className="flex items-center justify-center gap-2 mt-6 text-sm text-[#616569] animate-fade-in-up-delay-3">
           <div className="flex items-center gap-1 text-[#F5C518]">
             <Star className="w-4 h-4 fill-current" />
             <Star className="w-4 h-4 fill-current" />
@@ -95,28 +95,28 @@ function AppCard({
   isComingSoon = false,
 }: AppCardProps) {
   return (
-    <div className={`bg-white rounded-2xl p-8 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${isComingSoon ? 'relative overflow-hidden' : ''}`}>
+    <div className={`bg-white rounded-2xl p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${isComingSoon ? 'relative overflow-hidden' : ''}`}>
       {/* Coming Soon badge */}
       {isComingSoon && (
-        <div className="absolute top-4 right-4 px-3 py-1 bg-[#FFF3CD] text-[#856404] text-xs font-semibold rounded-full">
+        <div className="absolute top-3 right-3 px-3 py-1 bg-[#FFF3CD] text-[#856404] text-xs font-semibold rounded-full">
           Coming Soon
         </div>
       )}
 
-      <div className="flex items-center gap-6 mb-6 md:flex-col md:text-center">
-        <div className={`w-24 h-24 rounded-2xl shrink-0 overflow-hidden shadow-sm ${isComingSoon ? 'opacity-80' : ''}`}>
+      <div className="flex items-center gap-5 mb-5 md:flex-col md:text-center">
+        <div className={`w-20 h-20 rounded-xl shrink-0 overflow-hidden shadow-sm ${isComingSoon ? 'opacity-80' : ''}`}>
           <img
             src={icon}
             alt={title}
-            width={96}
-            height={96}
+            width={80}
+            height={80}
             loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>
         <div>
           <div className="flex items-center gap-3 md:justify-center">
-            <h3 className="text-3xl font-bold text-[#202223] md:text-2xl">{title}</h3>
+            <h3 className="text-2xl font-bold text-[#202223]">{title}</h3>
             {rating && (
               <div className="flex items-center gap-1 px-2 py-1 bg-[#FFF8E1] rounded-lg">
                 <Star className="w-4 h-4 text-[#F5C518] fill-current" />
@@ -166,10 +166,10 @@ function AppCard({
 
 function AppsSection() {
   return (
-    <section id="apps" className="py-16 md:py-20 px-6 bg-[#F6F6F7]">
+    <section id="apps" className="py-12 md:py-16 px-6 bg-[#F6F6F7]">
       <div className="max-w-[1200px] mx-auto">
         {/* Section header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
             Our Shopify Apps
           </h2>
@@ -208,8 +208,8 @@ function AppsSection() {
         </div>
 
         {/* Mid-page CTA */}
-        <div className="text-center mt-12">
-          <p className="text-lg text-[#616569] mb-4">More apps in development</p>
+        <div className="text-center mt-8">
+          <p className="text-lg text-[#616569] mb-3">More apps in development</p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 text-[#00A87B] font-semibold hover:text-[#008060] transition-colors"
@@ -231,16 +231,16 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ quote, name, role, rating = 5 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 relative">
+    <div className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 relative">
       {/* Decorative quote mark */}
       <Quote
-        className="absolute top-6 left-6 w-8 h-8 text-[#00A87B]/20"
+        className="absolute top-5 left-5 w-6 h-6 text-[#00A87B]/20"
         aria-hidden="true"
       />
 
       {/* Star rating */}
       {rating > 0 && (
-        <div className="flex items-center gap-1 mb-4 text-[#F5C518]">
+        <div className="flex items-center gap-1 mb-3 text-[#F5C518]">
           {Array.from({ length: rating }).map((_, i) => (
             <Star key={i} className="w-4 h-4 fill-current" />
           ))}
@@ -248,18 +248,18 @@ function TestimonialCard({ quote, name, role, rating = 5 }: TestimonialCardProps
       )}
 
       {/* Quote text */}
-      <blockquote className="text-lg text-[#202223] leading-relaxed mb-6 pl-4">
+      <blockquote className="text-base text-[#202223] leading-relaxed mb-4 pl-3">
         "{quote}"
       </blockquote>
 
       {/* Attribution */}
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00A87B] to-[#008060] flex items-center justify-center text-white font-semibold text-sm">
+        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#00A87B] to-[#008060] flex items-center justify-center text-white font-semibold text-sm">
           {name.charAt(0)}
         </div>
         <div>
-          <div className="font-semibold text-[#202223]">{name}</div>
-          <div className="text-sm text-[#616569]">{role}</div>
+          <div className="font-semibold text-[#202223] text-sm">{name}</div>
+          <div className="text-xs text-[#616569]">{role}</div>
         </div>
       </div>
     </div>
@@ -268,10 +268,10 @@ function TestimonialCard({ quote, name, role, rating = 5 }: TestimonialCardProps
 
 function TestimonialsSection() {
   return (
-    <section className="py-16 md:py-20 px-6 bg-[#F6F6F7]">
+    <section className="py-12 md:py-16 px-6 bg-[#F6F6F7]">
       <div className="max-w-[1200px] mx-auto">
         {/* Section header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
             What Merchants Say
           </h2>
@@ -308,27 +308,27 @@ interface BenefitCardProps {
 function BenefitCard({ icon, title, description, delay = '' }: BenefitCardProps) {
   return (
     <div
-      className={`bg-white/95 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl will-change-transform ${delay}`}
+      className={`bg-white/95 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl will-change-transform ${delay}`}
     >
-      <div className="w-16 h-16 mx-auto mb-5 bg-gradient-to-br from-[#00A87B] to-[#008060] rounded-2xl flex items-center justify-center">
+      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-br from-[#00A87B] to-[#008060] rounded-xl flex items-center justify-center">
         <div className="text-white">{icon}</div>
       </div>
-      <h3 className="font-heading text-xl font-bold mb-3 text-[#202223]">{title}</h3>
-      <p className="text-base leading-relaxed text-[#616569]">{description}</p>
+      <h3 className="font-heading text-lg font-bold mb-2 text-[#202223]">{title}</h3>
+      <p className="text-sm leading-relaxed text-[#616569]">{description}</p>
     </div>
   );
 }
 
 function WhyChooseSection() {
   return (
-    <section className="py-16 md:py-20 px-6 bg-gradient-to-br from-[#00A87B] to-[#008060] relative overflow-hidden">
+    <section className="py-12 md:py-16 px-6 bg-gradient-to-br from-[#00A87B] to-[#008060] relative overflow-hidden">
       {/* Decorative elements */}
       <div aria-hidden="true" className="absolute -top-1/2 -right-[10%] w-[500px] h-[500px] bg-white/10 rounded-full" />
       <div aria-hidden="true" className="absolute -bottom-1/4 -left-[5%] w-[300px] h-[300px] bg-white/5 rounded-full" />
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         {/* Section header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
             Why Merchants Choose Gemify
           </h2>
@@ -340,21 +340,21 @@ function WhyChooseSection() {
         {/* Feature grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           <BenefitCard
-            icon={<Store className="w-8 h-8" />}
+            icon={<Store className="w-6 h-6" />}
             title="Shopify Expertise"
-            description="Built by certified Shopify experts who understand your daily challenges and merchant needs."
+            description="Built by certified Shopify experts who understand your daily challenges."
             delay="animate-fade-in-up-delay-1"
           />
           <BenefitCard
-            icon={<Shield className="w-8 h-8" />}
+            icon={<Shield className="w-6 h-6" />}
             title="Enterprise Security"
-            description="Bank-grade security protecting your store data 24/7 with industry-leading practices."
+            description="Bank-grade security protecting your store data 24/7."
             delay="animate-fade-in-up-delay-2"
           />
           <BenefitCard
-            icon={<MessageCircle className="w-8 h-8" />}
+            icon={<MessageCircle className="w-6 h-6" />}
             title="Responsive Support"
-            description="Real human support ready to help when you need it. No bots, just genuine assistance."
+            description="Real human support ready to help. No bots, just genuine assistance."
             delay="animate-fade-in-up-delay-3"
           />
         </div>
@@ -365,26 +365,24 @@ function WhyChooseSection() {
 
 function AboutSection() {
   return (
-    <section id="about" className="py-16 px-6 bg-white">
+    <section id="about" className="py-10 px-6 bg-white">
       <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-center text-4xl font-bold mb-12 text-[#202223] md:text-3xl">
+        <h2 className="text-center text-3xl font-bold mb-8 text-[#202223]">
           About Gemify
         </h2>
         <div className="max-w-[800px] mx-auto text-center">
-          <p className="text-lg leading-relaxed text-[#616569] mb-6">
-            Gemify was founded by a team of experienced Shopify developers who understand
-            the challenges merchants face every day. We&apos;re passionate about creating
+          <p className="text-base leading-relaxed text-[#616569] mb-4">
+            Gemify was founded by experienced Shopify developers who understand
+            the challenges merchants face. We&apos;re passionate about creating
             simple, powerful tools that solve real problems.
           </p>
-          <p className="text-lg leading-relaxed text-[#616569] mb-6">
-            Our mission is to build apps that are intuitive, reliable, and genuinely helpful.
-            No bloated features and no confusing interfaces. Just clean, efficient solutions
-            that help your business thrive.
+          <p className="text-base leading-relaxed text-[#616569] mb-4">
+            Our mission: intuitive, reliable apps. No bloated features or confusing interfaces.
+            Just clean, efficient solutions that help your business thrive.
           </p>
-          <p className="text-lg leading-relaxed text-[#616569]">
-            Every app we create is built with the same attention to detail and commitment to
-            quality that we&apos;d demand for our own stores. When you choose Gemify, you&apos;re
-            choosing a partner dedicated to your success.
+          <p className="text-base leading-relaxed text-[#616569]">
+            Every app is built with the same attention to detail we&apos;d demand for our own stores.
+            When you choose Gemify, you&apos;re choosing a partner dedicated to your success.
           </p>
         </div>
       </div>
@@ -441,10 +439,10 @@ function ContactSection() {
     'w-full px-4 py-4 border-2 border-[#E1E3E5] rounded-xl text-base transition-all duration-200 focus:outline-none focus:border-[#00A87B] focus:ring-4 focus:ring-[#00A87B]/10';
 
   return (
-    <section id="contact" className="py-16 md:py-20 px-6 bg-white">
+    <section id="contact" className="py-12 md:py-16 px-6 bg-white">
       <div className="max-w-[1200px] mx-auto">
         {/* Section header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
             Get In Touch
           </h2>
@@ -474,7 +472,7 @@ function ContactSection() {
 
           <form
             onSubmit={handleSubmit}
-            className={`flex flex-col gap-5 ${isSuccess ? 'opacity-40 pointer-events-none' : ''}`}
+            className={`flex flex-col gap-4 ${isSuccess ? 'opacity-40 pointer-events-none' : ''}`}
           >
             {/* Name field */}
             <div className="flex flex-col gap-2">
@@ -539,7 +537,7 @@ function ContactSection() {
                 maxLength={MESSAGE_MAX_LENGTH}
                 value={formState.message}
                 onChange={(e) => setFormState((s) => ({ ...s, message: e.target.value }))}
-                className={`${inputClassName} min-h-[140px] resize-y`}
+                className={`${inputClassName} min-h-[120px] resize-y`}
               />
             </div>
 
