@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { HomePage } from './pages/home-page';
 import { FaqPage } from './pages/faq-page';
 import { PrivacyPolicyPage } from './pages/privacy-policy-page';
@@ -8,9 +9,29 @@ import { BulkDeleteOrdersPage } from './pages/bulk-delete-orders-page';
 import { BulkDeleteOrdersScreencastPage } from './pages/bulk-delete-orders-screencast-page';
 import { Footer } from './components/footer';
 
+// Scroll to hash anchor on page load and navigation
+function ScrollToHash() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      // Small delay to ensure DOM is rendered
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [hash]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <div className="min-h-screen flex flex-col">
         <Routes>
           <Route
