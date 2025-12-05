@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { Store, Shield, MessageCircle, Quote, Lock, Star } from 'lucide-react';
+import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckCircle } from 'lucide-react';
 
 function HeroSection() {
   return (
@@ -385,6 +385,8 @@ function AboutSection() {
   );
 }
 
+const MESSAGE_MAX_LENGTH = 500;
+
 function ContactSection() {
   const [formState, setFormState] = useState({
     name: '',
@@ -417,7 +419,6 @@ function ContactSection() {
 
       if (data.success) {
         setIsSuccess(true);
-        alert('Thank you! Your email has been sent successfully.');
       } else {
         alert('Oops! There was a problem sending your message. Please try again.');
       }
@@ -428,23 +429,47 @@ function ContactSection() {
     }
   };
 
+  // Common input styles for 44px+ touch targets
+  const inputClassName =
+    'w-full px-4 py-4 border-2 border-[#E1E3E5] rounded-xl text-base transition-all duration-200 focus:outline-none focus:border-[#00A87B] focus:ring-4 focus:ring-[#00A87B]/10';
+
   return (
-    <section id="contact" className="py-16 px-6 bg-white">
+    <section id="contact" className="py-16 md:py-20 px-6 bg-white">
       <div className="max-w-[1200px] mx-auto">
-        <h2 className="text-center text-4xl font-bold mb-12 text-[#202223] md:text-3xl">
-          Get In Touch
-        </h2>
+        {/* Section header */}
+        <div className="text-center mb-10">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
+            Get In Touch
+          </h2>
+          <div className="flex items-center justify-center gap-2 text-[#6D7175]">
+            <Clock className="w-4 h-4" />
+            <span>We typically respond within 24 hours</span>
+          </div>
+        </div>
+
         <div className="max-w-[600px] mx-auto">
+          {/* Success message */}
           {isSuccess && (
-            <div className="bg-[#E8F5F1] border-2 border-[#00A87B] rounded-lg p-5 text-center text-[#202223] text-base mb-5">
+            <div className="bg-[#E8F5F1] border-2 border-[#00A87B] rounded-2xl p-6 text-center mb-6">
+              <CheckCircle className="w-12 h-12 text-[#00A87B] mx-auto mb-3" />
               <div className="text-xl font-bold text-[#00A87B] mb-2">Thank You!</div>
-              <p>Your message has been sent successfully. We&apos;ll get back to you soon!</p>
+              <p className="text-[#202223] mb-4">
+                Your message has been sent successfully. We&apos;ll get back to you soon!
+              </p>
+              <a
+                href="#apps"
+                className="inline-flex items-center gap-2 text-[#00A87B] font-semibold hover:text-[#008060] transition-colors"
+              >
+                Explore our apps while you wait →
+              </a>
             </div>
           )}
+
           <form
             onSubmit={handleSubmit}
-            className={`flex flex-col gap-5 ${isSuccess ? 'opacity-60 pointer-events-none' : ''}`}
+            className={`flex flex-col gap-5 ${isSuccess ? 'opacity-40 pointer-events-none' : ''}`}
           >
+            {/* Name field */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#202223]">
                 Name<span className="text-[#D72C0D] ml-1">*</span>
@@ -452,11 +477,14 @@ function ContactSection() {
               <input
                 type="text"
                 required
+                placeholder="Your name"
                 value={formState.name}
                 onChange={(e) => setFormState((s) => ({ ...s, name: e.target.value }))}
-                className="px-4 py-3 border border-[#C9CCCF] rounded-lg text-base font-inherit transition-colors focus:outline-none focus:border-[#00A87B]"
+                className={inputClassName}
               />
             </div>
+
+            {/* Email field */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#202223]">
                 Email<span className="text-[#D72C0D] ml-1">*</span>
@@ -464,11 +492,14 @@ function ContactSection() {
               <input
                 type="email"
                 required
+                placeholder="you@example.com"
                 value={formState.email}
                 onChange={(e) => setFormState((s) => ({ ...s, email: e.target.value }))}
-                className="px-4 py-3 border border-[#C9CCCF] rounded-lg text-base font-inherit transition-colors focus:outline-none focus:border-[#00A87B]"
+                className={inputClassName}
               />
             </div>
+
+            {/* Subject field */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#202223]">
                 Subject<span className="text-[#D72C0D] ml-1">*</span>
@@ -476,28 +507,54 @@ function ContactSection() {
               <input
                 type="text"
                 required
+                placeholder="How can we help?"
                 value={formState.subject}
                 onChange={(e) => setFormState((s) => ({ ...s, subject: e.target.value }))}
-                className="px-4 py-3 border border-[#C9CCCF] rounded-lg text-base font-inherit transition-colors focus:outline-none focus:border-[#00A87B]"
+                className={inputClassName}
               />
             </div>
+
+            {/* Message field with character counter */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-[#202223]">
-                Message<span className="text-[#D72C0D] ml-1">*</span>
-              </label>
+              <div className="flex justify-between items-center">
+                <label className="text-sm font-medium text-[#202223]">
+                  Message<span className="text-[#D72C0D] ml-1">*</span>
+                </label>
+                <span
+                  className={`text-xs ${formState.message.length > MESSAGE_MAX_LENGTH ? 'text-[#D72C0D]' : 'text-[#6D7175]'}`}
+                >
+                  {formState.message.length}/{MESSAGE_MAX_LENGTH}
+                </span>
+              </div>
               <textarea
                 required
+                placeholder="Tell us more about your question or feedback..."
+                maxLength={MESSAGE_MAX_LENGTH}
                 value={formState.message}
                 onChange={(e) => setFormState((s) => ({ ...s, message: e.target.value }))}
-                className="px-4 py-3 border border-[#C9CCCF] rounded-lg text-base font-inherit min-h-[120px] resize-y transition-colors focus:outline-none focus:border-[#00A87B]"
+                className={`${inputClassName} min-h-[140px] resize-y`}
               />
             </div>
+
+            {/* Submit button - larger touch target */}
             <button
               type="submit"
               disabled={isSubmitting || isSuccess}
-              className="bg-[#00A87B] text-white px-6 py-3.5 rounded-lg text-base font-semibold cursor-pointer hover:bg-[#008060] transition-colors disabled:bg-[#C9CCCF] disabled:cursor-not-allowed"
+              className="w-full md:w-auto bg-[#00A87B] text-white px-8 py-4 rounded-xl text-lg font-semibold cursor-pointer hover:bg-[#008060] hover:shadow-lg transition-all duration-200 disabled:bg-[#C9CCCF] disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
-              {isSubmitting ? 'Sending...' : isSuccess ? 'Message Sent' : 'Send Message'}
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                  Sending...
+                </>
+              ) : isSuccess ? (
+                <>
+                  <CheckCircle className="w-5 h-5" />
+                  Message Sent
+                </>
+              ) : (
+                'Send Message'
+              )}
             </button>
 
             {/* Security indicator */}
