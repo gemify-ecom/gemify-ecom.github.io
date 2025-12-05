@@ -41,6 +41,7 @@ node_modules/*
 .serena/*
 .pnpm-store/*
 .github/*
+!.github/workflows/
 .dart_tool/*
 .idea/*
 .husky/*
