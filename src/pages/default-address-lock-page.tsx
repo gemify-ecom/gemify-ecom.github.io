@@ -165,74 +165,6 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
   );
 }
 
-interface PricingCardProps {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  highlighted?: boolean;
-  yearlyPrice?: string;
-}
-
-function PricingCard({
-  name,
-  price,
-  period,
-  description,
-  features,
-  highlighted = false,
-  yearlyPrice,
-}: PricingCardProps) {
-  return (
-    <div
-      className={`rounded-xl p-6 ${
-        highlighted
-          ? 'bg-gradient-to-br from-[#00A87B] to-[#008060] text-white shadow-lg scale-105'
-          : 'bg-white border border-gray-200'
-      }`}
-    >
-      <h3
-        className={`text-xl font-bold mb-2 ${highlighted ? 'text-white' : 'text-[#202223]'}`}
-      >
-        {name}
-      </h3>
-      <div className="mb-4">
-        <span
-          className={`text-3xl font-bold ${highlighted ? 'text-white' : 'text-[#202223]'}`}
-        >
-          {price}
-        </span>
-        <span className={`text-sm ${highlighted ? 'text-white/80' : 'text-[#616569]'}`}>
-          /{period}
-        </span>
-        {yearlyPrice && (
-          <p className={`text-xs mt-1 ${highlighted ? 'text-white/70' : 'text-[#616569]'}`}>
-            or {yearlyPrice}/year (save 17%)
-          </p>
-        )}
-      </div>
-      <p className={`text-sm mb-4 ${highlighted ? 'text-white/90' : 'text-[#616569]'}`}>
-        {description}
-      </p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-2 text-sm">
-            <Check
-              className={`w-4 h-4 mt-0.5 shrink-0 ${
-                highlighted ? 'text-white' : 'text-[#00A87B]'
-              }`}
-            />
-            <span className={highlighted ? 'text-white/90' : 'text-[#202223]'}>
-              {feature}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export function DefaultAddressLockPage() {
   return (
     <Layout>
@@ -358,53 +290,6 @@ export function DefaultAddressLockPage() {
               icon={<Check className="w-6 h-6" />}
               title="Privacy-First"
               description="We only store address IDs, never actual address content. Your customer data stays secure in Shopify."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-[#F6F6F7]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-[#202223] mb-4">
-            Simple, Order-Based Pricing
-          </h2>
-          <p className="text-center text-[#616569] mb-12 max-w-2xl mx-auto">
-            Pay only for what you use. Our pricing scales with your order volume.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <PricingCard
-              name="Free"
-              price="$0"
-              period="month"
-              description="Perfect for small stores"
-              features={['Up to 30 orders/month', 'Basic protection', 'Email support']}
-            />
-            <PricingCard
-              name="Basic"
-              price="$4.99"
-              period="month"
-              description="For growing businesses"
-              features={['Up to 100 orders/month', 'Full protection', 'Priority support']}
-              yearlyPrice="$49.90"
-            />
-            <PricingCard
-              name="Growth"
-              price="$24.99"
-              period="month"
-              description="For established stores"
-              features={['Up to 500 orders/month', 'Full protection', 'Priority support']}
-              highlighted
-              yearlyPrice="$249.90"
-            />
-            <PricingCard
-              name="Enterprise"
-              price="$99"
-              period="month"
-              description="For high-volume merchants"
-              features={['Unlimited orders', 'Full protection', 'Dedicated support']}
-              yearlyPrice="$990"
             />
           </div>
         </div>

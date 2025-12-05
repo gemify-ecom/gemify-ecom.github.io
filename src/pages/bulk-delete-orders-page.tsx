@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Filter, Trash2, AlertTriangle, Check, History, FileText, Shield } from 'lucide-react';
+import { Filter, Trash2, AlertTriangle, History, FileText, Shield } from 'lucide-react';
 import { Layout } from '../components/layout';
 
 interface FeatureCardProps {
@@ -16,67 +16,6 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
       </div>
       <h3 className="text-lg font-semibold text-[#202223] mb-2">{title}</h3>
       <p className="text-[#616569] text-sm leading-relaxed">{description}</p>
-    </div>
-  );
-}
-
-interface PricingCardProps {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  highlighted?: boolean;
-}
-
-function PricingCard({
-  name,
-  price,
-  period,
-  description,
-  features,
-  highlighted = false,
-}: PricingCardProps) {
-  return (
-    <div
-      className={`rounded-xl p-6 ${
-        highlighted
-          ? 'bg-gradient-to-br from-[#00A87B] to-[#008060] text-white shadow-lg scale-105'
-          : 'bg-white border border-gray-200'
-      }`}
-    >
-      <h3
-        className={`text-xl font-bold mb-2 ${highlighted ? 'text-white' : 'text-[#202223]'}`}
-      >
-        {name}
-      </h3>
-      <div className="mb-4">
-        <span
-          className={`text-3xl font-bold ${highlighted ? 'text-white' : 'text-[#202223]'}`}
-        >
-          {price}
-        </span>
-        <span className={`text-sm ${highlighted ? 'text-white/80' : 'text-[#616569]'}`}>
-          /{period}
-        </span>
-      </div>
-      <p className={`text-sm mb-4 ${highlighted ? 'text-white/90' : 'text-[#616569]'}`}>
-        {description}
-      </p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-2 text-sm">
-            <Check
-              className={`w-4 h-4 mt-0.5 shrink-0 ${
-                highlighted ? 'text-white' : 'text-[#00A87B]'
-              }`}
-            />
-            <span className={highlighted ? 'text-white/90' : 'text-[#202223]'}>
-              {feature}
-            </span>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
@@ -215,43 +154,6 @@ export function BulkDeleteOrdersPage() {
               icon={<Shield className="w-6 h-6" />}
               title="Safe & Reversible Preview"
               description="Preview orders before deletion. See exactly what will be deleted and confirm before proceeding."
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-[#202223] mb-4">
-            Simple Pricing
-          </h2>
-          <p className="text-center text-[#616569] mb-12 max-w-2xl mx-auto">
-            Start for free and upgrade as your needs grow.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <PricingCard
-              name="Free"
-              price="$0"
-              period="month"
-              description="Try it out"
-              features={['Delete up to 50 orders', 'Basic filters', 'Email support']}
-            />
-            <PricingCard
-              name="Pro"
-              price="$9.99"
-              period="month"
-              description="For active stores"
-              features={['Unlimited deletions', 'All filters', 'Job history', 'Priority support']}
-              highlighted
-            />
-            <PricingCard
-              name="Enterprise"
-              price="Custom"
-              period="month"
-              description="For large operations"
-              features={['Volume discounts', 'API access', 'Dedicated support', 'Custom filters']}
             />
           </div>
         </div>
