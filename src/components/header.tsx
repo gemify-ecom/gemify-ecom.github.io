@@ -15,6 +15,8 @@ export function Header({ showLogo = true }: HeaderProps) {
               <img
                 src="/resources/gemify.png"
                 alt="Gemify Logo"
+                width={40}
+                height={40}
                 className="w-full h-full object-contain"
               />
             </div>

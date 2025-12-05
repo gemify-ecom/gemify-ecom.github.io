@@ -22,7 +22,7 @@ function HeroSection() {
         </h1>
 
         {/* Subheading */}
-        <p className="text-xl md:text-2xl text-[#6D7175] mb-10 max-w-[700px] mx-auto leading-relaxed animate-fade-in-up-delay-2">
+        <p className="text-xl md:text-2xl text-[#616569] mb-10 max-w-[700px] mx-auto leading-relaxed animate-fade-in-up-delay-2">
           Simple, powerful tools built by developers who understand merchant needs. No fluff, just results.
         </p>
 
@@ -43,7 +43,7 @@ function HeroSection() {
         </div>
 
         {/* Trust badge */}
-        <div className="flex items-center justify-center gap-2 mt-8 text-sm text-[#6D7175] animate-fade-in-up-delay-3">
+        <div className="flex items-center justify-center gap-2 mt-8 text-sm text-[#616569] animate-fade-in-up-delay-3">
           <div className="flex items-center gap-1 text-[#F5C518]">
             <Star className="w-4 h-4 fill-current" />
             <Star className="w-4 h-4 fill-current" />
@@ -51,7 +51,7 @@ function HeroSection() {
             <Star className="w-4 h-4 fill-current" />
             <Star className="w-4 h-4 fill-current" />
           </div>
-          <span className="text-[#6D7175]">5-star rated on Shopify App Store</span>
+          <span className="text-[#616569]">5-star rated on Shopify App Store</span>
         </div>
       </div>
     </section>
@@ -105,7 +105,14 @@ function AppCard({
 
       <div className="flex items-center gap-6 mb-6 md:flex-col md:text-center">
         <div className={`w-24 h-24 rounded-2xl shrink-0 overflow-hidden shadow-sm ${isComingSoon ? 'opacity-80' : ''}`}>
-          <img src={icon} alt={title} className="w-full h-full object-cover" />
+          <img
+            src={icon}
+            alt={title}
+            width={96}
+            height={96}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div>
           <div className="flex items-center gap-3 md:justify-center">
@@ -166,7 +173,7 @@ function AppsSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
             Our Shopify Apps
           </h2>
-          <p className="text-lg text-[#6D7175] max-w-[600px] mx-auto">
+          <p className="text-lg text-[#616569] max-w-[600px] mx-auto">
             Simple, powerful tools to streamline your store operations
           </p>
         </div>
@@ -202,7 +209,7 @@ function AppsSection() {
 
         {/* Mid-page CTA */}
         <div className="text-center mt-12">
-          <p className="text-lg text-[#6D7175] mb-4">More apps in development</p>
+          <p className="text-lg text-[#616569] mb-4">More apps in development</p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 text-[#00A87B] font-semibold hover:text-[#008060] transition-colors"
@@ -252,7 +259,7 @@ function TestimonialCard({ quote, name, role, rating = 5 }: TestimonialCardProps
         </div>
         <div>
           <div className="font-semibold text-[#202223]">{name}</div>
-          <div className="text-sm text-[#6D7175]">{role}</div>
+          <div className="text-sm text-[#616569]">{role}</div>
         </div>
       </div>
     </div>
@@ -268,7 +275,7 @@ function TestimonialsSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
             What Merchants Say
           </h2>
-          <p className="text-lg text-[#6D7175] max-w-[600px] mx-auto">
+          <p className="text-lg text-[#616569] max-w-[600px] mx-auto">
             Don't just take our word for it
           </p>
         </div>
@@ -307,7 +314,7 @@ function BenefitCard({ icon, title, description, delay = '' }: BenefitCardProps)
         <div className="text-white">{icon}</div>
       </div>
       <h3 className="font-heading text-xl font-bold mb-3 text-[#202223]">{title}</h3>
-      <p className="text-base leading-relaxed text-[#6D7175]">{description}</p>
+      <p className="text-base leading-relaxed text-[#616569]">{description}</p>
     </div>
   );
 }
@@ -364,17 +371,17 @@ function AboutSection() {
           About Gemify
         </h2>
         <div className="max-w-[800px] mx-auto text-center">
-          <p className="text-lg leading-relaxed text-[#6D7175] mb-6">
+          <p className="text-lg leading-relaxed text-[#616569] mb-6">
             Gemify was founded by a team of experienced Shopify developers who understand
             the challenges merchants face every day. We&apos;re passionate about creating
             simple, powerful tools that solve real problems.
           </p>
-          <p className="text-lg leading-relaxed text-[#6D7175] mb-6">
+          <p className="text-lg leading-relaxed text-[#616569] mb-6">
             Our mission is to build apps that are intuitive, reliable, and genuinely helpful.
             No bloated features and no confusing interfaces. Just clean, efficient solutions
             that help your business thrive.
           </p>
-          <p className="text-lg leading-relaxed text-[#6D7175]">
+          <p className="text-lg leading-relaxed text-[#616569]">
             Every app we create is built with the same attention to detail and commitment to
             quality that we&apos;d demand for our own stores. When you choose Gemify, you&apos;re
             choosing a partner dedicated to your success.
@@ -441,7 +448,7 @@ function ContactSection() {
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
             Get In Touch
           </h2>
-          <div className="flex items-center justify-center gap-2 text-[#6D7175]">
+          <div className="flex items-center justify-center gap-2 text-[#616569]">
             <Clock className="w-4 h-4" />
             <span>We typically respond within 24 hours</span>
           </div>
@@ -521,7 +528,7 @@ function ContactSection() {
                   Message<span className="text-[#D72C0D] ml-1">*</span>
                 </label>
                 <span
-                  className={`text-xs ${formState.message.length > MESSAGE_MAX_LENGTH ? 'text-[#D72C0D]' : 'text-[#6D7175]'}`}
+                  className={`text-xs ${formState.message.length > MESSAGE_MAX_LENGTH ? 'text-[#D72C0D]' : 'text-[#616569]'}`}
                 >
                   {formState.message.length}/{MESSAGE_MAX_LENGTH}
                 </span>
@@ -558,7 +565,7 @@ function ContactSection() {
             </button>
 
             {/* Security indicator */}
-            <div className="flex items-center justify-center gap-2 text-sm text-[#6D7175]">
+            <div className="flex items-center justify-center gap-2 text-sm text-[#616569]">
               <Lock className="w-4 h-4" />
               <span>Your information is secure and will never be shared</span>
             </div>
@@ -572,6 +579,13 @@ function ContactSection() {
 export function HomePage() {
   return (
     <div>
+      {/* Skip to main content link for keyboard users */}
+      <a
+        href="#apps"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#00A87B] focus:text-white focus:rounded-lg focus:no-underline"
+      >
+        Skip to main content
+      </a>
       <HeroSection />
       <AppsSection />
       <TestimonialsSection />

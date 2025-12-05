@@ -32,6 +32,8 @@ export function Footer() {
                 <img
                   src="/resources/gemify.png"
                   alt="Gemify"
+                  width={32}
+                  height={32}
                   className="w-8 h-8"
                 />
                 <span className="text-xl font-bold">Gemify</span>
@@ -86,7 +88,7 @@ export function Footer() {
 
           {/* Copyright */}
           <div className="pt-8 border-t border-[#374151] text-center">
-            <p className="text-[#6D7175] text-sm">
+            <p className="text-[#616569] text-sm">
               &copy; 2025 Gemify. All rights reserved.
             </p>
           </div>
