@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { HomePage } from './pages/home-page';
 import { FaqPage } from './pages/faq-page';
 import { PrivacyPolicyPage } from './pages/privacy-policy-page';
@@ -8,6 +8,21 @@ import { DefaultAddressLockScreencastPage } from './pages/default-address-lock-s
 import { BulkDeleteOrdersPage } from './pages/bulk-delete-orders-page';
 import { BulkDeleteOrdersScreencastPage } from './pages/bulk-delete-orders-screencast-page';
 import { Footer } from './components/footer';
+
+// Redirect .html URLs to clean URLs
+function HtmlExtensionRedirect() {
+  const { pathname, search, hash } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (pathname.endsWith('.html')) {
+      const cleanPath = pathname.slice(0, -5); // Remove .html
+      navigate(cleanPath + search + hash, { replace: true });
+    }
+  }, [pathname, search, hash, navigate]);
+
+  return null;
+}
 
 // Scroll to hash anchor on page load and navigation
 function ScrollToHash() {
@@ -31,6 +46,7 @@ function ScrollToHash() {
 function App() {
   return (
     <BrowserRouter>
+      <HtmlExtensionRedirect />
       <ScrollToHash />
       <div className="min-h-screen flex flex-col">
         <Routes>
