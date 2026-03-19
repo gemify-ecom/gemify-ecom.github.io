@@ -332,6 +332,18 @@ function TestimonialsSection() {
       name: "Michael T.",
       role: "Shopify Plus Merchant",
     },
+    {
+      quote: "Great app and even better customer support! The app works smoothly and does exactly what it promises. The support team is extremely responsive, professional, and helpful. Highly recommended!",
+      name: "STRIKE SPORTS",
+      role: "Shopify Merchant",
+      highlight: "Even better customer support",
+    },
+    {
+      quote: "Sean has been exceptional and went above and beyond to clear all orders from the background instantly. Highly recommended, top support!",
+      name: "MooMenn",
+      role: "Shopify Merchant",
+      highlight: "Above and beyond",
+    },
   ];
 
   return (
