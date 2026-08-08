@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
-import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckCircle, Trash2, MapPin, ArrowRight, Sparkles } from 'lucide-react';
+import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckCircle, Trash2, MapPin, ArrowRight, Sparkles, Bot } from 'lucide-react';
 
 function HeroSection() {
   return (
@@ -235,6 +235,22 @@ function AppsSection() {
             buttonHref="https://apps.shopify.com/default-address-lock"
             detailsLink="/apps/default-address-lock"
           />
+          {/* Third card centered under the two-column grid */}
+          <div className="md:col-span-2 md:max-w-[calc(50%-0.75rem)] md:mx-auto md:w-full">
+            <AppCard
+              icon="/resources/llms_txt.png"
+              title="LLMs.txt"
+              tagline="Make your store readable to ChatGPT, Claude, and Gemini"
+              features={[
+                { icon: <Bot className="w-full h-full" />, text: 'Generate llms.txt and llms-full.txt in one click' },
+                { icon: <CheckCircle className="w-full h-full" />, text: 'Pick which products, collections, pages, and articles to include' },
+                { icon: <Sparkles className="w-full h-full" />, text: 'Served natively by Shopify at /llms.txt, no extra hosting' },
+              ]}
+              buttonText="Install Free"
+              buttonHref="https://llms-full-txt.fly.dev/"
+              detailsLink="/apps/llms-txt"
+            />
+          </div>
         </div>
 
       </div>
@@ -328,9 +344,11 @@ function TestimonialsSection() {
       highlight: "8 hours → 5 minutes",
     },
     {
-      quote: "Finally, apps that just work without complicated setup. The support team is incredibly responsive too.",
-      name: "Michael T.",
-      role: "Shopify Plus Merchant",
+      quote: "Great App. Needed to Remove imported orders from Amazon which was messing with Analytics. Got in Touch with Shopify Support where they said Couldn't Remove Fulfilled orders. Then used this app and it worked like magic. Thanks to the whole team at GEMIFY.",
+      name: "YuBi Bar",
+      role: "Shopify Merchant",
+      url: "https://apps.shopify.com/reviews/2313455",
+      highlight: "Worked like magic",
     },
     {
       quote: "Great app and even better customer support! The app works smoothly and does exactly what it promises. The support team is extremely responsive, professional, and helpful. Highly recommended!",

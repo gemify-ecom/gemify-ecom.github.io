@@ -7,6 +7,7 @@ import { DefaultAddressLockPage } from './pages/default-address-lock-page';
 import { DefaultAddressLockScreencastPage } from './pages/default-address-lock-screencast-page';
 import { BulkDeleteOrdersPage } from './pages/bulk-delete-orders-page';
 import { BulkDeleteOrdersScreencastPage } from './pages/bulk-delete-orders-screencast-page';
+import { LlmsTxtPage } from './pages/llms-txt-page';
 import { Footer } from './components/footer';
 
 // Redirect .html URLs to clean URLs
@@ -65,6 +66,7 @@ function App() {
           <Route path="/apps/default-address-lock/screencast" element={<DefaultAddressLockScreencastPage />} />
           <Route path="/apps/bulk-delete-orders" element={<BulkDeleteOrdersPage />} />
           <Route path="/apps/bulk-delete-orders/screencast" element={<BulkDeleteOrdersScreencastPage />} />
+          <Route path="/apps/llms-txt" element={<LlmsTxtPage />} />
         </Routes>
       </div>
     </BrowserRouter>

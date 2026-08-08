@@ -51,7 +51,9 @@ src/
 │   ├── home-page.tsx
 │   ├── faq-page.tsx
 │   ├── privacy-policy-page.tsx
-│   └── default-address-lock-page.tsx
+│   ├── bulk-delete-orders-page.tsx
+│   ├── default-address-lock-page.tsx
+│   └── llms-txt-page.tsx
 ├── App.tsx             # Routing setup
 ├── main.tsx            # Entry point
 └── index.css           # Global styles + tokens
@@ -66,7 +68,9 @@ src/
 | `/` | Home | Landing page with 7 sections |
 | `/faq` | FAQ | 34 Q&As across 10 categories |
 | `/privacy-policy` | Privacy | Legal compliance + data handling |
+| `/apps/bulk-delete-orders` | App Detail | Bulk Delete Orders features + install CTA |
 | `/apps/default-address-lock` | App Detail | Product features, pricing, testimonials |
+| `/apps/llms-txt` | App Detail | LLMs.txt features, how it works, install CTA |
 
 ---
 
@@ -85,7 +89,7 @@ npm run preview   # Preview production build locally
 
 ### Home Page
 - **Hero Section** - Social proof badge, responsive headline, dual CTAs
-- **Featured Apps** - 2 app cards (Default Address Lock, Bulk Delete Orders)
+- **Featured Apps** - 3 app cards (Bulk Delete Orders, Default Address Lock, LLMs.txt)
 - **Testimonials** - Merchant quotes demonstrating trust
 - **Why Choose** - 4 benefits with Lucide icons
 - **About** - Company mission & expertise
