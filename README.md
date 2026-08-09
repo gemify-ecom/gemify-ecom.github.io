@@ -69,8 +69,11 @@ src/
 | `/faq` | FAQ | 34 Q&As across 10 categories |
 | `/privacy-policy` | Privacy | Legal compliance + data handling |
 | `/apps/bulk-delete-orders` | App Detail | Bulk Delete Orders features + install CTA |
+| `/apps/bulk-delete-orders/screencast` | Screencast | Bulk Delete Orders demo video |
 | `/apps/default-address-lock` | App Detail | Product features, pricing, testimonials |
+| `/apps/default-address-lock/screencast` | Screencast | Default Address Lock demo video |
 | `/apps/llms-txt` | App Detail | LLMs.txt features, how it works, install CTA |
+| `/apps/llms-txt/screencast` | Screencast | LLMs.txt demo video |
 
 ---
 

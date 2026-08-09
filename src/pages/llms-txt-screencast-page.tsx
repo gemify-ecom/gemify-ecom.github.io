@@ -1,7 +1,7 @@
 import { Layout } from '../components/layout';
 import { useNoindexMeta } from '../hooks/use-noindex-meta';
 
-export function DefaultAddressLockScreencastPage() {
+export function LlmsTxtScreencastPage() {
   useNoindexMeta();
 
   return (
@@ -9,7 +9,7 @@ export function DefaultAddressLockScreencastPage() {
       <section className="py-16 px-6 bg-[#F6F6F7] min-h-[80vh]">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-[#202223] mb-2 text-center">
-            Default Address Lock
+            LLMs.txt
           </h1>
           <p className="text-[#616569] text-center mb-8">Screencast Demo</p>
 
@@ -22,7 +22,7 @@ export function DefaultAddressLockScreencastPage() {
               playsInline
               className="w-full"
             >
-              <source src="/resources/DAL_Screencast.mp4" type="video/mp4" />
+              <source src="/resources/LF_Screencast.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

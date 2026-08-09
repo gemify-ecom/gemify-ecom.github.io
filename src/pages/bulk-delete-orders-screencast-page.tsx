@@ -1,6 +1,9 @@
 import { Layout } from '../components/layout';
+import { useNoindexMeta } from '../hooks/use-noindex-meta';
 
 export function BulkDeleteOrdersScreencastPage() {
+  useNoindexMeta();
+
   return (
     <Layout showFooterCTA={false}>
       <section className="py-16 px-6 bg-[#F6F6F7] min-h-[80vh]">
