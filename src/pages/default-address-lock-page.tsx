@@ -1,12 +1,26 @@
-import { Link } from 'react-router-dom';
 import { Home, Gift, AlertTriangle, Shield, Check, X, ArrowDown } from 'lucide-react';
 import { Layout } from '../components/layout';
+import { useTranslations } from '../i18n/use-locale';
+import { LocalizedLink } from '../i18n/localized-link';
+import { interpolate, renderTemplate } from '../i18n/rich-text';
+
+const APP_STORE_URL = 'https://apps.shopify.com/default-address-lock';
+
+/** Address labels A and B are rendered as coloured markers inside the sentences. */
+const addressA = <span className="text-blue-600 font-bold">A</span>;
+const addressB = <span className="text-purple-600 font-bold">B</span>;
+const boldB = <span className="font-bold">B</span>;
+const boldA = <span className="font-bold">A</span>;
 
 function AddressFlowDiagram() {
+  const { defaultAddressLock } = useTranslations('appPages');
+  const t = defaultAddressLock.diagram;
+  const stepLabel = (number: number) => interpolate(t.stepLabel, { number });
+
   return (
     <div className="bg-gray-50 p-8">
       <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-        Default Address Lock
+        {t.heading}
       </h2>
 
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -14,7 +28,7 @@ function AddressFlowDiagram() {
         <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-red-100">
           <div className="flex items-center gap-2 mb-6">
             <X className="w-6 h-6 text-red-500" />
-            <h3 className="text-xl font-semibold text-red-600">Without Our App</h3>
+            <h3 className="text-xl font-semibold text-red-600">{t.withoutApp}</h3>
           </div>
 
           <div className="space-y-4">
@@ -24,8 +38,8 @@ function AddressFlowDiagram() {
                 <Home className="w-5 h-5 text-blue-600" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Step 1</p>
-                <p className="font-medium">Default address is <span className="text-blue-600 font-bold">A</span> (Your home)</p>
+                <p className="text-sm text-gray-500">{stepLabel(1)}</p>
+                <p className="font-medium">{renderTemplate(t.step1, { a: addressA })}</p>
               </div>
             </div>
 
@@ -37,8 +51,8 @@ function AddressFlowDiagram() {
                 <Gift className="w-5 h-5 text-purple-600" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Step 2</p>
-                <p className="font-medium">You ship a gift to <span className="text-purple-600 font-bold">B</span> (Friend&apos;s address)</p>
+                <p className="text-sm text-gray-500">{stepLabel(2)}</p>
+                <p className="font-medium">{renderTemplate(t.step2, { b: addressB })}</p>
               </div>
             </div>
 
@@ -50,8 +64,10 @@ function AddressFlowDiagram() {
                 <AlertTriangle className="w-5 h-5 text-red-600" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Step 3</p>
-                <p className="font-medium text-red-700">Shopify changes default to <span className="font-bold">B</span></p>
+                <p className="text-sm text-gray-500">{stepLabel(3)}</p>
+                <p className="font-medium text-red-700">
+                  {renderTemplate(t.step3Without, { b: boldB })}
+                </p>
               </div>
             </div>
 
@@ -60,10 +76,10 @@ function AddressFlowDiagram() {
             {/* Result */}
             <div className="p-4 bg-red-100 rounded-xl border-2 border-red-300">
               <p className="text-center font-semibold text-red-700">
-                Default address is now wrong!
+                {t.resultWithoutTitle}
               </p>
               <p className="text-center text-sm text-red-600 mt-1">
-                Future orders may ship to the wrong place
+                {t.resultWithoutBody}
               </p>
             </div>
           </div>
@@ -73,7 +89,7 @@ function AddressFlowDiagram() {
         <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-green-100">
           <div className="flex items-center gap-2 mb-6">
             <Check className="w-6 h-6 text-green-500" />
-            <h3 className="text-xl font-semibold text-green-600">With Our App</h3>
+            <h3 className="text-xl font-semibold text-green-600">{t.withApp}</h3>
           </div>
 
           <div className="space-y-4">
@@ -83,8 +99,8 @@ function AddressFlowDiagram() {
                 <Home className="w-5 h-5 text-blue-600" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Step 1</p>
-                <p className="font-medium">Default address is <span className="text-blue-600 font-bold">A</span> (Your home)</p>
+                <p className="text-sm text-gray-500">{stepLabel(1)}</p>
+                <p className="font-medium">{renderTemplate(t.step1, { a: addressA })}</p>
               </div>
             </div>
 
@@ -96,8 +112,8 @@ function AddressFlowDiagram() {
                 <Gift className="w-5 h-5 text-purple-600" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Step 2</p>
-                <p className="font-medium">You ship a gift to <span className="text-purple-600 font-bold">B</span> (Friend&apos;s address)</p>
+                <p className="text-sm text-gray-500">{stepLabel(2)}</p>
+                <p className="font-medium">{renderTemplate(t.step2, { b: addressB })}</p>
               </div>
             </div>
 
@@ -109,8 +125,10 @@ function AddressFlowDiagram() {
                 <Shield className="w-5 h-5 text-green-600" />
               </div>
               <div>
-                <p className="text-sm text-gray-500">Step 3</p>
-                <p className="font-medium text-green-700">App detects change &amp; reverts to <span className="font-bold">A</span></p>
+                <p className="text-sm text-gray-500">{stepLabel(3)}</p>
+                <p className="font-medium text-green-700">
+                  {renderTemplate(t.step3With, { a: boldA })}
+                </p>
               </div>
             </div>
 
@@ -119,10 +137,10 @@ function AddressFlowDiagram() {
             {/* Result */}
             <div className="p-4 bg-green-100 rounded-xl border-2 border-green-300">
               <p className="text-center font-semibold text-green-700">
-                Default address stays correct!
+                {t.resultWithTitle}
               </p>
               <p className="text-center text-sm text-green-600 mt-1">
-                Your home address remains protected
+                {t.resultWithBody}
               </p>
             </div>
           </div>
@@ -131,15 +149,15 @@ function AddressFlowDiagram() {
 
       {/* Summary */}
       <div className="max-w-2xl mx-auto mt-8 p-6 bg-white rounded-xl shadow-md">
-        <h3 className="font-semibold text-gray-800 mb-3 text-center">What We Do</h3>
+        <h3 className="font-semibold text-gray-800 mb-3 text-center">{t.summaryHeading}</h3>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full">
             <X className="w-4 h-4 text-gray-400" />
-            <span className="text-sm text-gray-600">We don&apos;t change order addresses</span>
+            <span className="text-sm text-gray-600">{t.summaryNegative}</span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full">
             <Check className="w-4 h-4 text-green-600" />
-            <span className="text-sm text-green-700">We protect your default address</span>
+            <span className="text-sm text-green-700">{t.summaryPositive}</span>
           </div>
         </div>
       </div>
@@ -166,6 +184,15 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 }
 
 export function DefaultAddressLockPage() {
+  const { defaultAddressLock: page } = useTranslations('appPages');
+  const { actions } = useTranslations('common');
+
+  const featureIcons = [
+    <Shield className="w-6 h-6" />,
+    <Home className="w-6 h-6" />,
+    <Check className="w-6 h-6" />,
+  ];
+
   return (
     <Layout showFooterCTA={false}>
       {/* Hero Section */}
@@ -174,32 +201,31 @@ export function DefaultAddressLockPage() {
           <div className="w-24 h-24 mx-auto mb-6">
             <img
               src="/resources/default_address_lock.png"
-              alt="Default Address Lock"
+              alt={page.title}
               className="w-full h-full object-contain rounded-2xl shadow-lg"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-[#202223] mb-4">
-            Default Address Lock
+            {page.title}
           </h1>
           <p className="text-xl text-[#616569] mb-6 max-w-2xl mx-auto">
-            Prevent Shopify from overwriting your customers&apos; default addresses when they
-            ship orders to different locations.
+            {page.tagline}
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <a
-              href="https://apps.shopify.com/default-address-lock"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#00A87B] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#008060] hover:shadow-lg transition-all no-underline"
             >
-              Install Free
+              {actions.installFree}
             </a>
-            <Link
+            <LocalizedLink
               to="/#contact"
               className="bg-white border-2 border-[#00A87B] text-[#00A87B] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#00A87B] hover:text-white transition-colors no-underline"
             >
-              Contact Us
-            </Link>
+              {actions.contactUs}
+            </LocalizedLink>
           </div>
         </div>
       </section>
@@ -208,55 +234,24 @@ export function DefaultAddressLockPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-[#202223] mb-4">
-            The Problem
+            {page.problemHeading}
           </h2>
           <p className="text-center text-[#616569] mb-12 max-w-2xl mx-auto">
-            Since 2015, Shopify has automatically changed customers&apos; default addresses
-            whenever they place an order with a different shipping address. This causes
-            major headaches for merchants.
+            {page.problemIntro}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-red-700 mb-3 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5" />
-                Gift Stores
-              </h3>
-              <p className="text-red-600 text-sm">
-                Customers who send gifts to friends and family find their default address
-                constantly changing to gift recipients&apos; addresses.
-              </p>
-            </div>
-            <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-red-700 mb-3 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5" />
-                B2B Merchants
-              </h3>
-              <p className="text-red-600 text-sm">
-                Business buyers who ship to their clients end up with incorrect default
-                addresses, disrupting future orders.
-              </p>
-            </div>
-            <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-red-700 mb-3 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5" />
-                CRM-Integrated Shops
-              </h3>
-              <p className="text-red-600 text-sm">
-                Stores relying on accurate customer data for marketing or fulfillment face
-                data integrity issues.
-              </p>
-            </div>
-            <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-red-700 mb-3 flex items-center gap-2">
-                <AlertTriangle className="w-5 h-5" />
-                Subscription Businesses
-              </h3>
-              <p className="text-red-600 text-sm">
-                One-time gift shipments can override the subscription delivery address,
-                causing recurring shipments to go to the wrong place.
-              </p>
-            </div>
+            {page.problems.map((problem) => (
+              <div key={problem.title} className="bg-red-50 border border-red-200 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-red-700 mb-3 flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5" />
+                  {problem.title}
+                </h3>
+                <p className="text-red-600 text-sm">
+                  {problem.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -268,29 +263,21 @@ export function DefaultAddressLockPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-[#202223] mb-4">
-            How It Works
+            {page.howItWorksHeading}
           </h2>
           <p className="text-center text-[#616569] mb-12 max-w-2xl mx-auto">
-            Our app intelligently monitors address changes and automatically restores the
-            original default address when Shopify tries to overwrite it.
+            {page.howItWorksIntro}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <FeatureCard
-              icon={<Shield className="w-6 h-6" />}
-              title="Smart Detection"
-              description="Distinguishes between order-triggered changes and intentional manual updates. Manual changes are preserved."
-            />
-            <FeatureCard
-              icon={<Home className="w-6 h-6" />}
-              title="Automatic Restoration"
-              description="When Shopify overwrites a default address after an order, we automatically restore the original."
-            />
-            <FeatureCard
-              icon={<Check className="w-6 h-6" />}
-              title="Privacy-First"
-              description="We only store address IDs, never actual address content. Your customer data stays secure in Shopify."
-            />
+            {page.features.map((feature, index) => (
+              <FeatureCard
+                key={feature.title}
+                icon={featureIcons[index]}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -299,27 +286,26 @@ export function DefaultAddressLockPage() {
       <section className="py-16 px-6 bg-gradient-to-br from-[#00A87B] to-[#008060]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Protect Your Customer Addresses?
+            {page.ctaHeading}
           </h2>
           <p className="text-white/90 mb-8">
-            Install Default Address Lock today and stop Shopify from overwriting your
-            customers&apos; default addresses. Free plan available for small stores.
+            {page.ctaBody}
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <a
-              href="https://apps.shopify.com/default-address-lock"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[#00A87B] px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-lg transition-shadow no-underline"
             >
-              Install Free on Shopify
+              {actions.installFreeOnShopify}
             </a>
-            <Link
+            <LocalizedLink
               to="/faq#default-address-lock-app"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors no-underline"
             >
-              Read FAQ
-            </Link>
+              {actions.readFaq}
+            </LocalizedLink>
           </div>
         </div>
       </section>

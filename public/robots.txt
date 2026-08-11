@@ -2,4 +2,7 @@ User-agent: *
 Disallow: /apps/bulk-delete-orders/screencast
 Disallow: /apps/default-address-lock/screencast
 Disallow: /apps/llms-txt/screencast
+Disallow: /ja/apps/bulk-delete-orders/screencast
+Disallow: /ja/apps/default-address-lock/screencast
+Disallow: /ja/apps/llms-txt/screencast
 Allow: /

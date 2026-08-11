@@ -45,8 +45,22 @@ npm run lint
 src/
 ├── components/          # Reusable UI components
 │   ├── header.tsx      # Navigation bar
-│   ├── footer.tsx      # Footer
+│   ├── footer.tsx      # Footer (contains the language switcher)
+│   ├── language-switcher.tsx
+│   ├── screencast-page-layout.tsx
 │   └── layout.tsx      # Page wrapper
+├── i18n/               # Localization (English + Japanese)
+│   ├── locales.ts             # Supported locales
+│   ├── locale-paths.ts        # /ja prefix helpers
+│   ├── locale-detection.ts    # ?locale=, storage, browser language
+│   ├── locale-context.ts      # Locale context object
+│   ├── locale-provider.tsx    # Reads the locale from the URL
+│   ├── locale-url-sync.tsx    # Redirects to the canonical locale URL
+│   ├── use-locale.ts          # useLocale / useTranslations / useLocalePath
+│   ├── use-document-locale.ts # <html lang>, title, canonical, hreflang
+│   ├── localized-link.tsx     # Locale-aware <Link>
+│   ├── rich-text.tsx          # {placeholder} interpolation
+│   └── translations/          # en/ and ja/ dictionaries per page
 ├── pages/              # Page-level components
 │   ├── home-page.tsx
 │   ├── faq-page.tsx
@@ -54,7 +68,7 @@ src/
 │   ├── bulk-delete-orders-page.tsx
 │   ├── default-address-lock-page.tsx
 │   └── llms-txt-page.tsx
-├── App.tsx             # Routing setup
+├── App.tsx             # Routing setup (each page registered per locale)
 ├── main.tsx            # Entry point
 └── index.css           # Global styles + tokens
 ```
@@ -74,6 +88,31 @@ src/
 | `/apps/default-address-lock/screencast` | Screencast | Default Address Lock demo video |
 | `/apps/llms-txt` | App Detail | LLMs.txt features, how it works, install CTA |
 | `/apps/llms-txt/screencast` | Screencast | LLMs.txt demo video |
+
+Every route also exists under a `/ja` prefix (`/ja/faq`, `/ja/apps/llms-txt`, …) for the Japanese version.
+
+---
+
+## Localization
+
+The site ships in English (default) and Japanese.
+
+| Mechanism | Behavior |
+|-----------|----------|
+| URL prefix | `/faq` is English, `/ja/faq` is Japanese. The URL is the source of truth. |
+| `?locale=ja` | Forces a language on any URL, remembers the choice, then redirects to the canonical `/ja/...` URL. `?locale=en` does the reverse. |
+| Browser language | On the first page of a visit to an unprefixed URL, `navigator.languages` decides the language. |
+| Saved choice | A switcher click or `?locale=` is stored in `localStorage` and wins over the browser language on later visits. |
+| Switcher | Footer bottom bar; switches language while staying on the same page. |
+| SEO | `<html lang>`, `<title>`, description, canonical, and `hreflang` (`en`, `ja`, `x-default`) are set per route at runtime. |
+
+Copy lives in `src/i18n/translations/{en,ja}/`, one file per page. The English
+dictionaries define the shape, so a missing or extra Japanese key is a type
+error. Strings can carry `{placeholder}` tokens that components replace with
+links or emphasised text.
+
+Merchant testimonials on the home page are quoted verbatim from the Shopify App
+Store and stay in English in both languages.
 
 ---
 

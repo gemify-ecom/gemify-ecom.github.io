@@ -1,8 +1,12 @@
 import { useState, type FormEvent } from 'react';
-import { Link } from 'react-router-dom';
 import { Store, Shield, MessageCircle, Quote, Lock, Star, Loader2, Clock, CheckCircle, Trash2, MapPin, ArrowRight, Sparkles, Bot } from 'lucide-react';
+import { useTranslations } from '../i18n/use-locale';
+import { LocalizedLink } from '../i18n/localized-link';
+import { interpolate, renderTemplate } from '../i18n/rich-text';
 
 function HeroSection() {
+  const { hero } = useTranslations('home');
+
   return (
     <section className="relative text-center py-12 md:py-16 lg:py-20 px-6 overflow-hidden animate-fade-in-up">
       {/* Decorative gradient orbs - hidden from screen readers */}
@@ -13,17 +17,17 @@ function HeroSection() {
         {/* Social proof badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 bg-[#E8F5F1] text-[#00A87B] rounded-full text-sm font-medium animate-fade-in-up-delay-1">
           <span className="w-2 h-2 bg-[#00A87B] rounded-full animate-pulse" />
-          Trusted by 500+ Shopify merchants
+          {hero.socialProof}
         </div>
 
         {/* Headline */}
         <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-[#202223] leading-[1.05] tracking-tight animate-fade-in-up-delay-1">
-          Apps That Actually Help Your Shopify Store
+          {hero.headline}
         </h1>
 
         {/* Subheading */}
         <p className="text-lg md:text-xl text-[#616569] mb-8 max-w-[700px] mx-auto leading-relaxed animate-fade-in-up-delay-2">
-          Simple, powerful tools built by developers who understand merchant needs. No fluff, just results.
+          {hero.subheadline}
         </p>
 
         {/* Primary CTA */}
@@ -32,13 +36,13 @@ function HeroSection() {
             href="#apps"
             className="inline-flex items-center justify-center px-8 py-4 bg-[#00A87B] text-white text-lg font-semibold rounded-xl shadow-lg shadow-[#00A87B]/25 hover:bg-[#008060] hover:shadow-xl hover:shadow-[#00A87B]/30 hover:-translate-y-0.5 transition-all duration-200"
           >
-            Explore Our Apps
+            {hero.primaryCta}
           </a>
           <a
             href="#contact"
             className="inline-flex items-center justify-center px-8 py-4 text-[#00A87B] text-lg font-semibold hover:text-[#008060] transition-colors"
           >
-            Get in Touch →
+            {hero.secondaryCta}
           </a>
         </div>
 
@@ -51,7 +55,7 @@ function HeroSection() {
             <Star className="w-4 h-4 fill-current" />
             <Star className="w-4 h-4 fill-current" />
           </div>
-          <span className="text-[#616569]">5-star rated on Shopify App Store</span>
+          <span className="text-[#616569]">{hero.ratingBadge}</span>
         </div>
       </div>
     </section>
@@ -87,6 +91,9 @@ function AppCard({
   isComingSoon = false,
   accentColor = '#00A87B',
 }: AppCardProps) {
+  const { apps } = useTranslations('home');
+  const { actions } = useTranslations('common');
+
   return (
     <div
       className={`group relative bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[#E1E3E5] cursor-pointer
@@ -103,7 +110,7 @@ function AppCard({
       {/* Coming Soon badge */}
       {isComingSoon && (
         <div className="absolute top-4 right-4 px-3 py-1.5 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full border border-amber-200">
-          Coming Soon
+          {apps.comingSoon}
         </div>
       )}
 
@@ -131,7 +138,9 @@ function AppCard({
                 </div>
               )}
               {installs && (
-                <span className="text-xs text-[#616569]">{installs} installs</span>
+                <span className="text-xs text-[#616569]">
+                  {interpolate(apps.installs, { count: installs })}
+                </span>
               )}
             </div>
           </div>
@@ -172,14 +181,14 @@ function AppCard({
             </a>
           )}
           {detailsLink && (
-            <Link
+            <LocalizedLink
               to={detailsLink}
               className="inline-flex items-center gap-1.5 text-[#00A87B] px-4 py-2.5 text-sm font-semibold
                 hover:text-[#008060] hover:bg-[#E8F5F1] rounded-xl
                 transition-all duration-200 no-underline"
             >
-              Learn More
-            </Link>
+              {actions.learnMore}
+            </LocalizedLink>
           )}
         </div>
       </div>
@@ -188,6 +197,29 @@ function AppCard({
 }
 
 function AppsSection() {
+  const { apps } = useTranslations('home');
+  const { actions } = useTranslations('common');
+
+  const bulkDeleteFeatureIcons = [
+    <Trash2 className="w-full h-full" />,
+    <CheckCircle className="w-full h-full" />,
+    <Clock className="w-full h-full" />,
+  ];
+  const addressLockFeatureIcons = [
+    <MapPin className="w-full h-full" />,
+    <Shield className="w-full h-full" />,
+    <Store className="w-full h-full" />,
+  ];
+  const llmsTxtFeatureIcons = [
+    <Bot className="w-full h-full" />,
+    <CheckCircle className="w-full h-full" />,
+    <Sparkles className="w-full h-full" />,
+  ];
+
+  /** Pairs translated feature text with the icon that belongs to it. */
+  const withIcons = (texts: string[], icons: React.ReactNode[]) =>
+    texts.map((text, index) => ({ icon: icons[index], text }));
+
   return (
     <section id="apps" className="py-12 md:py-20 px-6 bg-gradient-to-b from-[#F6F6F7] to-white">
       <div className="max-w-[1100px] mx-auto">
@@ -195,13 +227,13 @@ function AppsSection() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-4 bg-[#E8F5F1] text-[#00A87B] rounded-full text-sm font-medium">
             <Sparkles className="w-4 h-4" />
-            Free to Install
+            {apps.badge}
           </div>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[#202223]">
-            Our Shopify Apps
+            {apps.heading}
           </h2>
           <p className="text-lg text-[#616569] max-w-[550px] mx-auto">
-            Simple, powerful tools that solve real merchant problems
+            {apps.subheading}
           </p>
         </div>
 
@@ -209,14 +241,10 @@ function AppsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AppCard
             icon="/resources/bulk_delete_orders.png"
-            title="Bulk Delete Orders"
-            tagline="Clean up test orders and unwanted data in seconds"
-            features={[
-              { icon: <Trash2 className="w-full h-full" />, text: 'Filter and target specific orders for bulk deletion' },
-              { icon: <CheckCircle className="w-full h-full" />, text: 'Auto-cancels orders before deletion — no manual steps' },
-              { icon: <Clock className="w-full h-full" />, text: 'Track jobs and export reports in Job History' },
-            ]}
-            buttonText="Install Free"
+            title={apps.bulkDeleteOrders.title}
+            tagline={apps.bulkDeleteOrders.tagline}
+            features={withIcons(apps.bulkDeleteOrders.features, bulkDeleteFeatureIcons)}
+            buttonText={actions.installFree}
             buttonHref="https://apps.shopify.com/bulk-delete-orders"
             rating={5.0}
             installs="200+"
@@ -224,14 +252,10 @@ function AppsSection() {
           />
           <AppCard
             icon="/resources/default_address_lock.png"
-            title="Default Address Lock"
-            tagline="Keep customer default addresses intact after orders"
-            features={[
-              { icon: <MapPin className="w-full h-full" />, text: 'Prevent Shopify from overwriting default addresses' },
-              { icon: <Shield className="w-full h-full" />, text: 'Smart detection for order vs. manual changes' },
-              { icon: <Store className="w-full h-full" />, text: 'Perfect for gift stores and B2B merchants' },
-            ]}
-            buttonText="Install Free"
+            title={apps.defaultAddressLock.title}
+            tagline={apps.defaultAddressLock.tagline}
+            features={withIcons(apps.defaultAddressLock.features, addressLockFeatureIcons)}
+            buttonText={actions.installFree}
             buttonHref="https://apps.shopify.com/default-address-lock"
             detailsLink="/apps/default-address-lock"
           />
@@ -239,14 +263,10 @@ function AppsSection() {
           <div className="md:col-span-2 md:max-w-[calc(50%-0.75rem)] md:mx-auto md:w-full">
             <AppCard
               icon="/resources/llms_txt.png"
-              title="LLMs.txt"
-              tagline="Make your store readable to ChatGPT, Claude, and Gemini"
-              features={[
-                { icon: <Bot className="w-full h-full" />, text: 'Generate llms.txt and llms-full.txt in one click' },
-                { icon: <CheckCircle className="w-full h-full" />, text: 'Pick which products, collections, pages, and articles to include' },
-                { icon: <Sparkles className="w-full h-full" />, text: 'Served natively by Shopify at /llms.txt, no extra hosting' },
-              ]}
-              buttonText="Install Free"
+              title={apps.llmsTxt.title}
+              tagline={apps.llmsTxt.tagline}
+              features={withIcons(apps.llmsTxt.features, llmsTxtFeatureIcons)}
+              buttonText={actions.installFree}
               buttonHref="https://llms-full-txt.fly.dev/"
               detailsLink="/apps/llms-txt"
             />
@@ -269,6 +289,7 @@ interface Testimonial {
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   const { quote, name, role, url, avatar, highlight } = testimonial;
+  const { testimonials } = useTranslations('home');
 
   return (
     <div className="group relative bg-white rounded-2xl p-6 md:p-8 border border-[#E1E3E5] shadow-sm hover:shadow-lg hover:border-[#00A87B]/20 transition-all duration-200">
@@ -284,9 +305,9 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         ))}
       </div>
 
-      {/* Quote text */}
+      {/* Quote text - merchant reviews are shown verbatim in their original language */}
       <blockquote className="mb-5">
-        <p className="text-[#202223] text-base md:text-lg leading-relaxed">
+        <p lang="en" className="text-[#202223] text-base md:text-lg leading-relaxed">
           "{quote}"
         </p>
         {highlight && (
@@ -327,7 +348,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         {/* Verified badge */}
         <div className="flex items-center gap-1 px-2 py-1 bg-[#E8F5F1] rounded-full">
           <CheckCircle className="w-3 h-3 text-[#00A87B]" />
-          <span className="text-xs font-medium text-[#00A87B]">Verified</span>
+          <span className="text-xs font-medium text-[#00A87B]">{testimonials.verified}</span>
         </div>
       </div>
     </div>
@@ -335,6 +356,10 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 }
 
 function TestimonialsSection() {
+  const { testimonials: t } = useTranslations('home');
+
+  // Review text and author names are quoted verbatim from the Shopify App Store
+  // and are therefore not translated; only the surrounding labels are.
   const testimonials: Testimonial[] = [
     {
       quote: "Your app saved my team about 8 hours of clicking buttons in Shopify, and turned it into a 5 minute project.",
@@ -346,20 +371,20 @@ function TestimonialsSection() {
     {
       quote: "Great App. Needed to Remove imported orders from Amazon which was messing with Analytics. Got in Touch with Shopify Support where they said Couldn't Remove Fulfilled orders. Then used this app and it worked like magic. Thanks to the whole team at GEMIFY.",
       name: "YuBi Bar",
-      role: "Shopify Merchant",
+      role: t.merchantRole,
       url: "https://apps.shopify.com/reviews/2313455",
       highlight: "Worked like magic",
     },
     {
       quote: "Great app and even better customer support! The app works smoothly and does exactly what it promises. The support team is extremely responsive, professional, and helpful. Highly recommended!",
       name: "STRIKE SPORTS",
-      role: "Shopify Merchant",
+      role: t.merchantRole,
       highlight: "Even better customer support",
     },
     {
       quote: "Sean has been exceptional and went above and beyond to clear all orders from the background instantly. Highly recommended, top support!",
       name: "MooMenn",
-      role: "Shopify Merchant",
+      role: t.merchantRole,
       highlight: "Above and beyond",
     },
   ];
@@ -375,18 +400,18 @@ function TestimonialsSection() {
                 <Star key={i} className="w-3 h-3 fill-current" />
               ))}
             </div>
-            5.0 on Shopify App Store
+            {t.badge}
           </div>
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#202223] mb-2">
-            Trusted by Merchants
+            {t.heading}
           </h2>
-          <p className="text-[#616569]">See what store owners are saying about our apps</p>
+          <p className="text-[#616569]">{t.subheading}</p>
         </div>
 
         {/* Testimonials grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {testimonials.map((t, i) => (
-            <TestimonialCard key={i} testimonial={t} />
+          {testimonials.map((testimonial, i) => (
+            <TestimonialCard key={i} testimonial={testimonial} />
           ))}
         </div>
       </div>
@@ -416,6 +441,19 @@ function BenefitCard({ icon, title, description, delay = '' }: BenefitCardProps)
 }
 
 function WhyChooseSection() {
+  const { whyChoose } = useTranslations('home');
+
+  const benefitIcons = [
+    <Store className="w-6 h-6" />,
+    <Shield className="w-6 h-6" />,
+    <MessageCircle className="w-6 h-6" />,
+  ];
+  const benefitDelays = [
+    'animate-fade-in-up-delay-1',
+    'animate-fade-in-up-delay-2',
+    'animate-fade-in-up-delay-3',
+  ];
+
   return (
     <section className="py-12 md:py-16 px-6 bg-gradient-to-br from-[#00A87B] to-[#008060] relative overflow-hidden">
       {/* Decorative elements */}
@@ -426,33 +464,24 @@ function WhyChooseSection() {
         {/* Section header */}
         <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-            Why Merchants Choose Gemify
+            {whyChoose.heading}
           </h2>
           <p className="text-lg text-white/80 max-w-[600px] mx-auto">
-            Tools built with your success in mind
+            {whyChoose.subheading}
           </p>
         </div>
 
         {/* Feature grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          <BenefitCard
-            icon={<Store className="w-6 h-6" />}
-            title="Shopify Expertise"
-            description="Built by certified Shopify experts who understand your daily challenges."
-            delay="animate-fade-in-up-delay-1"
-          />
-          <BenefitCard
-            icon={<Shield className="w-6 h-6" />}
-            title="Enterprise Security"
-            description="Bank-grade security protecting your store data 24/7."
-            delay="animate-fade-in-up-delay-2"
-          />
-          <BenefitCard
-            icon={<MessageCircle className="w-6 h-6" />}
-            title="Responsive Support"
-            description="Real human support ready to help. No bots, just genuine assistance."
-            delay="animate-fade-in-up-delay-3"
-          />
+          {whyChoose.benefits.map((benefit, index) => (
+            <BenefitCard
+              key={benefit.title}
+              icon={benefitIcons[index]}
+              title={benefit.title}
+              description={benefit.description}
+              delay={benefitDelays[index]}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -460,23 +489,26 @@ function WhyChooseSection() {
 }
 
 function AboutSection() {
+  const { about } = useTranslations('home');
+  const emphasis = (text: string) => (
+    <span className="font-medium text-[#202223]">{text}</span>
+  );
+
   return (
     <section id="about" className="py-12 px-6 bg-[#F6F6F7]">
       <div className="max-w-[700px] mx-auto text-center">
-        <h2 className="text-3xl font-bold text-[#202223] mb-6">About Gemify</h2>
+        <h2 className="text-3xl font-bold text-[#202223] mb-6">{about.heading}</h2>
 
         <p className="text-lg leading-relaxed text-[#474B4F] mb-5">
-          Founded by experienced Shopify developers who understand the challenges merchants face.
+          {about.intro}
         </p>
 
         <p className="text-base leading-relaxed text-[#616569] mb-5">
-          Our mission is simple: <span className="font-medium text-[#202223]">intuitive, reliable apps</span>.
-          No bloated features. No confusing interfaces. Just clean solutions that help your business thrive.
+          {renderTemplate(about.mission.text, { emphasis: emphasis(about.mission.emphasis) })}
         </p>
 
         <p className="text-base leading-relaxed text-[#616569]">
-          Every app is built with the same care we&apos;d demand for our own stores.
-          When you choose Gemify, you&apos;re choosing a <span className="font-medium text-[#202223]">partner dedicated to your success</span>.
+          {renderTemplate(about.closing.text, { emphasis: emphasis(about.closing.emphasis) })}
         </p>
       </div>
     </section>
@@ -486,6 +518,7 @@ function AboutSection() {
 const MESSAGE_MAX_LENGTH = 500;
 
 function ContactSection() {
+  const { contact } = useTranslations('home');
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -518,10 +551,10 @@ function ContactSection() {
       if (data.success) {
         setIsSuccess(true);
       } else {
-        alert('Oops! There was a problem sending your message. Please try again.');
+        alert(contact.errorAlert);
       }
     } catch {
-      alert('Oops! There was a problem sending your message. Please try again.');
+      alert(contact.errorAlert);
     } finally {
       setIsSubmitting(false);
     }
@@ -537,11 +570,11 @@ function ContactSection() {
         {/* Section header */}
         <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-[#202223]">
-            Get In Touch
+            {contact.heading}
           </h2>
           <div className="flex items-center justify-center gap-2 text-[#616569]">
             <Clock className="w-4 h-4" />
-            <span>We typically respond within 24 hours</span>
+            <span>{contact.responseTime}</span>
           </div>
         </div>
 
@@ -550,15 +583,15 @@ function ContactSection() {
           {isSuccess && (
             <div className="bg-[#E8F5F1] border-2 border-[#00A87B] rounded-2xl p-6 text-center mb-6">
               <CheckCircle className="w-12 h-12 text-[#00A87B] mx-auto mb-3" />
-              <div className="text-xl font-bold text-[#00A87B] mb-2">Thank You!</div>
+              <div className="text-xl font-bold text-[#00A87B] mb-2">{contact.successTitle}</div>
               <p className="text-[#202223] mb-4">
-                Your message has been sent successfully. We&apos;ll get back to you soon!
+                {contact.successBody}
               </p>
               <a
                 href="#apps"
                 className="inline-flex items-center gap-2 text-[#00A87B] font-semibold hover:text-[#008060] transition-colors"
               >
-                Explore our apps while you wait →
+                {contact.successCta}
               </a>
             </div>
           )}
@@ -570,12 +603,12 @@ function ContactSection() {
             {/* Name field */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#202223]">
-                Name<span className="text-[#D72C0D] ml-1">*</span>
+                {contact.nameLabel}<span className="text-[#D72C0D] ml-1">*</span>
               </label>
               <input
                 type="text"
                 required
-                placeholder="Your name"
+                placeholder={contact.namePlaceholder}
                 value={formState.name}
                 onChange={(e) => setFormState((s) => ({ ...s, name: e.target.value }))}
                 className={inputClassName}
@@ -585,12 +618,12 @@ function ContactSection() {
             {/* Email field */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#202223]">
-                Email<span className="text-[#D72C0D] ml-1">*</span>
+                {contact.emailLabel}<span className="text-[#D72C0D] ml-1">*</span>
               </label>
               <input
                 type="email"
                 required
-                placeholder="you@example.com"
+                placeholder={contact.emailPlaceholder}
                 value={formState.email}
                 onChange={(e) => setFormState((s) => ({ ...s, email: e.target.value }))}
                 className={inputClassName}
@@ -600,12 +633,12 @@ function ContactSection() {
             {/* Subject field */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#202223]">
-                Subject<span className="text-[#D72C0D] ml-1">*</span>
+                {contact.subjectLabel}<span className="text-[#D72C0D] ml-1">*</span>
               </label>
               <input
                 type="text"
                 required
-                placeholder="How can we help?"
+                placeholder={contact.subjectPlaceholder}
                 value={formState.subject}
                 onChange={(e) => setFormState((s) => ({ ...s, subject: e.target.value }))}
                 className={inputClassName}
@@ -616,7 +649,7 @@ function ContactSection() {
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center">
                 <label className="text-sm font-medium text-[#202223]">
-                  Message<span className="text-[#D72C0D] ml-1">*</span>
+                  {contact.messageLabel}<span className="text-[#D72C0D] ml-1">*</span>
                 </label>
                 <span
                   className={`text-xs ${formState.message.length > MESSAGE_MAX_LENGTH ? 'text-[#D72C0D]' : 'text-[#616569]'}`}
@@ -626,7 +659,7 @@ function ContactSection() {
               </div>
               <textarea
                 required
-                placeholder="Tell us more about your question or feedback..."
+                placeholder={contact.messagePlaceholder}
                 maxLength={MESSAGE_MAX_LENGTH}
                 value={formState.message}
                 onChange={(e) => setFormState((s) => ({ ...s, message: e.target.value }))}
@@ -643,22 +676,22 @@ function ContactSection() {
               {isSubmitting ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Sending...
+                  {contact.submitting}
                 </>
               ) : isSuccess ? (
                 <>
                   <CheckCircle className="w-5 h-5" />
-                  Message Sent
+                  {contact.submitted}
                 </>
               ) : (
-                'Send Message'
+                contact.submit
               )}
             </button>
 
             {/* Security indicator */}
             <div className="flex items-center justify-center gap-2 text-sm text-[#616569]">
               <Lock className="w-4 h-4" />
-              <span>Your information is secure and will never be shared</span>
+              <span>{contact.securityNote}</span>
             </div>
           </form>
         </div>
@@ -668,6 +701,8 @@ function ContactSection() {
 }
 
 export function HomePage() {
+  const { skipToContent } = useTranslations('home');
+
   return (
     <div>
       {/* Skip to main content link for keyboard users */}
@@ -675,7 +710,7 @@ export function HomePage() {
         href="#apps"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#00A87B] focus:text-white focus:rounded-lg focus:no-underline"
       >
-        Skip to main content
+        {skipToContent}
       </a>
       <HeroSection />
       <AppsSection />
