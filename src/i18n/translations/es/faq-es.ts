@@ -243,7 +243,9 @@ export const faqEs: FaqDictionary = {
         },
         {
           question: '¿Cuánto cuesta LLMs-full.txt?',
-          paragraphs: ['LLMs-full.txt es gratuita de instalar y de usar.'],
+          paragraphs: [
+            'LLMs-full.txt tiene un plan gratuito con hasta 50 elementos por tipo de contenido. El plan Complete cuesta 9,99 $/mes por productos, colecciones, páginas y artículos de blog ilimitados, además de soporte por correo electrónico.',
+          ],
         },
       ],
     },
@@ -268,7 +270,7 @@ export const faqEs: FaqDictionary = {
           bullets: [
             { label: 'Bulk Delete Orders:', text: '50 operaciones de eliminación masiva gratuitas' },
             { label: 'Default Address Lock:', text: 'Gratis hasta 30 pedidos al mes' },
-            { label: 'LLMs-full.txt:', text: 'Gratis de instalar y de usar' },
+            { label: 'LLMs-full.txt:', text: 'Gratis hasta 50 elementos por tipo de contenido' },
           ],
         },
         {

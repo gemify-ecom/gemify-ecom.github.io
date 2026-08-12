@@ -12,7 +12,7 @@ Why merchants choose Gemify:
 - Enterprise Security: bank-grade security protecting store data 24/7
 - Responsive Support: real human support, replies within 24 hours on business days
 
-Contact: contact@gemify.dev
+Contact: sean.gemify@gmail.com
 Website: https://gemify-ecom.github.io (available in English, Japanese /ja, German /de, French /fr, Spanish /es)
 Rated 5.0 on the Shopify App Store. Trusted by 500+ Shopify merchants.
 
@@ -101,11 +101,14 @@ Features:
 - Clean markdown generated from store data via the Shopify GraphQL API
 - No customer data accessed: the app only reads store content
 
-Pricing: free to install and use.
+Pricing:
+
+- Free: up to 50 items per content type
+- Complete: $9.99/month for unlimited products, collections, pages, and blog articles, plus email support
 
 ## Pricing & Billing (all apps)
 
-- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (free)
+- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (up to 50 items per content type)
 - Billing is handled through Shopify and appears on the regular Shopify invoice
 - Cancel anytime by uninstalling the app through the Shopify admin
 - Refunds follow Shopify's standard refund policy
@@ -135,4 +138,4 @@ Highlights:
 - Is it safe to delete orders? Yes, but deletion is permanent. The app auto-cancels orders first; test with small batches and export a backup.
 - Will Default Address Lock stop customers updating their own addresses? No. Manual updates through the customer account are always preserved.
 - Who can see the files LLMs-full.txt generates? They are publicly accessible on the store's domain and contain only content the merchant chose to include.
-- How do I get support? Email contact@gemify.dev; replies within 24 hours on business days.
+- How do I get support? Email sean.gemify@gmail.com; replies within 24 hours on business days.

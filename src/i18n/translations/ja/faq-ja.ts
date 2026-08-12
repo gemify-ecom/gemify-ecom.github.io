@@ -234,7 +234,9 @@ export const faqJa: FaqDictionary = {
         },
         {
           question: 'LLMs-full.txtの料金はいくらですか?',
-          paragraphs: ['LLMs-full.txtは無料でインストールしてご利用いただけます。'],
+          paragraphs: [
+            'LLMs-full.txtには、コンテンツ種別ごとに最大50件まで利用できる無料プランがあります。Completeプランは月額9.99ドルで、商品・コレクション・ページ・ブログ記事を無制限に扱え、メールサポートも付きます。',
+          ],
         },
       ],
     },
@@ -259,7 +261,7 @@ export const faqJa: FaqDictionary = {
           bullets: [
             { label: 'Bulk Delete Orders:', text: '一括削除50回まで無料' },
             { label: 'Default Address Lock:', text: '月間30件までの注文は無料' },
-            { label: 'LLMs-full.txt:', text: '無料でインストール・利用可能' },
+            { label: 'LLMs-full.txt:', text: 'コンテンツ種別ごとに最大50件まで無料' },
           ],
         },
         {
