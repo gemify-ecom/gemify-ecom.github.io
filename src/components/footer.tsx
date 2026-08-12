@@ -44,7 +44,7 @@ export function Footer({ showCTA = true }: FooterProps) {
                   alt={brand}
                   width={32}
                   height={32}
-                  className="w-8 h-8"
+                  className="w-8 h-8 brightness-0 invert"
                 />
                 <span className="text-xl font-bold">{brand}</span>
               </div>
