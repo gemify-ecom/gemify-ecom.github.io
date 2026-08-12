@@ -6,12 +6,12 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyEn: PrivacyPolicyDictionary = {
   title: 'Privacy Policy',
-  lastUpdated: 'Last Updated: November 27, 2025',
+  lastUpdated: 'Last Updated: August 12, 2026',
 
   blocks: [
     {
       kind: 'paragraph',
-      text: 'At Gemify ("we," "us," or "our"), we take your privacy seriously. This Privacy Policy explains how our Shopify applications, including Bulk Delete Orders and Default Address Lock (collectively, "our Apps"), collect, use, store, and protect your information when you use our services.',
+      text: 'At Gemify ("we," "us," or "our"), we take your privacy seriously. This Privacy Policy explains how our Shopify applications, including Bulk Delete Orders, Default Address Lock, and LLMs.txt (collectively, "our Apps"), collect, use, store, and protect your information when you use our services.',
     },
     {
       kind: 'highlight',
@@ -44,6 +44,10 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         {
           label: 'Customer Data:',
           text: 'Customer IDs and address IDs only (for Default Address Lock app) - we never store personal information such as names, addresses, or contact details',
+        },
+        {
+          label: 'Store Content:',
+          text: 'Products, collections, pages, blog articles, and store policies read through the Shopify GraphQL API, plus theme access to publish the generated files (for LLMs.txt app)',
         },
         {
           label: 'API Access Tokens:',
@@ -86,6 +90,10 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
           label: 'Default Address Lock:',
           text: 'Privacy-first design - we only store customer IDs and address IDs to enable the address locking functionality. We never store personal information (names, addresses, phone numbers, etc.). All personal data remains securely within Shopify.',
         },
+        {
+          label: 'LLMs.txt:',
+          text: 'We do not access or store any customer data. The app only reads store content (products, collections, pages, blog articles, and policies) that you choose to include. Note that the generated llms.txt files are published to your storefront and are publicly accessible, like the rest of your storefront content.',
+        },
         'We do not use cookies or tracking technologies on customer-facing storefronts',
       ],
     },
@@ -121,6 +129,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         'To operate our Apps and provide the features you request',
         'To process order deletions and other operations (for Bulk Delete Orders app)',
         'To manage customer address locking preferences (for Default Address Lock app)',
+        'To generate and publish llms.txt files to your theme (for LLMs.txt app)',
         'To authenticate your store and maintain secure access',
         'To monitor and improve app performance and reliability',
       ],
@@ -493,7 +502,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'This Privacy Policy was last updated on November 27, 2025. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
+      text: 'This Privacy Policy was last updated on August 12, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
     },
   ],
 };

@@ -80,7 +80,7 @@ src/
 | Path | Page | Purpose |
 |------|------|---------|
 | `/` | Home | Landing page with 7 sections |
-| `/faq` | FAQ | 34 Q&As across 10 categories |
+| `/faq` | FAQ | 43 Q&As across 7 categories |
 | `/privacy-policy` | Privacy | Legal compliance + data handling |
 | `/apps/bulk-delete-orders` | App Detail | Bulk Delete Orders features + install CTA |
 | `/apps/bulk-delete-orders/screencast` | Screencast | Bulk Delete Orders demo video |
@@ -139,9 +139,9 @@ npm run preview   # Preview production build locally
 - **Contact** - Form for merchant inquiries
 
 ### FAQ Page
-34 questions organized into 10 categories:
-- General, App Features, Pricing, Installation, Billing
-- Security, Support, Integration, Performance, Troubleshooting
+43 questions organized into 7 categories:
+- General, Bulk Delete Orders, Default Address Lock, LLMs.txt
+- Pricing & Billing, Privacy & Security, Technical
 
 ### Privacy Policy
 16 comprehensive sections covering:

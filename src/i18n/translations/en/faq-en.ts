@@ -174,10 +174,62 @@ export const faqEn: FaqDictionary = {
           ],
         },
         {
-          question: 'When will Default Address Lock be available?',
+          question: 'Is Default Address Lock available now?',
           paragraphs: [
-            "We're actively developing Default Address Lock and expect to launch soon. Contact us at {email} if you'd like to be notified when it's available or to join our beta testing program.",
+            'Yes! Default Address Lock is available on the Shopify App Store. You can install it directly from the app listing. If you have any questions before getting started, contact us at {email}.',
           ],
+        },
+      ],
+    },
+    {
+      title: 'LLMs.txt App',
+      items: [
+        {
+          question: 'What does the LLMs.txt app do?',
+          paragraphs: [
+            'LLMs.txt generates llms.txt and llms-full.txt files for your Shopify store, so AI assistants like ChatGPT, Claude, and Gemini can understand your products, collections, and pages. The files are published to your theme and served by Shopify at /llms.txt and /llms-full.txt on your own domain, with no extra hosting needed.',
+          ],
+        },
+        {
+          question: 'What are llms.txt and llms-full.txt?',
+          paragraphs: [
+            'They are plain markdown files based on the llms.txt standard. Just like robots.txt guides search engines, llms.txt guides AI assistants. llms.txt is a concise index of your store, while llms-full.txt contains the full content of everything you choose to include. AI models read these files far more reliably than rendered storefront HTML.',
+          ],
+        },
+        {
+          question: 'What content can I include?',
+          paragraphs: [
+            "You choose exactly what goes into the files, and you can leave out anything you don't want summarized for AI assistants. You can include:",
+          ],
+          bullets: ['Products', 'Collections', 'Pages', 'Blog articles', 'Store policies'],
+        },
+        {
+          question: 'Does LLMs.txt access customer data?',
+          paragraphs: [
+            'No. LLMs.txt only reads store content (products, collections, pages, blog articles, and policies) through the Shopify GraphQL API. It never accesses orders or customer information.',
+          ],
+        },
+        {
+          question: 'Who can see the generated files?',
+          paragraphs: [
+            'The files are publicly accessible on your store domain, just like your storefront pages. They contain only the store content you chose to include, all of which is already public on your storefront.',
+          ],
+        },
+        {
+          question: 'Will the files slow down my store?',
+          paragraphs: [
+            'No. The generated files are static text files served by Shopify alongside your theme. They add no scripts to your storefront and have no impact on loading speed.',
+          ],
+        },
+        {
+          question: 'What happens when my catalog changes?',
+          paragraphs: [
+            'Regenerate the files from the app dashboard whenever your products, collections, or pages change. Generation takes one click and the published files are updated in place.',
+          ],
+        },
+        {
+          question: 'How much does LLMs.txt cost?',
+          paragraphs: ['LLMs.txt is free to install and use.'],
         },
       ],
     },
@@ -187,7 +239,7 @@ export const faqEn: FaqDictionary = {
         {
           question: 'How much do your apps cost?',
           paragraphs: [
-            "Pricing varies by app. You can view pricing details on each app's listing page in the Shopify App Store. Most of our apps offer a free trial period so you can test them before committing.",
+            "Pricing varies by app. You can view pricing details on each app's page on this site or its listing in the Shopify App Store. All of our apps offer a free plan so you can try them before upgrading.",
           ],
         },
         {
@@ -197,9 +249,12 @@ export const faqEn: FaqDictionary = {
           ],
         },
         {
-          question: 'Is there a free trial?',
-          paragraphs: [
-            'Many of our apps offer a free trial period. Check the specific app listing in the Shopify App Store for trial availability and duration.',
+          question: 'Is there a free plan?',
+          paragraphs: ['Yes, all of our apps offer a free plan:'],
+          bullets: [
+            { label: 'Bulk Delete Orders:', text: '50 free bulk delete operations' },
+            { label: 'Default Address Lock:', text: 'Free for up to 30 orders per month' },
+            { label: 'LLMs.txt:', text: 'Free to install and use' },
           ],
         },
         {
@@ -216,7 +271,7 @@ export const faqEn: FaqDictionary = {
         {
           question: 'What data do you collect?',
           paragraphs: [
-            'We only collect the minimum data necessary to provide our app services. This typically includes store information and the specific data needed for the app to function (e.g., order data for Bulk Delete Orders). For complete details, please read our {privacyPolicy}.',
+            'We only collect the minimum data necessary to provide our app services. This typically includes store information and the specific data needed for the app to function (e.g., order data for Bulk Delete Orders, or product and page content for LLMs.txt). For complete details, please read our {privacyPolicy}.',
           ],
         },
         {
@@ -265,7 +320,7 @@ export const faqEn: FaqDictionary = {
         {
           question: 'Will your apps slow down my store?',
           paragraphs: [
-            "No, our apps are designed to be lightweight and efficient. They operate primarily on the backend and don't add any code to your storefront, so there's no impact on your store's loading speed.",
+            "No, our apps are designed to be lightweight and efficient. They operate primarily on the backend and don't add any scripts to your storefront pages, so there's no impact on your store's loading speed. The files published by LLMs.txt are plain static text and don't affect page load either.",
           ],
         },
         {

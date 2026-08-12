@@ -7,12 +7,12 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyJa: PrivacyPolicyDictionary = {
   title: 'プライバシーポリシー',
-  lastUpdated: '最終更新日: 2025年11月27日',
+  lastUpdated: '最終更新日: 2026年8月12日',
 
   blocks: [
     {
       kind: 'paragraph',
-      text: 'Gemify(以下「当社」といいます)は、お客様のプライバシーを重視しています。本プライバシーポリシーは、Bulk Delete OrdersおよびDefault Address Lockを含む当社のShopifyアプリ(以下総称して「本アプリ」といいます)が、お客様が当社のサービスをご利用になる際に、どのように情報を収集、利用、保存、保護するかを説明するものです。',
+      text: 'Gemify(以下「当社」といいます)は、お客様のプライバシーを重視しています。本プライバシーポリシーは、Bulk Delete Orders、Default Address LockおよびLLMs.txtを含む当社のShopifyアプリ(以下総称して「本アプリ」といいます)が、お客様が当社のサービスをご利用になる際に、どのように情報を収集、利用、保存、保護するかを説明するものです。',
     },
     {
       kind: 'highlight',
@@ -45,6 +45,10 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
         {
           label: '顧客データ:',
           text: '顧客IDと住所IDのみ(Default Address Lockアプリの場合)。氏名、住所、連絡先などの個人情報を保存することはありません',
+        },
+        {
+          label: 'ストアコンテンツ:',
+          text: 'Shopify GraphQL APIを通じて読み取る商品、コレクション、ページ、ブログ記事、ストアポリシー、および生成したファイルを公開するためのテーマへのアクセス(LLMs.txtアプリの場合)',
         },
         {
           label: 'APIアクセストークン:',
@@ -87,6 +91,10 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
           label: 'Default Address Lock:',
           text: 'プライバシーを第一に設計しています。住所ロック機能を実現するために顧客IDと住所IDのみを保存します。氏名、住所、電話番号などの個人情報を保存することはありません。個人データはすべてShopify内で安全に保持されます。',
         },
+        {
+          label: 'LLMs.txt:',
+          text: '顧客データには一切アクセスせず、保存もしません。本アプリが読み取るのは、お客様が選択したストアのコンテンツ(商品、コレクション、ページ、ブログ記事、ポリシー)のみです。なお、生成されたllms.txtファイルはストアフロントに公開され、他のストアフロントのコンテンツと同様に誰でも閲覧できます。',
+        },
         '顧客向けのストアフロントでCookieやトラッキング技術を使用することはありません',
       ],
     },
@@ -119,6 +127,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
         '本アプリを稼働させ、お客様が求める機能を提供するため',
         '注文の削除やその他の処理を実行するため(Bulk Delete Ordersアプリの場合)',
         '顧客の住所ロック設定を管理するため(Default Address Lockアプリの場合)',
+        'llms.txtファイルを生成し、テーマに公開するため(LLMs.txtアプリの場合)',
         'お客様のストアを認証し、安全なアクセスを維持するため',
         'アプリのパフォーマンスと信頼性を監視し、改善するため',
       ],
@@ -488,7 +497,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: '本プライバシーポリシーの最終更新日は2025年11月27日です。本アプリをご利用いただくことで、本プライバシーポリシーを読み、理解し、これに拘束されることに同意したものとみなされます。',
+      text: '本プライバシーポリシーの最終更新日は2026年8月12日です。本アプリをご利用いただくことで、本プライバシーポリシーを読み、理解し、これに拘束されることに同意したものとみなされます。',
     },
   ],
 };
