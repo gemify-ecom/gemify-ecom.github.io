@@ -39,7 +39,7 @@ export const homeEn = {
       ],
     },
     llmsTxt: {
-      title: 'LLMs.txt',
+      title: 'LLMs-full.txt',
       tagline: 'Make your store readable to ChatGPT, Claude, and Gemini',
       features: [
         'Generate llms.txt and llms-full.txt in one click',

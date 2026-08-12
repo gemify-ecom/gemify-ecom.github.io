@@ -1,6 +1,6 @@
 # Gemify
 
-> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs.txt. This file contains the full site content in plain markdown for AI assistants. A shorter index is available at /llms.txt.
+> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs-full.txt. This file contains the full site content in plain markdown for AI assistants. A shorter index is available at /llms.txt.
 
 ## About Gemify
 
@@ -78,7 +78,7 @@ Pricing:
 - Enterprise: $99/month or $990/year (unlimited orders)
 - Yearly billing saves 17%
 
-## LLMs.txt
+## LLMs-full.txt
 
 URL: https://gemify-ecom.github.io/apps/llms-txt
 Install: https://llms-full-txt.fly.dev/
@@ -105,14 +105,14 @@ Pricing: free to install and use.
 
 ## Pricing & Billing (all apps)
 
-- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs.txt (free)
+- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (free)
 - Billing is handled through Shopify and appears on the regular Shopify invoice
 - Cancel anytime by uninstalling the app through the Shopify admin
 - Refunds follow Shopify's standard refund policy
 
 ## Privacy & Security
 
-- Minimum data collection: only what each app needs (order data for Bulk Delete Orders, customer/address IDs for Default Address Lock, store content for LLMs.txt)
+- Minimum data collection: only what each app needs (order data for Bulk Delete Orders, customer/address IDs for Default Address Lock, store content for LLMs-full.txt)
 - Data is never sold, rented, or traded to third parties
 - Encryption in transit (TLS 1.2+) and at rest (AES-256), OAuth 2.0 authentication, regular security audits, strict access controls
 - After uninstall, minimal data is kept for 30 days to ease reinstallation, then permanently deleted
@@ -134,5 +134,5 @@ Highlights:
 
 - Is it safe to delete orders? Yes, but deletion is permanent. The app auto-cancels orders first; test with small batches and export a backup.
 - Will Default Address Lock stop customers updating their own addresses? No. Manual updates through the customer account are always preserved.
-- Who can see the files LLMs.txt generates? They are publicly accessible on the store's domain and contain only content the merchant chose to include.
+- Who can see the files LLMs-full.txt generates? They are publicly accessible on the store's domain and contain only content the merchant chose to include.
 - How do I get support? Email contact@gemify.dev; replies within 24 hours on business days.

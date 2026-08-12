@@ -190,12 +190,12 @@ export const faqEs: FaqDictionary = {
       ],
     },
     {
-      title: 'App LLMs.txt',
+      title: 'App LLMs-full.txt',
       items: [
         {
-          question: '¿Qué hace la app LLMs.txt?',
+          question: '¿Qué hace la app LLMs-full.txt?',
           paragraphs: [
-            'LLMs.txt genera los archivos llms.txt y llms-full.txt de su tienda de Shopify, para que asistentes de IA como ChatGPT, Claude y Gemini puedan entender sus productos, colecciones y páginas. Los archivos se publican en su tema y Shopify los sirve en /llms.txt y /llms-full.txt desde su propio dominio, sin necesidad de hosting adicional.',
+            'LLMs-full.txt genera los archivos llms.txt y llms-full.txt de su tienda de Shopify, para que asistentes de IA como ChatGPT, Claude y Gemini puedan entender sus productos, colecciones y páginas. Los archivos se publican en su tema y Shopify los sirve en /llms.txt y /llms-full.txt desde su propio dominio, sin necesidad de hosting adicional.',
           ],
         },
         {
@@ -218,9 +218,9 @@ export const faqEs: FaqDictionary = {
           ],
         },
         {
-          question: '¿LLMs.txt accede a datos de clientes?',
+          question: '¿LLMs-full.txt accede a datos de clientes?',
           paragraphs: [
-            'No. LLMs.txt solo lee contenido de la tienda (productos, colecciones, páginas, artículos del blog y políticas) a través de la API GraphQL de Shopify. Nunca accede a pedidos ni a información de clientes.',
+            'No. LLMs-full.txt solo lee contenido de la tienda (productos, colecciones, páginas, artículos del blog y políticas) a través de la API GraphQL de Shopify. Nunca accede a pedidos ni a información de clientes.',
           ],
         },
         {
@@ -242,8 +242,8 @@ export const faqEs: FaqDictionary = {
           ],
         },
         {
-          question: '¿Cuánto cuesta LLMs.txt?',
-          paragraphs: ['LLMs.txt es gratuita de instalar y de usar.'],
+          question: '¿Cuánto cuesta LLMs-full.txt?',
+          paragraphs: ['LLMs-full.txt es gratuita de instalar y de usar.'],
         },
       ],
     },
@@ -268,7 +268,7 @@ export const faqEs: FaqDictionary = {
           bullets: [
             { label: 'Bulk Delete Orders:', text: '50 operaciones de eliminación masiva gratuitas' },
             { label: 'Default Address Lock:', text: 'Gratis hasta 30 pedidos al mes' },
-            { label: 'LLMs.txt:', text: 'Gratis de instalar y de usar' },
+            { label: 'LLMs-full.txt:', text: 'Gratis de instalar y de usar' },
           ],
         },
         {
@@ -285,7 +285,7 @@ export const faqEs: FaqDictionary = {
         {
           question: '¿Qué datos recopilan?',
           paragraphs: [
-            'Solo recopilamos los datos mínimos necesarios para prestar los servicios de nuestras apps. Normalmente incluyen información de la tienda y los datos concretos que la app necesita para funcionar (por ejemplo, datos de pedidos para Bulk Delete Orders, o contenido de productos y páginas para LLMs.txt). Para conocer todos los detalles, consulte nuestra {privacyPolicy}.',
+            'Solo recopilamos los datos mínimos necesarios para prestar los servicios de nuestras apps. Normalmente incluyen información de la tienda y los datos concretos que la app necesita para funcionar (por ejemplo, datos de pedidos para Bulk Delete Orders, o contenido de productos y páginas para LLMs-full.txt). Para conocer todos los detalles, consulte nuestra {privacyPolicy}.',
           ],
         },
         {
@@ -336,7 +336,7 @@ export const faqEs: FaqDictionary = {
         {
           question: '¿Sus apps ralentizarán mi tienda?',
           paragraphs: [
-            'No. Nuestras apps están diseñadas para ser ligeras y eficientes. Funcionan principalmente en el backend y no añaden scripts a las páginas de su tienda, por lo que no afectan a su velocidad de carga. Los archivos publicados por LLMs.txt son texto estático simple y tampoco influyen en el tiempo de carga.',
+            'No. Nuestras apps están diseñadas para ser ligeras y eficientes. Funcionan principalmente en el backend y no añaden scripts a las páginas de su tienda, por lo que no afectan a su velocidad de carga. Los archivos publicados por LLMs-full.txt son texto estático simple y tampoco influyen en el tiempo de carga.',
           ],
         },
         {

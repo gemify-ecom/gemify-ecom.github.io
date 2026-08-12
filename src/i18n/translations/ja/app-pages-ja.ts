@@ -138,7 +138,7 @@ export const appPagesJa: AppPagesDictionary = {
   },
 
   llmsTxt: {
-    title: 'LLMs.txt',
+    title: 'LLMs-full.txt',
     tagline:
       'ShopifyストアをAI対応に。{llmsTxt}と{llmsFullTxt}を生成し、AIアシスタントが商品・コレクション・ページを正しく理解できるようにします。',
     problemHeading: 'ストアにllms.txtが必要な理由',
@@ -218,6 +218,6 @@ export const appPagesJa: AppPagesDictionary = {
     ],
     ctaHeading: 'AI対応をはじめませんか?',
     ctaBody:
-      'LLMs.txtを導入して、AIアシスタントにストアの正確な姿を伝えましょう。インストールは無料です。',
+      'LLMs-full.txtを導入して、AIアシスタントにストアの正確な姿を伝えましょう。インストールは無料です。',
   },
 };

@@ -86,8 +86,8 @@ src/
 | `/apps/bulk-delete-orders/screencast` | Screencast | Bulk Delete Orders demo video |
 | `/apps/default-address-lock` | App Detail | Product features, pricing, testimonials |
 | `/apps/default-address-lock/screencast` | Screencast | Default Address Lock demo video |
-| `/apps/llms-txt` | App Detail | LLMs.txt features, how it works, install CTA |
-| `/apps/llms-txt/screencast` | Screencast | LLMs.txt demo video |
+| `/apps/llms-txt` | App Detail | LLMs-full.txt features, how it works, install CTA |
+| `/apps/llms-txt/screencast` | Screencast | LLMs-full.txt demo video |
 
 Every route also exists under a language prefix (`/ja/faq`, `/de/faq`, `/fr/faq`, `/es/faq`, …) for the Japanese, German, French, and Spanish versions.
 
@@ -131,7 +131,7 @@ npm run preview   # Preview production build locally
 
 ### Home Page
 - **Hero Section** - Social proof badge, responsive headline, dual CTAs
-- **Featured Apps** - 3 app cards (Bulk Delete Orders, Default Address Lock, LLMs.txt)
+- **Featured Apps** - 3 app cards (Bulk Delete Orders, Default Address Lock, LLMs-full.txt)
 - **Testimonials** - Merchant quotes demonstrating trust
 - **Why Choose** - 4 benefits with Lucide icons
 - **About** - Company mission & expertise
@@ -140,7 +140,7 @@ npm run preview   # Preview production build locally
 
 ### FAQ Page
 43 questions organized into 7 categories:
-- General, Bulk Delete Orders, Default Address Lock, LLMs.txt
+- General, Bulk Delete Orders, Default Address Lock, LLMs-full.txt
 - Pricing & Billing, Privacy & Security, Technical
 
 ### Privacy Policy

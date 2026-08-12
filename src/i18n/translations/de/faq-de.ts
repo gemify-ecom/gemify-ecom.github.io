@@ -190,12 +190,12 @@ export const faqDe: FaqDictionary = {
       ],
     },
     {
-      title: 'App LLMs.txt',
+      title: 'App LLMs-full.txt',
       items: [
         {
-          question: 'Was macht die App LLMs.txt?',
+          question: 'Was macht die App LLMs-full.txt?',
           paragraphs: [
-            'LLMs.txt erzeugt die Dateien llms.txt und llms-full.txt für Ihren Shopify-Store, damit KI-Assistenten wie ChatGPT, Claude und Gemini Ihre Produkte, Kategorien und Seiten verstehen. Die Dateien werden in Ihrem Theme veröffentlicht und von Shopify unter /llms.txt und /llms-full.txt auf Ihrer eigenen Domain ausgeliefert, ganz ohne zusätzliches Hosting.',
+            'LLMs-full.txt erzeugt die Dateien llms.txt und llms-full.txt für Ihren Shopify-Store, damit KI-Assistenten wie ChatGPT, Claude und Gemini Ihre Produkte, Kategorien und Seiten verstehen. Die Dateien werden in Ihrem Theme veröffentlicht und von Shopify unter /llms.txt und /llms-full.txt auf Ihrer eigenen Domain ausgeliefert, ganz ohne zusätzliches Hosting.',
           ],
         },
         {
@@ -212,9 +212,9 @@ export const faqDe: FaqDictionary = {
           bullets: ['Produkte', 'Kategorien', 'Seiten', 'Blog-Artikel', 'Store-Richtlinien'],
         },
         {
-          question: 'Greift LLMs.txt auf Kundendaten zu?',
+          question: 'Greift LLMs-full.txt auf Kundendaten zu?',
           paragraphs: [
-            'Nein. LLMs.txt liest über die Shopify GraphQL API ausschließlich Store-Inhalte (Produkte, Kategorien, Seiten, Blog-Artikel und Richtlinien). Auf Bestellungen oder Kundendaten greift die App nie zu.',
+            'Nein. LLMs-full.txt liest über die Shopify GraphQL API ausschließlich Store-Inhalte (Produkte, Kategorien, Seiten, Blog-Artikel und Richtlinien). Auf Bestellungen oder Kundendaten greift die App nie zu.',
           ],
         },
         {
@@ -236,8 +236,8 @@ export const faqDe: FaqDictionary = {
           ],
         },
         {
-          question: 'Was kostet LLMs.txt?',
-          paragraphs: ['LLMs.txt ist kostenlos in Installation und Nutzung.'],
+          question: 'Was kostet LLMs-full.txt?',
+          paragraphs: ['LLMs-full.txt ist kostenlos in Installation und Nutzung.'],
         },
       ],
     },
@@ -265,7 +265,7 @@ export const faqDe: FaqDictionary = {
               label: 'Default Address Lock:',
               text: 'Kostenlos für bis zu 30 Bestellungen pro Monat',
             },
-            { label: 'LLMs.txt:', text: 'Kostenlos in Installation und Nutzung' },
+            { label: 'LLMs-full.txt:', text: 'Kostenlos in Installation und Nutzung' },
           ],
         },
         {
@@ -282,7 +282,7 @@ export const faqDe: FaqDictionary = {
         {
           question: 'Welche Daten erheben Sie?',
           paragraphs: [
-            'Wir erheben nur die Daten, die für die Bereitstellung unserer App-Dienste unbedingt erforderlich sind. Dazu zählen üblicherweise Store-Informationen sowie die für den Betrieb der jeweiligen App nötigen Daten (zum Beispiel Bestelldaten für Bulk Delete Orders oder Produkt- und Seiteninhalte für LLMs.txt). Alle Einzelheiten finden Sie in unserer {privacyPolicy}.',
+            'Wir erheben nur die Daten, die für die Bereitstellung unserer App-Dienste unbedingt erforderlich sind. Dazu zählen üblicherweise Store-Informationen sowie die für den Betrieb der jeweiligen App nötigen Daten (zum Beispiel Bestelldaten für Bulk Delete Orders oder Produkt- und Seiteninhalte für LLMs-full.txt). Alle Einzelheiten finden Sie in unserer {privacyPolicy}.',
           ],
         },
         {
@@ -333,7 +333,7 @@ export const faqDe: FaqDictionary = {
         {
           question: 'Verlangsamen Ihre Apps meinen Store?',
           paragraphs: [
-            'Nein, unsere Apps sind schlank und effizient aufgebaut. Sie arbeiten überwiegend im Backend und fügen Ihren Storefront-Seiten keine Skripte hinzu, sodass die Ladegeschwindigkeit Ihres Stores unberührt bleibt. Auch die von LLMs.txt veröffentlichten Dateien sind reiner statischer Text und wirken sich nicht auf die Ladezeit aus.',
+            'Nein, unsere Apps sind schlank und effizient aufgebaut. Sie arbeiten überwiegend im Backend und fügen Ihren Storefront-Seiten keine Skripte hinzu, sodass die Ladegeschwindigkeit Ihres Stores unberührt bleibt. Auch die von LLMs-full.txt veröffentlichten Dateien sind reiner statischer Text und wirken sich nicht auf die Ladezeit aus.',
           ],
         },
         {

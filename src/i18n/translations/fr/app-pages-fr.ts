@@ -139,7 +139,7 @@ export const appPagesFr: AppPagesDictionary = {
   },
 
   llmsTxt: {
-    title: 'LLMs.txt',
+    title: 'LLMs-full.txt',
     tagline:
       'Préparez votre boutique Shopify pour l’IA. Générez {llmsTxt} et {llmsFullTxt} pour que les assistants IA comprennent vos produits, vos collections et vos pages.',
     problemHeading: 'Pourquoi votre boutique a besoin de llms.txt',
@@ -219,6 +219,6 @@ export const appPagesFr: AppPagesDictionary = {
     ] satisfies FeatureCardContent[],
     ctaHeading: 'Prêt à passer à l’ère de l’IA ?',
     ctaBody:
-      'Installez LLMs.txt dès aujourd’hui et donnez aux assistants IA une image fidèle de votre boutique. Installation gratuite.',
+      'Installez LLMs-full.txt dès aujourd’hui et donnez aux assistants IA une image fidèle de votre boutique. Installation gratuite.',
   },
 };

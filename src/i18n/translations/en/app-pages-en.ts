@@ -138,7 +138,7 @@ export const appPagesEn = {
   },
 
   llmsTxt: {
-    title: 'LLMs.txt',
+    title: 'LLMs-full.txt',
     /** `{llmsTxt}` and `{llmsFullTxt}` render as inline code. */
     tagline:
       'Make your Shopify store AI-ready. Generate {llmsTxt} and {llmsFullTxt} so AI assistants can understand your products, collections, and pages.',
@@ -220,6 +220,6 @@ export const appPagesEn = {
     ] satisfies FeatureCardContent[],
     ctaHeading: 'Ready to Go AI-Ready?',
     ctaBody:
-      'Install LLMs.txt today and give AI assistants an accurate picture of your store. Free to install.',
+      'Install LLMs-full.txt today and give AI assistants an accurate picture of your store. Free to install.',
   },
 };

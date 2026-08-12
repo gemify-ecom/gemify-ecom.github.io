@@ -12,7 +12,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
   blocks: [
     {
       kind: 'paragraph',
-      text: 'Chez Gemify (« nous », « notre » ou « nos »), nous prenons votre vie privée au sérieux. La présente politique de confidentialité explique comment nos applications Shopify, notamment Bulk Delete Orders, Default Address Lock et LLMs.txt (collectivement, « nos applications »), collectent, utilisent, conservent et protègent vos informations lorsque vous utilisez nos services.',
+      text: 'Chez Gemify (« nous », « notre » ou « nos »), nous prenons votre vie privée au sérieux. La présente politique de confidentialité explique comment nos applications Shopify, notamment Bulk Delete Orders, Default Address Lock et LLMs-full.txt (collectivement, « nos applications »), collectent, utilisent, conservent et protègent vos informations lorsque vous utilisez nos services.',
     },
     {
       kind: 'highlight',
@@ -48,7 +48,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
         },
         {
           label: 'Contenu de la boutique :',
-          text: 'Produits, collections, pages, articles de blog et politiques de la boutique, lus via l’API GraphQL de Shopify, ainsi qu’un accès au thème pour publier les fichiers générés (pour l’application LLMs.txt)',
+          text: 'Produits, collections, pages, articles de blog et politiques de la boutique, lus via l’API GraphQL de Shopify, ainsi qu’un accès au thème pour publier les fichiers générés (pour l’application LLMs-full.txt)',
         },
         {
           label: 'Jetons d’accès à l’API :',
@@ -95,7 +95,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
           text: 'Conception privacy-first : nous conservons uniquement les identifiants clients et les identifiants d’adresse afin d’assurer le verrouillage des adresses. Nous ne conservons jamais d’informations personnelles (noms, adresses, numéros de téléphone, etc.). Toutes les données personnelles restent hébergées de façon sécurisée chez Shopify.',
         },
         {
-          label: 'LLMs.txt :',
+          label: 'LLMs-full.txt :',
           text: 'Nous n’accédons à aucune donnée client et n’en conservons aucune. L’application lit uniquement le contenu de la boutique (produits, collections, pages, articles de blog et politiques) que vous choisissez d’inclure. Notez que les fichiers llms.txt générés sont publiés sur votre vitrine et accessibles publiquement, comme le reste du contenu de votre vitrine.',
         },
         'Nous n’utilisons ni cookies ni technologies de suivi sur les vitrines destinées aux clients',
@@ -133,7 +133,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
         'Faire fonctionner nos applications et fournir les fonctionnalités que vous demandez',
         'Traiter les suppressions de commandes et les autres opérations (pour l’application Bulk Delete Orders)',
         'Gérer les préférences de verrouillage des adresses client (pour l’application Default Address Lock)',
-        'Générer et publier les fichiers llms.txt dans votre thème (pour l’application LLMs.txt)',
+        'Générer et publier les fichiers llms.txt dans votre thème (pour l’application LLMs-full.txt)',
         'Authentifier votre boutique et maintenir un accès sécurisé',
         'Surveiller et améliorer les performances et la fiabilité des applications',
       ],

@@ -182,12 +182,12 @@ export const faqEn: FaqDictionary = {
       ],
     },
     {
-      title: 'LLMs.txt App',
+      title: 'LLMs-full.txt App',
       items: [
         {
-          question: 'What does the LLMs.txt app do?',
+          question: 'What does the LLMs-full.txt app do?',
           paragraphs: [
-            'LLMs.txt generates llms.txt and llms-full.txt files for your Shopify store, so AI assistants like ChatGPT, Claude, and Gemini can understand your products, collections, and pages. The files are published to your theme and served by Shopify at /llms.txt and /llms-full.txt on your own domain, with no extra hosting needed.',
+            'LLMs-full.txt generates llms.txt and llms-full.txt files for your Shopify store, so AI assistants like ChatGPT, Claude, and Gemini can understand your products, collections, and pages. The files are published to your theme and served by Shopify at /llms.txt and /llms-full.txt on your own domain, with no extra hosting needed.',
           ],
         },
         {
@@ -204,9 +204,9 @@ export const faqEn: FaqDictionary = {
           bullets: ['Products', 'Collections', 'Pages', 'Blog articles', 'Store policies'],
         },
         {
-          question: 'Does LLMs.txt access customer data?',
+          question: 'Does LLMs-full.txt access customer data?',
           paragraphs: [
-            'No. LLMs.txt only reads store content (products, collections, pages, blog articles, and policies) through the Shopify GraphQL API. It never accesses orders or customer information.',
+            'No. LLMs-full.txt only reads store content (products, collections, pages, blog articles, and policies) through the Shopify GraphQL API. It never accesses orders or customer information.',
           ],
         },
         {
@@ -228,8 +228,8 @@ export const faqEn: FaqDictionary = {
           ],
         },
         {
-          question: 'How much does LLMs.txt cost?',
-          paragraphs: ['LLMs.txt is free to install and use.'],
+          question: 'How much does LLMs-full.txt cost?',
+          paragraphs: ['LLMs-full.txt is free to install and use.'],
         },
       ],
     },
@@ -254,7 +254,7 @@ export const faqEn: FaqDictionary = {
           bullets: [
             { label: 'Bulk Delete Orders:', text: '50 free bulk delete operations' },
             { label: 'Default Address Lock:', text: 'Free for up to 30 orders per month' },
-            { label: 'LLMs.txt:', text: 'Free to install and use' },
+            { label: 'LLMs-full.txt:', text: 'Free to install and use' },
           ],
         },
         {
@@ -271,7 +271,7 @@ export const faqEn: FaqDictionary = {
         {
           question: 'What data do you collect?',
           paragraphs: [
-            'We only collect the minimum data necessary to provide our app services. This typically includes store information and the specific data needed for the app to function (e.g., order data for Bulk Delete Orders, or product and page content for LLMs.txt). For complete details, please read our {privacyPolicy}.',
+            'We only collect the minimum data necessary to provide our app services. This typically includes store information and the specific data needed for the app to function (e.g., order data for Bulk Delete Orders, or product and page content for LLMs-full.txt). For complete details, please read our {privacyPolicy}.',
           ],
         },
         {
@@ -320,7 +320,7 @@ export const faqEn: FaqDictionary = {
         {
           question: 'Will your apps slow down my store?',
           paragraphs: [
-            "No, our apps are designed to be lightweight and efficient. They operate primarily on the backend and don't add any scripts to your storefront pages, so there's no impact on your store's loading speed. The files published by LLMs.txt are plain static text and don't affect page load either.",
+            "No, our apps are designed to be lightweight and efficient. They operate primarily on the backend and don't add any scripts to your storefront pages, so there's no impact on your store's loading speed. The files published by LLMs-full.txt are plain static text and don't affect page load either.",
           ],
         },
         {

@@ -190,12 +190,12 @@ export const faqFr: FaqDictionary = {
       ],
     },
     {
-      title: 'Application LLMs.txt',
+      title: 'Application LLMs-full.txt',
       items: [
         {
-          question: 'Que fait l’application LLMs.txt ?',
+          question: 'Que fait l’application LLMs-full.txt ?',
           paragraphs: [
-            'LLMs.txt génère les fichiers llms.txt et llms-full.txt de votre boutique Shopify, afin que les assistants IA comme ChatGPT, Claude et Gemini comprennent vos produits, vos collections et vos pages. Les fichiers sont publiés dans votre thème et servis par Shopify sur /llms.txt et /llms-full.txt, sur votre propre domaine, sans hébergement supplémentaire.',
+            'LLMs-full.txt génère les fichiers llms.txt et llms-full.txt de votre boutique Shopify, afin que les assistants IA comme ChatGPT, Claude et Gemini comprennent vos produits, vos collections et vos pages. Les fichiers sont publiés dans votre thème et servis par Shopify sur /llms.txt et /llms-full.txt, sur votre propre domaine, sans hébergement supplémentaire.',
           ],
         },
         {
@@ -218,9 +218,9 @@ export const faqFr: FaqDictionary = {
           ],
         },
         {
-          question: 'LLMs.txt accède-t-elle aux données clients ?',
+          question: 'LLMs-full.txt accède-t-elle aux données clients ?',
           paragraphs: [
-            'Non. LLMs.txt lit uniquement le contenu de la boutique (produits, collections, pages, articles de blog et politiques) via l’API GraphQL de Shopify. Elle n’accède jamais aux commandes ni aux informations client.',
+            'Non. LLMs-full.txt lit uniquement le contenu de la boutique (produits, collections, pages, articles de blog et politiques) via l’API GraphQL de Shopify. Elle n’accède jamais aux commandes ni aux informations client.',
           ],
         },
         {
@@ -242,8 +242,8 @@ export const faqFr: FaqDictionary = {
           ],
         },
         {
-          question: 'Combien coûte LLMs.txt ?',
-          paragraphs: ['L’installation et l’utilisation de LLMs.txt sont gratuites.'],
+          question: 'Combien coûte LLMs-full.txt ?',
+          paragraphs: ['L’installation et l’utilisation de LLMs-full.txt sont gratuites.'],
         },
       ],
     },
@@ -271,7 +271,7 @@ export const faqFr: FaqDictionary = {
               label: 'Default Address Lock :',
               text: 'Gratuit jusqu’à 30 commandes par mois',
             },
-            { label: 'LLMs.txt :', text: 'Installation et utilisation gratuites' },
+            { label: 'LLMs-full.txt :', text: 'Installation et utilisation gratuites' },
           ],
         },
         {
@@ -288,7 +288,7 @@ export const faqFr: FaqDictionary = {
         {
           question: 'Quelles données collectez-vous ?',
           paragraphs: [
-            'Nous collectons uniquement le minimum de données nécessaire à la fourniture de nos services. Cela comprend généralement les informations de la boutique et les données spécifiques dont l’application a besoin pour fonctionner (par exemple, les données de commande pour Bulk Delete Orders, ou le contenu des produits et des pages pour LLMs.txt). Pour tous les détails, consultez notre {privacyPolicy}.',
+            'Nous collectons uniquement le minimum de données nécessaire à la fourniture de nos services. Cela comprend généralement les informations de la boutique et les données spécifiques dont l’application a besoin pour fonctionner (par exemple, les données de commande pour Bulk Delete Orders, ou le contenu des produits et des pages pour LLMs-full.txt). Pour tous les détails, consultez notre {privacyPolicy}.',
           ],
         },
         {
@@ -341,7 +341,7 @@ export const faqFr: FaqDictionary = {
         {
           question: 'Vos applications vont-elles ralentir ma boutique ?',
           paragraphs: [
-            'Non, nos applications sont conçues pour être légères et efficaces. Elles fonctionnent principalement côté serveur et n’ajoutent aucun script aux pages de votre vitrine : la vitesse de chargement de votre boutique reste inchangée. Les fichiers publiés par LLMs.txt sont de simples fichiers texte statiques et n’ont pas davantage d’impact sur le temps de chargement.',
+            'Non, nos applications sont conçues pour être légères et efficaces. Elles fonctionnent principalement côté serveur et n’ajoutent aucun script aux pages de votre vitrine : la vitesse de chargement de votre boutique reste inchangée. Les fichiers publiés par LLMs-full.txt sont de simples fichiers texte statiques et n’ont pas davantage d’impact sur le temps de chargement.',
           ],
         },
         {

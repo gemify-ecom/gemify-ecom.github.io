@@ -1,6 +1,6 @@
 # Gemify
 
-> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs.txt. Founded by experienced Shopify developers. Every app offers a free plan, works with all Shopify plans including Shopify Plus, and follows a privacy-first approach.
+> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs-full.txt. Founded by experienced Shopify developers. Every app offers a free plan, works with all Shopify plans including Shopify Plus, and follows a privacy-first approach.
 
 Key facts:
 
@@ -13,7 +13,7 @@ Key facts:
 
 - [Bulk Delete Orders](https://gemify-ecom.github.io/apps/bulk-delete-orders): Bulk delete orders and draft orders with powerful filters (status, date, tags). Auto-cancels orders before deletion, tracks jobs, exports reports. Free plan: 50 operations; Complete plan: $36/year, unlimited.
 - [Default Address Lock](https://gemify-ecom.github.io/apps/default-address-lock): Stops Shopify from overwriting customer default addresses when orders ship elsewhere. Ideal for gift stores, B2B, CRM-integrated shops, and subscriptions. Free up to 30 orders/month; paid plans from $4.99/month.
-- [LLMs.txt](https://gemify-ecom.github.io/apps/llms-txt): Generates llms.txt and llms-full.txt for Shopify stores so AI assistants like ChatGPT, Claude, and Gemini understand the catalog. Files are served natively by Shopify at the store's own domain. Free.
+- [LLMs-full.txt](https://gemify-ecom.github.io/apps/llms-txt): Generates llms.txt and llms-full.txt for Shopify stores so AI assistants like ChatGPT, Claude, and Gemini understand the catalog. Files are served natively by Shopify at the store's own domain. Free.
 
 ## Documentation
 
@@ -24,7 +24,7 @@ Key facts:
 
 - [Bulk Delete Orders on the Shopify App Store](https://apps.shopify.com/bulk-delete-orders)
 - [Default Address Lock on the Shopify App Store](https://apps.shopify.com/default-address-lock)
-- [LLMs.txt app](https://llms-full-txt.fly.dev/)
+- [LLMs-full.txt app](https://llms-full-txt.fly.dev/)
 
 ## Optional
 

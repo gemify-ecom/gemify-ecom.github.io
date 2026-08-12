@@ -187,12 +187,12 @@ export const faqJa: FaqDictionary = {
       ],
     },
     {
-      title: 'LLMs.txt アプリ',
+      title: 'LLMs-full.txt アプリ',
       items: [
         {
-          question: 'LLMs.txtは何ができるアプリですか?',
+          question: 'LLMs-full.txtは何ができるアプリですか?',
           paragraphs: [
-            'LLMs.txtは、Shopifyストア用のllms.txtとllms-full.txtを生成するアプリです。ChatGPT、Claude、GeminiなどのAIアシスタントが、ストアの商品、コレクション、ページを正しく理解できるようになります。生成したファイルはテーマに公開され、追加のホスティングなしで、ストア自身のドメインの /llms.txt と /llms-full.txt からShopifyが配信します。',
+            'LLMs-full.txtは、Shopifyストア用のllms.txtとllms-full.txtを生成するアプリです。ChatGPT、Claude、GeminiなどのAIアシスタントが、ストアの商品、コレクション、ページを正しく理解できるようになります。生成したファイルはテーマに公開され、追加のホスティングなしで、ストア自身のドメインの /llms.txt と /llms-full.txt からShopifyが配信します。',
           ],
         },
         {
@@ -209,9 +209,9 @@ export const faqJa: FaqDictionary = {
           bullets: ['商品', 'コレクション', 'ページ', 'ブログ記事', 'ストアポリシー'],
         },
         {
-          question: 'LLMs.txtは顧客データにアクセスしますか?',
+          question: 'LLMs-full.txtは顧客データにアクセスしますか?',
           paragraphs: [
-            'いいえ。LLMs.txtがShopify GraphQL APIを通じて読み取るのは、商品、コレクション、ページ、ブログ記事、ポリシーといったストアのコンテンツのみです。注文や顧客情報にアクセスすることはありません。',
+            'いいえ。LLMs-full.txtがShopify GraphQL APIを通じて読み取るのは、商品、コレクション、ページ、ブログ記事、ポリシーといったストアのコンテンツのみです。注文や顧客情報にアクセスすることはありません。',
           ],
         },
         {
@@ -233,8 +233,8 @@ export const faqJa: FaqDictionary = {
           ],
         },
         {
-          question: 'LLMs.txtの料金はいくらですか?',
-          paragraphs: ['LLMs.txtは無料でインストールしてご利用いただけます。'],
+          question: 'LLMs-full.txtの料金はいくらですか?',
+          paragraphs: ['LLMs-full.txtは無料でインストールしてご利用いただけます。'],
         },
       ],
     },
@@ -259,7 +259,7 @@ export const faqJa: FaqDictionary = {
           bullets: [
             { label: 'Bulk Delete Orders:', text: '一括削除50回まで無料' },
             { label: 'Default Address Lock:', text: '月間30件までの注文は無料' },
-            { label: 'LLMs.txt:', text: '無料でインストール・利用可能' },
+            { label: 'LLMs-full.txt:', text: '無料でインストール・利用可能' },
           ],
         },
         {
@@ -276,7 +276,7 @@ export const faqJa: FaqDictionary = {
         {
           question: 'どのようなデータを収集していますか?',
           paragraphs: [
-            'アプリのサービス提供に必要な最小限のデータのみを収集します。通常はストア情報と、アプリの動作に必要なデータ(たとえばBulk Delete Ordersの場合は注文データ、LLMs.txtの場合は商品やページのコンテンツ)が含まれます。詳細は{privacyPolicy}をご覧ください。',
+            'アプリのサービス提供に必要な最小限のデータのみを収集します。通常はストア情報と、アプリの動作に必要なデータ(たとえばBulk Delete Ordersの場合は注文データ、LLMs-full.txtの場合は商品やページのコンテンツ)が含まれます。詳細は{privacyPolicy}をご覧ください。',
           ],
         },
         {
@@ -325,7 +325,7 @@ export const faqJa: FaqDictionary = {
         {
           question: 'アプリを入れるとストアが遅くなりませんか?',
           paragraphs: [
-            'いいえ。アプリは軽量かつ効率的に動作するよう設計されています。主にバックエンドで動作し、ストアフロントのページにスクリプトを追加しないため、表示速度への影響はありません。LLMs.txtが公開するファイルも静的なテキストファイルのため、ページの読み込みには影響しません。',
+            'いいえ。アプリは軽量かつ効率的に動作するよう設計されています。主にバックエンドで動作し、ストアフロントのページにスクリプトを追加しないため、表示速度への影響はありません。LLMs-full.txtが公開するファイルも静的なテキストファイルのため、ページの読み込みには影響しません。',
           ],
         },
         {

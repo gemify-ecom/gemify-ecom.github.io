@@ -40,7 +40,7 @@ export const homeFr: HomeDictionary = {
       ],
     },
     llmsTxt: {
-      title: 'LLMs.txt',
+      title: 'LLMs-full.txt',
       tagline: 'Rendez votre boutique lisible par ChatGPT, Claude et Gemini',
       features: [
         'Générez llms.txt et llms-full.txt en un clic',

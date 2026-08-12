@@ -12,7 +12,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
   blocks: [
     {
       kind: 'paragraph',
-      text: 'Bei Gemify ("wir", "uns" oder "unser") nehmen wir Ihren Datenschutz ernst. Diese Datenschutzerklärung beschreibt, wie unsere Shopify-Anwendungen, darunter Bulk Delete Orders, Default Address Lock und LLMs.txt (zusammen "unsere Apps"), Ihre Informationen erheben, verwenden, speichern und schützen, wenn Sie unsere Dienste nutzen.',
+      text: 'Bei Gemify ("wir", "uns" oder "unser") nehmen wir Ihren Datenschutz ernst. Diese Datenschutzerklärung beschreibt, wie unsere Shopify-Anwendungen, darunter Bulk Delete Orders, Default Address Lock und LLMs-full.txt (zusammen "unsere Apps"), Ihre Informationen erheben, verwenden, speichern und schützen, wenn Sie unsere Dienste nutzen.',
     },
     {
       kind: 'highlight',
@@ -48,7 +48,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         },
         {
           label: 'Store-Inhalte:',
-          text: 'Produkte, Kategorien, Seiten, Blog-Artikel und Store-Richtlinien, die über die Shopify GraphQL API gelesen werden, sowie Theme-Zugriff zur Veröffentlichung der erzeugten Dateien (für die App LLMs.txt)',
+          text: 'Produkte, Kategorien, Seiten, Blog-Artikel und Store-Richtlinien, die über die Shopify GraphQL API gelesen werden, sowie Theme-Zugriff zur Veröffentlichung der erzeugten Dateien (für die App LLMs-full.txt)',
         },
         {
           label: 'API-Zugriffstoken:',
@@ -95,7 +95,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
           text: 'Datenschutzfreundliches Design: Wir speichern ausschließlich Kunden-IDs und Adress-IDs, um die Adresssperre zu ermöglichen. Personenbezogene Daten (Namen, Adressen, Telefonnummern usw.) speichern wir nie. Alle personenbezogenen Daten verbleiben sicher innerhalb von Shopify.',
         },
         {
-          label: 'LLMs.txt:',
+          label: 'LLMs-full.txt:',
           text: 'Wir greifen auf keinerlei Kundendaten zu und speichern sie nicht. Die App liest ausschließlich die Store-Inhalte (Produkte, Kategorien, Seiten, Blog-Artikel und Richtlinien), die Sie auswählen. Bitte beachten Sie, dass die erzeugten llms.txt-Dateien in Ihrer Storefront veröffentlicht und wie Ihre übrigen Storefront-Inhalte öffentlich zugänglich sind.',
         },
         'Auf kundenseitigen Storefronts setzen wir weder Cookies noch Tracking-Technologien ein',
@@ -133,7 +133,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         'Um unsere Apps zu betreiben und die von Ihnen angeforderten Funktionen bereitzustellen',
         'Um Bestelllöschungen und andere Vorgänge auszuführen (für die App Bulk Delete Orders)',
         'Um Einstellungen zur Adresssperre zu verwalten (für die App Default Address Lock)',
-        'Um llms.txt-Dateien zu erzeugen und in Ihrem Theme zu veröffentlichen (für die App LLMs.txt)',
+        'Um llms.txt-Dateien zu erzeugen und in Ihrem Theme zu veröffentlichen (für die App LLMs-full.txt)',
         'Um Ihren Store zu authentifizieren und einen sicheren Zugriff aufrechtzuerhalten',
         'Um Leistung und Zuverlässigkeit der Apps zu überwachen und zu verbessern',
       ],
