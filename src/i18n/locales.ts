@@ -20,15 +20,6 @@ export const LOCALE_LABELS: Record<Locale, string> = {
   es: 'Español',
 };
 
-/** Short label for the compact switcher buttons. */
-export const LOCALE_SHORT_LABELS: Record<Locale, string> = {
-  en: 'EN',
-  ja: '日本語',
-  de: 'DE',
-  fr: 'FR',
-  es: 'ES',
-};
-
 export function isLocale(value: string | null | undefined): value is Locale {
   return !!value && (SUPPORTED_LOCALES as readonly string[]).includes(value);
 }
