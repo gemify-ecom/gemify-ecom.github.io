@@ -551,7 +551,7 @@ function ContactSection() {
       if (data.success) {
         setIsSuccess(true);
       } else {
-        alert(contact.errorAlert);
+        alert(data.message ? `${contact.errorAlert}\n\n${data.message}` : contact.errorAlert);
       }
     } catch {
       alert(contact.errorAlert);
