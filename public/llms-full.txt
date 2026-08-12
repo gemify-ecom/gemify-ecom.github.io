@@ -1,0 +1,138 @@
+# Gemify
+
+> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs.txt. This file contains the full site content in plain markdown for AI assistants. A shorter index is available at /llms.txt.
+
+## About Gemify
+
+Gemify is a Shopify app development company founded by experienced Shopify developers who understand the challenges merchants face. The mission: intuitive, reliable apps. No bloated features, no confusing interfaces, just clean solutions that help businesses thrive.
+
+Why merchants choose Gemify:
+
+- Shopify Expertise: built by certified Shopify experts who understand daily merchant challenges
+- Enterprise Security: bank-grade security protecting store data 24/7
+- Responsive Support: real human support, replies within 24 hours on business days
+
+Contact: contact@gemify.dev
+Website: https://gemify-ecom.github.io (available in English, Japanese /ja, German /de, French /fr, Spanish /es)
+Rated 5.0 on the Shopify App Store. Trusted by 500+ Shopify merchants.
+
+## Bulk Delete Orders
+
+URL: https://gemify-ecom.github.io/apps/bulk-delete-orders
+Install: https://apps.shopify.com/bulk-delete-orders
+
+Clean up a Shopify store by bulk deleting test orders, old data, or unwanted orders with powerful filters and automatic cancellation. Shopify provides no native way to bulk delete orders; deleting hundreds of orders one by one is time-consuming and error-prone.
+
+Solves:
+
+- Test orders cluttering analytics after development and testing
+- Cleanup of imported orders after platform migration
+- Duplicate orders from system glitches or integration issues
+- GDPR / privacy compliance deletion of old order records
+
+Features:
+
+- Powerful filters: date range, order status, financial status, fulfillment status, tags, customer, and more
+- Auto-cancel and delete: orders are automatically cancelled before deletion, fulfilled orders handled gracefully
+- Job history: track all deletion jobs with detailed logs
+- Export reports: detailed records of deleted orders for compliance and audits
+- Safe preview: see exactly what will be deleted and confirm before proceeding
+- Supports both regular orders and draft orders
+
+Important notes:
+
+- Deleted orders cannot be recovered; the app recommends filtering carefully, testing with small batches, and exporting a backup first
+- Deleting orders removes them from Shopify analytics and reports
+- Deleting an order does not delete the customer account
+
+Pricing:
+
+- Free plan: 50 bulk delete order/draft order operations
+- Complete plan: $36/year, unlimited operations
+
+## Default Address Lock
+
+URL: https://gemify-ecom.github.io/apps/default-address-lock
+Install: https://apps.shopify.com/default-address-lock
+
+Prevents Shopify from overwriting customers' default addresses when they ship orders to different locations. Since 2015, Shopify has automatically changed a customer's default address to match the most recent order's shipping address. The app detects order-triggered changes and automatically restores the original default address, while intentional manual updates by the customer are preserved.
+
+Solves:
+
+- Gift stores: customers' default addresses keep changing to gift recipients' addresses
+- B2B merchants: buyers shipping to clients end up with incorrect default addresses
+- CRM-integrated shops: inaccurate customer data disrupts marketing and fulfillment
+- Subscription businesses: one-time gift shipments override recurring delivery addresses
+
+Features:
+
+- Smart detection: distinguishes order-triggered changes from intentional manual updates
+- Automatic restoration: reverts automatic overwrites as they happen
+- Privacy-first: stores only address IDs, never actual address content; personal data stays in Shopify
+
+Pricing:
+
+- Free: up to 30 orders per month
+- Basic: $4.99/month or $49.90/year (up to 100 orders per month)
+- Growth: $24.99/month or $249.90/year (up to 500 orders per month)
+- Enterprise: $99/month or $990/year (unlimited orders)
+- Yearly billing saves 17%
+
+## LLMs.txt
+
+URL: https://gemify-ecom.github.io/apps/llms-txt
+Install: https://llms-full-txt.fly.dev/
+
+Makes Shopify stores AI-ready by generating llms.txt and llms-full.txt files, so AI assistants like ChatGPT, Claude, and Gemini can understand a store's products, collections, and pages. Just as robots.txt guides search engines, llms.txt guides AI assistants, helping them recommend products and answer customer questions accurately.
+
+Solves:
+
+- Shoppers increasingly research products through AI assistants, which otherwise work from whatever they can scrape
+- Storefront HTML is noisy; models read markdown far more reliably
+- Hand-maintaining the files across hundreds of products does not scale
+- The standard expects files at the root domain; external hosting means extra infrastructure
+
+Features:
+
+- One-click generation of both llms.txt and llms-full.txt from the dashboard
+- Choose exactly which products, collections, pages, blog articles, and policies to include
+- Custom output: reorder sections and customize formatting
+- Served natively: files are published to the theme and served by Shopify at /llms.txt and /llms-full.txt, no extra hosting
+- Clean markdown generated from store data via the Shopify GraphQL API
+- No customer data accessed: the app only reads store content
+
+Pricing: free to install and use.
+
+## Pricing & Billing (all apps)
+
+- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs.txt (free)
+- Billing is handled through Shopify and appears on the regular Shopify invoice
+- Cancel anytime by uninstalling the app through the Shopify admin
+- Refunds follow Shopify's standard refund policy
+
+## Privacy & Security
+
+- Minimum data collection: only what each app needs (order data for Bulk Delete Orders, customer/address IDs for Default Address Lock, store content for LLMs.txt)
+- Data is never sold, rented, or traded to third parties
+- Encryption in transit (TLS 1.2+) and at rest (AES-256), OAuth 2.0 authentication, regular security audits, strict access controls
+- After uninstall, minimal data is kept for 30 days to ease reinstallation, then permanently deleted
+- GDPR and CPRA compliant; subscribes to Shopify's mandatory compliance webhooks for data subject requests
+- Full policy: https://gemify-ecom.github.io/privacy-policy
+
+## Technical Compatibility
+
+- Works with all Shopify plans: Basic, Shopify, Advanced, and Shopify Plus
+- Apps operate on the backend and add no scripts to storefront pages, so store loading speed is unaffected
+- No technical knowledge required; anyone who can use the Shopify admin can use the apps
+- Multiple Gemify apps can be installed together without conflicts
+
+## FAQ
+
+Full FAQ (43 questions): https://gemify-ecom.github.io/faq
+
+Highlights:
+
+- Is it safe to delete orders? Yes, but deletion is permanent. The app auto-cancels orders first; test with small batches and export a backup.
+- Will Default Address Lock stop customers updating their own addresses? No. Manual updates through the customer account are always preserved.
+- Who can see the files LLMs.txt generates? They are publicly accessible on the store's domain and contain only content the merchant chose to include.
+- How do I get support? Email contact@gemify.dev; replies within 24 hours on business days.
