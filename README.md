@@ -49,7 +49,7 @@ src/
 │   ├── language-switcher.tsx
 │   ├── screencast-page-layout.tsx
 │   └── layout.tsx      # Page wrapper
-├── i18n/               # Localization (English + Japanese)
+├── i18n/               # Localization (en, ja, de, fr, es)
 │   ├── locales.ts             # Supported locales
 │   ├── locale-paths.ts        # /ja prefix helpers
 │   ├── locale-detection.ts    # ?locale=, storage, browser language
@@ -60,7 +60,7 @@ src/
 │   ├── use-document-locale.ts # <html lang>, title, canonical, hreflang
 │   ├── localized-link.tsx     # Locale-aware <Link>
 │   ├── rich-text.tsx          # {placeholder} interpolation
-│   └── translations/          # en/ and ja/ dictionaries per page
+│   └── translations/          # en/ ja/ de/ fr/ es/ dictionaries per page
 ├── pages/              # Page-level components
 │   ├── home-page.tsx
 │   ├── faq-page.tsx
@@ -89,30 +89,30 @@ src/
 | `/apps/llms-txt` | App Detail | LLMs.txt features, how it works, install CTA |
 | `/apps/llms-txt/screencast` | Screencast | LLMs.txt demo video |
 
-Every route also exists under a `/ja` prefix (`/ja/faq`, `/ja/apps/llms-txt`, …) for the Japanese version.
+Every route also exists under a language prefix (`/ja/faq`, `/de/faq`, `/fr/faq`, `/es/faq`, …) for the Japanese, German, French, and Spanish versions.
 
 ---
 
 ## Localization
 
-The site ships in English (default) and Japanese.
+The site ships in English (default), Japanese, German, French, and Spanish.
 
 | Mechanism | Behavior |
 |-----------|----------|
-| URL prefix | `/faq` is English, `/ja/faq` is Japanese. The URL is the source of truth. |
+| URL prefix | `/faq` is English; `/ja/faq`, `/de/faq`, `/fr/faq`, `/es/faq` are the translated versions. The URL is the source of truth. |
 | `?locale=ja` | Forces a language on any URL, remembers the choice, then redirects to the canonical `/ja/...` URL. `?locale=en` does the reverse. |
 | Browser language | On the first page of a visit to an unprefixed URL, `navigator.languages` decides the language. |
 | Saved choice | A switcher click or `?locale=` is stored in `localStorage` and wins over the browser language on later visits. |
 | Switcher | Footer bottom bar; switches language while staying on the same page. |
-| SEO | `<html lang>`, `<title>`, description, canonical, and `hreflang` (`en`, `ja`, `x-default`) are set per route at runtime. |
+| SEO | `<html lang>`, `<title>`, description, canonical, and `hreflang` (one per language plus `x-default`) are set per route at runtime. |
 
-Copy lives in `src/i18n/translations/{en,ja}/`, one file per page. The English
-dictionaries define the shape, so a missing or extra Japanese key is a type
-error. Strings can carry `{placeholder}` tokens that components replace with
-links or emphasised text.
+Copy lives in `src/i18n/translations/{en,ja,de,fr,es}/`, one file per page. The
+English dictionaries define the shape, so a missing or extra key in any other
+language is a type error. Strings can carry `{placeholder}` tokens that
+components replace with links or emphasised text.
 
 Merchant testimonials on the home page are quoted verbatim from the Shopify App
-Store and stay in English in both languages.
+Store and stay in English in every language.
 
 ---
 

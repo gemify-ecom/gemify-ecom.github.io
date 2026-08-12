@@ -10,4 +10,13 @@ Disallow: /apps/llms-txt/screencast
 Disallow: /ja/apps/bulk-delete-orders/screencast
 Disallow: /ja/apps/default-address-lock/screencast
 Disallow: /ja/apps/llms-txt/screencast
+Disallow: /de/apps/bulk-delete-orders/screencast
+Disallow: /de/apps/default-address-lock/screencast
+Disallow: /de/apps/llms-txt/screencast
+Disallow: /fr/apps/bulk-delete-orders/screencast
+Disallow: /fr/apps/default-address-lock/screencast
+Disallow: /fr/apps/llms-txt/screencast
+Disallow: /es/apps/bulk-delete-orders/screencast
+Disallow: /es/apps/default-address-lock/screencast
+Disallow: /es/apps/llms-txt/screencast
 Allow: /

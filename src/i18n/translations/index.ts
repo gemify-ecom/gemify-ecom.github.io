@@ -9,6 +9,21 @@ import { commonJa } from './ja/common-ja';
 import { faqJa } from './ja/faq-ja';
 import { homeJa } from './ja/home-ja';
 import { privacyPolicyJa } from './ja/privacy-policy-ja';
+import { appPagesDe } from './de/app-pages-de';
+import { commonDe } from './de/common-de';
+import { faqDe } from './de/faq-de';
+import { homeDe } from './de/home-de';
+import { privacyPolicyDe } from './de/privacy-policy-de';
+import { appPagesFr } from './fr/app-pages-fr';
+import { commonFr } from './fr/common-fr';
+import { faqFr } from './fr/faq-fr';
+import { homeFr } from './fr/home-fr';
+import { privacyPolicyFr } from './fr/privacy-policy-fr';
+import { appPagesEs } from './es/app-pages-es';
+import { commonEs } from './es/common-es';
+import { faqEs } from './es/faq-es';
+import { homeEs } from './es/home-es';
+import { privacyPolicyEs } from './es/privacy-policy-es';
 import type {
   AppPagesDictionary,
   CommonDictionary,
@@ -40,5 +55,26 @@ export const dictionaries: Record<Locale, Dictionary> = {
     faq: faqJa,
     privacyPolicy: privacyPolicyJa,
     appPages: appPagesJa,
+  },
+  de: {
+    common: commonDe,
+    home: homeDe,
+    faq: faqDe,
+    privacyPolicy: privacyPolicyDe,
+    appPages: appPagesDe,
+  },
+  fr: {
+    common: commonFr,
+    home: homeFr,
+    faq: faqFr,
+    privacyPolicy: privacyPolicyFr,
+    appPages: appPagesFr,
+  },
+  es: {
+    common: commonEs,
+    home: homeEs,
+    faq: faqEs,
+    privacyPolicy: privacyPolicyEs,
+    appPages: appPagesEs,
   },
 };

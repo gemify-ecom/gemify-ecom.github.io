@@ -5,7 +5,7 @@
  * Every other locale is served from a path prefix (`/ja/faq`) so that each
  * language has a crawlable, shareable URL.
  */
-export const SUPPORTED_LOCALES = ['en', 'ja'] as const;
+export const SUPPORTED_LOCALES = ['en', 'ja', 'de', 'fr', 'es'] as const;
 
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
@@ -15,12 +15,18 @@ export const DEFAULT_LOCALE: Locale = 'en';
 export const LOCALE_LABELS: Record<Locale, string> = {
   en: 'English',
   ja: '日本語',
+  de: 'Deutsch',
+  fr: 'Français',
+  es: 'Español',
 };
 
 /** Short label for the compact switcher buttons. */
 export const LOCALE_SHORT_LABELS: Record<Locale, string> = {
   en: 'EN',
   ja: '日本語',
+  de: 'DE',
+  fr: 'FR',
+  es: 'ES',
 };
 
 export function isLocale(value: string | null | undefined): value is Locale {
