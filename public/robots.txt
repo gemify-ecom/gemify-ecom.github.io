@@ -1,3 +1,8 @@
+# Screencast demo pages are fully blocked from crawling.
+# All other pages stay crawlable on purpose: every route except the home page
+# carries a runtime <meta name="robots" content="noindex"> tag, and crawlers
+# must be able to fetch a page to see that tag. Do not add Disallow rules for
+# those routes, or already-indexed URLs will never drop out of the index.
 User-agent: *
 Disallow: /apps/bulk-delete-orders/screencast
 Disallow: /apps/default-address-lock/screencast

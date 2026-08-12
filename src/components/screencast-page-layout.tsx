@@ -1,6 +1,5 @@
 import { Layout } from './layout';
 import { useTranslations } from '../i18n/use-locale';
-import { useNoindexMeta } from '../hooks/use-noindex-meta';
 
 interface ScreencastPageLayoutProps {
   /** App name shown as the page heading; app names are not translated. */
@@ -11,7 +10,6 @@ interface ScreencastPageLayoutProps {
 /** Shared shell for the per-app screencast demo pages. */
 export function ScreencastPageLayout({ title, videoSrc }: ScreencastPageLayoutProps) {
   const { screencast } = useTranslations('common');
-  useNoindexMeta();
 
   return (
     <Layout showFooterCTA={false}>

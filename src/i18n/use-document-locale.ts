@@ -5,12 +5,14 @@ import { buildLocalePath, stripLocalePrefix } from './locale-paths';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from './locales';
 
 /**
- * Keeps `<html lang>` correct and publishes canonical / hreflang links for the
- * current page in every language.
+ * Keeps `<html lang>` correct, publishes canonical / hreflang links for the
+ * current page in every language, and marks every page except the home page
+ * as `noindex` so only the home page appears in search results.
  *
  * This is a client-rendered SPA on GitHub Pages, so there is no per-route HTML
- * file to hold these tags; they have to be written at runtime, the same way
- * `useNoindexMeta` handles the screencast pages.
+ * file to hold these tags; they have to be written at runtime. The noindex
+ * relies on crawlers being allowed to fetch these routes: robots.txt must not
+ * Disallow them, or the tag is never seen and the URL can stay indexed.
  */
 export function useDocumentLocale() {
   const { locale, dictionary } = useLocale();
@@ -40,7 +42,7 @@ export function useDocumentLocale() {
       { rel: 'alternate', hreflang: 'x-default', href: origin + buildLocalePath(DEFAULT_LOCALE, path) },
     ];
 
-    const elements = links.map(({ rel, hreflang, href }) => {
+    const elements: Element[] = links.map(({ rel, hreflang, href }) => {
       const link = document.createElement('link');
       link.rel = rel;
       if (hreflang) {
@@ -51,8 +53,17 @@ export function useDocumentLocale() {
       return link;
     });
 
+    // Only the home page (in any language) may be indexed.
+    if (path !== '/') {
+      const robots = document.createElement('meta');
+      robots.name = 'robots';
+      robots.content = 'noindex';
+      document.head.appendChild(robots);
+      elements.push(robots);
+    }
+
     return () => {
-      elements.forEach((link) => link.remove());
+      elements.forEach((element) => element.remove());
     };
   }, [locale, pathname, meta]);
 }
