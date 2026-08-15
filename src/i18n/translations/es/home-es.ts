@@ -43,7 +43,7 @@ export const homeEs: HomeDictionary = {
       title: 'LLMs-full.txt',
       tagline: 'Haga que su tienda sea legible para ChatGPT, Claude y Gemini',
       features: [
-        'Genere llms.txt y llms-full.txt con un solo clic',
+        'Genere agents.md, llms.txt y llms-full.txt con un solo clic',
         'Elija qué productos, colecciones, páginas y artículos incluir',
         'Shopify los publica de forma nativa en /llms.txt, sin hosting adicional',
       ],

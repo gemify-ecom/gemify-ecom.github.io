@@ -140,7 +140,7 @@ export const appPagesDe: AppPagesDictionary = {
   llmsTxt: {
     title: 'LLMs-full.txt',
     tagline:
-      'Machen Sie Ihren Shopify-Store bereit für KI. Erzeugen Sie {llmsTxt} und {llmsFullTxt}, damit KI-Assistenten Ihre Produkte, Kategorien und Seiten verstehen.',
+      'Machen Sie Ihren Shopify-Store bereit für KI. Erzeugen Sie {agentsMd}, {llmsTxt} und {llmsFullTxt}, damit KI-Assistenten Ihre Produkte, Kategorien und Seiten verstehen.',
     problemHeading: 'Warum Ihr Store llms.txt braucht',
     problemIntro:
       'Der {standardLink} hilft KI-Modellen, Ihre Website zu verstehen. So wie {robotsTxt} Suchmaschinen leitet, leitet {llmsTxt} KI-Assistenten und hilft ihnen, Ihre Produkte zu empfehlen und Kundenfragen korrekt zu beantworten.',
@@ -169,22 +169,22 @@ export const appPagesDe: AppPagesDictionary = {
     ],
     featuresHeading: 'Das erhalten Sie',
     featuresIntro:
-      'Inhalte auswählen, beide Dateien erzeugen und von Shopify auf Ihrer eigenen Domain ausliefern lassen. Kein zusätzliches Hosting, keine manuelle Bearbeitung.',
+      'Inhalte auswählen, Ihre Dateien erzeugen und von Shopify auf Ihrer eigenen Domain ausliefern lassen. Kein zusätzliches Hosting, keine manuelle Bearbeitung.',
     features: [
       {
         title: 'Erzeugung mit einem Klick',
         description:
-          'Erzeugen Sie llms.txt und llms-full.txt direkt aus Ihrem Dashboard. Wählen Sie genau aus, welche Produkte, Kategorien, Seiten und Artikel enthalten sein sollen.',
+          'Erzeugen Sie agents.md, llms.txt und llms-full.txt direkt aus Ihrem Dashboard. Wählen Sie genau aus, welche Produkte, Kategorien, Seiten und Artikel enthalten sein sollen.',
       },
       {
         title: 'Individuelle Ausgabe',
         description:
-          'Ordnen Sie Abschnitte neu an und passen Sie die Formatierung Ihrer llms-Dateien an, damit die Ausgabe Ihren Store so beschreibt, wie Sie es möchten.',
+          'Ordnen Sie Abschnitte neu an und passen Sie die Formatierung Ihrer erzeugten Dateien an, damit die Ausgabe Ihren Store so beschreibt, wie Sie es möchten.',
       },
       {
         title: 'Native Auslieferung',
         description:
-          'Die Dateien werden in Ihrem Theme veröffentlicht und von Shopify unter /llms.txt und /llms-full.txt ausgeliefert, ohne zusätzliches Hosting.',
+          'Die Dateien werden in Ihrem Theme veröffentlicht und von Shopify unter /agents.md, /llms.txt und /llms-full.txt ausgeliefert, ohne zusätzliches Hosting.',
       },
       {
         title: 'Sie bestimmen die Inhalte',

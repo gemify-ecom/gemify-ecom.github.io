@@ -59,6 +59,7 @@ export function LlmsTxtPage() {
 
   // Inline code and links referenced by the translated sentences.
   const taglineNodes = {
+    agentsMd: <code className="font-mono text-[#00A87B]">agents.md</code>,
     llmsTxt: <code className="font-mono text-[#00A87B]">llms.txt</code>,
     llmsFullTxt: <code className="font-mono text-[#00A87B]">llms-full.txt</code>,
   };

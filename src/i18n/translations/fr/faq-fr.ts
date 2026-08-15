@@ -195,13 +195,13 @@ export const faqFr: FaqDictionary = {
         {
           question: 'Que fait l’application LLMs-full.txt ?',
           paragraphs: [
-            'LLMs-full.txt génère les fichiers llms.txt et llms-full.txt de votre boutique Shopify, afin que les assistants IA comme ChatGPT, Claude et Gemini comprennent vos produits, vos collections et vos pages. Les fichiers sont publiés dans votre thème et servis par Shopify sur /llms.txt et /llms-full.txt, sur votre propre domaine, sans hébergement supplémentaire.',
+            'LLMs-full.txt génère les fichiers agents.md, llms.txt et llms-full.txt de votre boutique Shopify, afin que les assistants IA comme ChatGPT, Claude et Gemini comprennent vos produits, vos collections et vos pages. Les fichiers sont publiés dans votre thème et servis par Shopify sur /agents.md, /llms.txt et /llms-full.txt, sur votre propre domaine, sans hébergement supplémentaire.',
           ],
         },
         {
-          question: 'Que sont llms.txt et llms-full.txt ?',
+          question: 'Que sont agents.md, llms.txt et llms-full.txt ?',
           paragraphs: [
-            'Ce sont de simples fichiers markdown fondés sur le standard llms.txt. Tout comme robots.txt guide les moteurs de recherche, llms.txt guide les assistants IA. llms.txt est un index concis de votre boutique, tandis que llms-full.txt contient l’intégralité du contenu que vous avez choisi d’inclure. Les modèles d’IA lisent ces fichiers bien plus fidèlement que le HTML d’une vitrine.',
+            'Ce sont de simples fichiers markdown fondés sur le standard llms.txt. Tout comme robots.txt guide les moteurs de recherche, ces fichiers guident les assistants IA. llms.txt est un index concis de votre boutique, llms-full.txt contient l’intégralité du contenu que vous avez choisi d’inclure, et agents.md publie la même description de boutique sous le nom de fichier que recherchent les agents IA. Les modèles d’IA lisent ces fichiers bien plus fidèlement que le HTML d’une vitrine.',
           ],
         },
         {

@@ -195,13 +195,13 @@ export const faqEs: FaqDictionary = {
         {
           question: '¿Qué hace la app LLMs-full.txt?',
           paragraphs: [
-            'LLMs-full.txt genera los archivos llms.txt y llms-full.txt de su tienda de Shopify, para que asistentes de IA como ChatGPT, Claude y Gemini puedan entender sus productos, colecciones y páginas. Los archivos se publican en su tema y Shopify los sirve en /llms.txt y /llms-full.txt desde su propio dominio, sin necesidad de hosting adicional.',
+            'LLMs-full.txt genera los archivos agents.md, llms.txt y llms-full.txt de su tienda de Shopify, para que asistentes de IA como ChatGPT, Claude y Gemini puedan entender sus productos, colecciones y páginas. Los archivos se publican en su tema y Shopify los sirve en /agents.md, /llms.txt y /llms-full.txt desde su propio dominio, sin necesidad de hosting adicional.',
           ],
         },
         {
-          question: '¿Qué son llms.txt y llms-full.txt?',
+          question: '¿Qué son agents.md, llms.txt y llms-full.txt?',
           paragraphs: [
-            'Son archivos de markdown simple basados en el estándar llms.txt. Igual que robots.txt guía a los motores de búsqueda, llms.txt guía a los asistentes de IA. llms.txt es un índice conciso de su tienda, mientras que llms-full.txt contiene el contenido completo de todo lo que decida incluir. Los modelos de IA leen estos archivos con mucha más fiabilidad que el HTML renderizado de una tienda.',
+            'Son archivos de markdown simple basados en el estándar llms.txt. Igual que robots.txt guía a los motores de búsqueda, estos archivos guían a los asistentes de IA. llms.txt es un índice conciso de su tienda, llms-full.txt contiene el contenido completo de todo lo que decida incluir y agents.md publica la misma descripción de la tienda con el nombre de archivo que buscan los agentes de IA. Los modelos de IA leen estos archivos con mucha más fiabilidad que el HTML renderizado de una tienda.',
           ],
         },
         {

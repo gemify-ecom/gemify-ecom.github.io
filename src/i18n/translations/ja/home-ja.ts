@@ -42,7 +42,7 @@ export const homeJa: HomeDictionary = {
       title: 'LLMs-full.txt',
       tagline: 'ChatGPT・Claude・Geminiがストアを理解できるように',
       features: [
-        'llms.txtとllms-full.txtをワンクリックで生成',
+        'agents.md・llms.txt・llms-full.txtをワンクリックで生成',
         '掲載する商品・コレクション・ページ・記事を自由に選択',
         'Shopifyが/llms.txtで直接配信。追加のホスティングは不要',
       ],

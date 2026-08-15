@@ -195,13 +195,13 @@ export const faqDe: FaqDictionary = {
         {
           question: 'Was macht die App LLMs-full.txt?',
           paragraphs: [
-            'LLMs-full.txt erzeugt die Dateien llms.txt und llms-full.txt für Ihren Shopify-Store, damit KI-Assistenten wie ChatGPT, Claude und Gemini Ihre Produkte, Kategorien und Seiten verstehen. Die Dateien werden in Ihrem Theme veröffentlicht und von Shopify unter /llms.txt und /llms-full.txt auf Ihrer eigenen Domain ausgeliefert, ganz ohne zusätzliches Hosting.',
+            'LLMs-full.txt erzeugt die Dateien agents.md, llms.txt und llms-full.txt für Ihren Shopify-Store, damit KI-Assistenten wie ChatGPT, Claude und Gemini Ihre Produkte, Kategorien und Seiten verstehen. Die Dateien werden in Ihrem Theme veröffentlicht und von Shopify unter /agents.md, /llms.txt und /llms-full.txt auf Ihrer eigenen Domain ausgeliefert, ganz ohne zusätzliches Hosting.',
           ],
         },
         {
-          question: 'Was sind llms.txt und llms-full.txt?',
+          question: 'Was sind agents.md, llms.txt und llms-full.txt?',
           paragraphs: [
-            'Es handelt sich um einfache Markdown-Dateien nach dem llms.txt-Standard. So wie robots.txt Suchmaschinen leitet, leitet llms.txt KI-Assistenten. llms.txt ist ein kompaktes Verzeichnis Ihres Stores, während llms-full.txt die vollständigen Inhalte aller ausgewählten Elemente enthält. KI-Modelle lesen diese Dateien deutlich zuverlässiger als gerendertes Storefront-HTML.',
+            'Es handelt sich um einfache Markdown-Dateien nach dem llms.txt-Standard. So wie robots.txt Suchmaschinen leitet, leiten diese Dateien KI-Assistenten. llms.txt ist ein kompaktes Verzeichnis Ihres Stores, llms-full.txt enthält die vollständigen Inhalte aller ausgewählten Elemente, und agents.md veröffentlicht dieselbe Store-Beschreibung unter dem Dateinamen, nach dem KI-Agenten suchen. KI-Modelle lesen diese Dateien deutlich zuverlässiger als gerendertes Storefront-HTML.',
           ],
         },
         {

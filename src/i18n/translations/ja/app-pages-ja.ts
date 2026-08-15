@@ -140,7 +140,7 @@ export const appPagesJa: AppPagesDictionary = {
   llmsTxt: {
     title: 'LLMs-full.txt',
     tagline:
-      'ShopifyストアをAI対応に。{llmsTxt}と{llmsFullTxt}を生成し、AIアシスタントが商品・コレクション・ページを正しく理解できるようにします。',
+      'ShopifyストアをAI対応に。{agentsMd}・{llmsTxt}・{llmsFullTxt}を生成し、AIアシスタントが商品・コレクション・ページを正しく理解できるようにします。',
     problemHeading: 'ストアにllms.txtが必要な理由',
     problemIntro:
       '{standardLink}は、AIモデルがWebサイトを理解する助けになります。{robotsTxt}が検索エンジンを案内するように、{llmsTxt}はAIアシスタントを案内し、商品の提案や顧客の質問への回答を正確にします。',
@@ -169,12 +169,12 @@ export const appPagesJa: AppPagesDictionary = {
     ],
     featuresHeading: 'できること',
     featuresIntro:
-      '掲載する内容を選び、2つのファイルを生成すれば、あとはShopifyが自社ドメインから配信します。追加のホスティングも手作業の編集も不要です。',
+      '掲載する内容を選び、ファイルを生成すれば、あとはShopifyが自社ドメインから配信します。追加のホスティングも手作業の編集も不要です。',
     features: [
       {
         title: 'ワンクリックで生成',
         description:
-          'ダッシュボードからllms.txtとllms-full.txtの両方を生成。掲載する商品・コレクション・ページ・記事を細かく選べます。',
+          'ダッシュボードからagents.md・llms.txt・llms-full.txtをまとめて生成。掲載する商品・コレクション・ページ・記事を細かく選べます。',
       },
       {
         title: '出力のカスタマイズ',
@@ -184,7 +184,7 @@ export const appPagesJa: AppPagesDictionary = {
       {
         title: 'Shopifyが直接配信',
         description:
-          'ファイルはテーマに公開され、Shopifyが/llms.txtと/llms-full.txtで配信します。追加のホスティングは不要です。',
+          'ファイルはテーマに公開され、Shopifyが/agents.md・/llms.txt・/llms-full.txtで配信します。追加のホスティングは不要です。',
       },
       {
         title: '掲載内容は自由に選択',

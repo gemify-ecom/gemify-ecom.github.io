@@ -192,13 +192,13 @@ export const faqJa: FaqDictionary = {
         {
           question: 'LLMs-full.txtは何ができるアプリですか?',
           paragraphs: [
-            'LLMs-full.txtは、Shopifyストア用のllms.txtとllms-full.txtを生成するアプリです。ChatGPT、Claude、GeminiなどのAIアシスタントが、ストアの商品、コレクション、ページを正しく理解できるようになります。生成したファイルはテーマに公開され、追加のホスティングなしで、ストア自身のドメインの /llms.txt と /llms-full.txt からShopifyが配信します。',
+            'LLMs-full.txtは、Shopifyストア用のagents.md、llms.txt、llms-full.txtを生成するアプリです。ChatGPT、Claude、GeminiなどのAIアシスタントが、ストアの商品、コレクション、ページを正しく理解できるようになります。生成したファイルはテーマに公開され、追加のホスティングなしで、ストア自身のドメインの /agents.md、/llms.txt、/llms-full.txt からShopifyが配信します。',
           ],
         },
         {
-          question: 'llms.txtとllms-full.txtとは何ですか?',
+          question: 'agents.md、llms.txt、llms-full.txtとは何ですか?',
           paragraphs: [
-            'llms.txt標準に基づくマークダウン形式のテキストファイルです。robots.txtが検索エンジンを案内するのと同じように、llms.txtはAIアシスタントを案内します。llms.txtはストアの簡潔な索引で、llms-full.txtには選択したコンテンツの全文が含まれます。AIモデルは、表示用のストアフロントHTMLよりも、これらのファイルをはるかに正確に読み取れます。',
+            'llms.txt標準に基づくマークダウン形式のテキストファイルです。robots.txtが検索エンジンを案内するのと同じように、これらのファイルはAIアシスタントを案内します。llms.txtはストアの簡潔な索引で、llms-full.txtには選択したコンテンツの全文が含まれます。agents.mdは、AIエージェントが参照するファイル名で同じストア情報を公開します。AIモデルは、表示用のストアフロントHTMLよりも、これらのファイルをはるかに正確に読み取れます。',
           ],
         },
         {

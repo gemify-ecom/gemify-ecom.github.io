@@ -141,7 +141,7 @@ export const appPagesEs: AppPagesDictionary = {
   llmsTxt: {
     title: 'LLMs-full.txt',
     tagline:
-      'Prepare su tienda de Shopify para la IA. Genere {llmsTxt} y {llmsFullTxt} para que los asistentes de IA entiendan sus productos, colecciones y páginas.',
+      'Prepare su tienda de Shopify para la IA. Genere {agentsMd}, {llmsTxt} y {llmsFullTxt} para que los asistentes de IA entiendan sus productos, colecciones y páginas.',
     problemHeading: 'Por qué su tienda necesita llms.txt',
     problemIntro:
       'El {standardLink} ayuda a los modelos de IA a entender su sitio web. Igual que {robotsTxt} guía a los motores de búsqueda, {llmsTxt} guía a los asistentes de IA y les ayuda a recomendar sus productos y a responder con precisión a las preguntas de los clientes.',
@@ -170,22 +170,22 @@ export const appPagesEs: AppPagesDictionary = {
     ] satisfies ProblemCard[],
     featuresHeading: 'Qué obtiene',
     featuresIntro:
-      'Elija su contenido, genere ambos archivos y deje que Shopify los sirva desde su propio dominio. Sin hosting adicional y sin edición manual.',
+      'Elija su contenido, genere sus archivos y deje que Shopify los sirva desde su propio dominio. Sin hosting adicional y sin edición manual.',
     features: [
       {
         title: 'Generación con un clic',
         description:
-          'Genere llms.txt y llms-full.txt desde su panel. Elija exactamente qué productos, colecciones, páginas y artículos incluir.',
+          'Genere agents.md, llms.txt y llms-full.txt desde su panel. Elija exactamente qué productos, colecciones, páginas y artículos incluir.',
       },
       {
         title: 'Salida personalizable',
         description:
-          'Reordene las secciones y personalice el formato de sus archivos llms, para que el resultado describa su tienda como usted quiere.',
+          'Reordene las secciones y personalice el formato de sus archivos generados, para que el resultado describa su tienda como usted quiere.',
       },
       {
         title: 'Servido de forma nativa',
         description:
-          'Los archivos se publican en su tema y Shopify los sirve en /llms.txt y /llms-full.txt, sin necesidad de hosting adicional.',
+          'Los archivos se publican en su tema y Shopify los sirve en /agents.md, /llms.txt y /llms-full.txt, sin necesidad de hosting adicional.',
       },
       {
         title: 'Usted elige el contenido',

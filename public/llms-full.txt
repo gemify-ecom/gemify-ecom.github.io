@@ -83,7 +83,7 @@ Pricing:
 URL: https://gemify-ecom.github.io/apps/llms-txt
 Install: https://apps.shopify.com/llms-full-txt
 
-Makes Shopify stores AI-ready by generating llms.txt and llms-full.txt files, so AI assistants like ChatGPT, Claude, and Gemini can understand a store's products, collections, and pages. Just as robots.txt guides search engines, llms.txt guides AI assistants, helping them recommend products and answer customer questions accurately.
+Makes Shopify stores AI-ready by generating agents.md, llms.txt, and llms-full.txt files, so AI assistants like ChatGPT, Claude, and Gemini can understand a store's products, collections, and pages. Just as robots.txt guides search engines, llms.txt guides AI assistants, helping them recommend products and answer customer questions accurately.
 
 Solves:
 
@@ -94,10 +94,10 @@ Solves:
 
 Features:
 
-- One-click generation of both llms.txt and llms-full.txt from the dashboard
+- One-click generation of agents.md, llms.txt, and llms-full.txt from the dashboard
 - Choose exactly which products, collections, pages, blog articles, and policies to include
 - Custom output: reorder sections and customize formatting
-- Served natively: files are published to the theme and served by Shopify at /llms.txt and /llms-full.txt, no extra hosting
+- Served natively: files are published to the theme and served by Shopify at /agents.md, /llms.txt, and /llms-full.txt, no extra hosting
 - Clean markdown generated from store data via the Shopify GraphQL API
 - No customer data accessed: the app only reads store content
 

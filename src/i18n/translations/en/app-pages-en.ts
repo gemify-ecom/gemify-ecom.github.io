@@ -141,7 +141,7 @@ export const appPagesEn = {
     title: 'LLMs-full.txt',
     /** `{llmsTxt}` and `{llmsFullTxt}` render as inline code. */
     tagline:
-      'Make your Shopify store AI-ready. Generate {llmsTxt} and {llmsFullTxt} so AI assistants can understand your products, collections, and pages.',
+      'Make your Shopify store AI-ready. Generate {agentsMd}, {llmsTxt}, and {llmsFullTxt} so AI assistants can understand your products, collections, and pages.',
     problemHeading: 'Why Your Store Needs llms.txt',
     /** `{standardLink}`, `{robotsTxt}` and `{llmsTxt}` are inline nodes. */
     problemIntro:
@@ -171,22 +171,22 @@ export const appPagesEn = {
     ] satisfies ProblemCard[],
     featuresHeading: 'What You Get',
     featuresIntro:
-      'Pick your content, generate both files, and let Shopify serve them from your own domain. No extra hosting, no manual editing.',
+      'Pick your content, generate your files, and let Shopify serve them from your own domain. No extra hosting, no manual editing.',
     features: [
       {
         title: 'One-Click Generation',
         description:
-          'Generate both llms.txt and llms-full.txt from your dashboard. Choose exactly which products, collections, pages, and articles to include.',
+          'Generate agents.md, llms.txt, and llms-full.txt from your dashboard. Choose exactly which products, collections, pages, and articles to include.',
       },
       {
         title: 'Custom Output',
         description:
-          'Reorder sections and customize how your llms files are formatted, so the output matches how you want your store described.',
+          'Reorder sections and customize how your generated files are formatted, so the output matches how you want your store described.',
       },
       {
         title: 'Served Natively',
         description:
-          'Files are published to your theme and served by Shopify at /llms.txt and /llms-full.txt, with no extra hosting needed.',
+          'Files are published to your theme and served by Shopify at /agents.md, /llms.txt, and /llms-full.txt, with no extra hosting needed.',
       },
       {
         title: 'You Choose the Content',

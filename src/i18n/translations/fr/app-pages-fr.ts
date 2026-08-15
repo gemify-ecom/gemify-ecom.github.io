@@ -141,7 +141,7 @@ export const appPagesFr: AppPagesDictionary = {
   llmsTxt: {
     title: 'LLMs-full.txt',
     tagline:
-      'Préparez votre boutique Shopify pour l’IA. Générez {llmsTxt} et {llmsFullTxt} pour que les assistants IA comprennent vos produits, vos collections et vos pages.',
+      'Préparez votre boutique Shopify pour l’IA. Générez {agentsMd}, {llmsTxt} et {llmsFullTxt} pour que les assistants IA comprennent vos produits, vos collections et vos pages.',
     problemHeading: 'Pourquoi votre boutique a besoin de llms.txt',
     problemIntro:
       'Le {standardLink} aide les modèles d’IA à comprendre votre site. Tout comme {robotsTxt} guide les moteurs de recherche, {llmsTxt} guide les assistants IA et les aide à recommander vos produits et à répondre correctement aux questions de vos clients.',
@@ -170,22 +170,22 @@ export const appPagesFr: AppPagesDictionary = {
     ] satisfies ProblemCard[],
     featuresHeading: 'Ce que vous obtenez',
     featuresIntro:
-      'Choisissez votre contenu, générez les deux fichiers et laissez Shopify les servir depuis votre propre domaine. Aucun hébergement supplémentaire, aucune édition manuelle.',
+      'Choisissez votre contenu, générez vos fichiers et laissez Shopify les servir depuis votre propre domaine. Aucun hébergement supplémentaire, aucune édition manuelle.',
     features: [
       {
         title: 'Génération en un clic',
         description:
-          'Générez llms.txt et llms-full.txt depuis votre tableau de bord. Choisissez précisément les produits, collections, pages et articles à inclure.',
+          'Générez agents.md, llms.txt et llms-full.txt depuis votre tableau de bord. Choisissez précisément les produits, collections, pages et articles à inclure.',
       },
       {
         title: 'Sortie personnalisable',
         description:
-          'Réorganisez les sections et personnalisez la mise en forme de vos fichiers llms, pour que le résultat corresponde à la façon dont vous voulez présenter votre boutique.',
+          'Réorganisez les sections et personnalisez la mise en forme de vos fichiers générés, pour que le résultat corresponde à la façon dont vous voulez présenter votre boutique.',
       },
       {
         title: 'Servi nativement',
         description:
-          'Les fichiers sont publiés dans votre thème et servis par Shopify sur /llms.txt et /llms-full.txt, sans hébergement supplémentaire.',
+          'Les fichiers sont publiés dans votre thème et servis par Shopify sur /agents.md, /llms.txt et /llms-full.txt, sans hébergement supplémentaire.',
       },
       {
         title: 'Vous choisissez le contenu',

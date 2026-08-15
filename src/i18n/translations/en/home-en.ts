@@ -42,7 +42,7 @@ export const homeEn = {
       title: 'LLMs-full.txt',
       tagline: 'Make your store readable to ChatGPT, Claude, and Gemini',
       features: [
-        'Generate llms.txt and llms-full.txt in one click',
+        'Generate agents.md, llms.txt, and llms-full.txt in one click',
         'Pick which products, collections, pages, and articles to include',
         'Served natively by Shopify at /llms.txt, no extra hosting',
       ],
