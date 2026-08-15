@@ -4,7 +4,7 @@ import { useTranslations } from '../i18n/use-locale';
 import { LocalizedLink } from '../i18n/localized-link';
 import { renderTemplate } from '../i18n/rich-text';
 
-const APP_URL = 'https://llms-full-txt.fly.dev/';
+const APP_URL = 'https://apps.shopify.com/llms-full-txt';
 const STANDARD_URL = 'https://llmstxt.org';
 
 interface FeatureCardProps {

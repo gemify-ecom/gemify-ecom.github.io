@@ -267,7 +267,7 @@ function AppsSection() {
               tagline={apps.llmsTxt.tagline}
               features={withIcons(apps.llmsTxt.features, llmsTxtFeatureIcons)}
               buttonText={actions.installFree}
-              buttonHref="https://llms-full-txt.fly.dev/"
+              buttonHref="https://apps.shopify.com/llms-full-txt"
               detailsLink="/apps/llms-txt"
             />
           </div>

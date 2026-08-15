@@ -24,7 +24,7 @@ Key facts:
 
 - [Bulk Delete Orders on the Shopify App Store](https://apps.shopify.com/bulk-delete-orders)
 - [Default Address Lock on the Shopify App Store](https://apps.shopify.com/default-address-lock)
-- [LLMs-full.txt app](https://llms-full-txt.fly.dev/)
+- [LLMs-full.txt on the Shopify App Store](https://apps.shopify.com/llms-full-txt)
 
 ## Optional
 

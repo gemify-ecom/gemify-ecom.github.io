@@ -81,7 +81,7 @@ Pricing:
 ## LLMs-full.txt
 
 URL: https://gemify-ecom.github.io/apps/llms-txt
-Install: https://llms-full-txt.fly.dev/
+Install: https://apps.shopify.com/llms-full-txt
 
 Makes Shopify stores AI-ready by generating llms.txt and llms-full.txt files, so AI assistants like ChatGPT, Claude, and Gemini can understand a store's products, collections, and pages. Just as robots.txt guides search engines, llms.txt guides AI assistants, helping them recommend products and answer customer questions accurately.
 
