@@ -101,7 +101,9 @@ body {
      header and footer. The light ground lives on the wrapper in layout.tsx. */
   background: var(--color-ink);
   margin: 0;
-  padding: 0;
+  /* viewport-fit=cover (index.html) lets content run under Safari's glass
+     bottom bar; keep it out of the landscape notch on both sides. */
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -29,7 +29,8 @@ export function Footer({ showCTA = true }: FooterProps) {
       )}
 
       {/* Footer */}
-      <footer className="bg-ink text-white py-12 px-6">
+      {/* Extra bottom padding keeps the last line clear of Safari's floating bottom bar */}
+      <footer className="bg-ink text-white pt-12 pb-[calc(3rem+env(safe-area-inset-bottom))] px-6">
         <div className="max-w-[1120px] mx-auto">
           {/* Footer Grid */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
