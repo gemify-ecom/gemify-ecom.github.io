@@ -96,7 +96,10 @@ body {
   font-family: var(--font-sans);
   color: var(--color-text-primary);
   line-height: 1.6;
-  background: var(--color-bg-light);
+  /* Ink, not the light page ground: iOS Safari tints its bottom bar and the
+     overscroll area with the canvas colour, so this keeps them dark like the
+     header and footer. The light ground lives on the wrapper in layout.tsx. */
+  background: var(--color-ink);
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;

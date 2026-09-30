@@ -24,7 +24,8 @@ export function Layout({
   const { skipToContent } = useTranslations('common');
 
   return (
-    <div className="min-h-screen flex flex-col">
+    // bg-mist is the page ground; body itself is ink (see index.css)
+    <div className="min-h-screen flex flex-col bg-mist">
       {/* Skip link: the first focusable element, visible only when focused */}
       <a
         href={`#${MAIN_CONTENT_ID}`}
