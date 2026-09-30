@@ -1,0 +1,9 @@
+# Every page is prerendered to static HTML and may be crawled. Pages that
+# should stay out of search results (demo screencasts, unlisted help pages)
+# carry a noindex tag instead of being blocked here: a crawler has to fetch a
+# page to see that tag, and a public Disallow list would only advertise
+# those URLs.
+User-agent: *
+Allow: /
+
+Sitemap: https://gemify-ecom.github.io/sitemap.xml

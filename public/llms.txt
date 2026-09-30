@@ -1,0 +1,45 @@
+# Gemify
+
+> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs-full.txt. Founded by experienced Shopify developers. Every app offers a free plan, works with all Shopify plans including Shopify Plus, and follows a privacy-first approach. Gemify also builds custom Shopify apps and customizes, upgrades, and fixes existing apps, including apps built by other developers.
+
+Key facts:
+
+- Bulk Delete Orders, Default Address Lock, and LLMs-full.txt run on the backend and add no scripts to storefronts, so store speed is unaffected
+- Data is encrypted in transit (TLS 1.2+) and at rest (AES-256); GDPR and CPRA compliant; customer data is never sold
+- Support: sean.gemify@gmail.com, replies within 24 hours on business days
+- YouTube: [Gemify Ecom](https://www.youtube.com/@sean.gemify)
+- The site is available in English (default), Japanese (/ja), German (/de), French (/fr), and Spanish (/es)
+
+## Apps
+
+- [Bulk Delete Orders](https://gemify-ecom.github.io/apps/bulk-delete-orders): Bulk delete orders, draft orders, and customers with filters (status, payment status, date, tags). Auto-cancels orders before deletion, confirms before deleting, tracks jobs in real time, exports CSV reports. Customers can be deleted with their orders or anonymized (PII masked). Free plan: 50 order/draft order deletions plus bulk customer deletion; Complete plan: $36/year, unlimited, adds customer anonymization. Rated 5.0 on the Shopify App Store.
+- [Default Address Lock](https://gemify-ecom.github.io/apps/default-address-lock): Stops Shopify from overwriting customer default addresses when orders ship elsewhere, restoring the original in real time while keeping manual changes by customers or staff. Activity dashboard of every protection event. Ideal for gift stores, B2B, CRM-integrated shops, and subscriptions. Free up to 30 orders/month; Basic $4.99/month (100 orders), Growth $24.99/month (500), Enterprise $99/month (unlimited).
+- [LLMs-full.txt](https://gemify-ecom.github.io/apps/llms-txt): Generates agents.md, llms.txt, and llms-full.txt for Shopify stores so AI assistants like ChatGPT, Claude, and Gemini understand the catalog. Files are served natively by Shopify at the store's own domain. Choose content by type or item by item, edit the output in a template editor, and regenerate automatically hourly, daily, or weekly. Free plan: up to 50 items per content type with every feature; Complete plan: $9.99/month, unlimited. Rated 5.0 on the Shopify App Store.
+
+### Coming soon (not on the Shopify App Store yet; no install link or prices yet)
+
+- [Japan Multiship](https://gemify-ecom.github.io/apps/japan-multiship): Buyers assign cart items to up to 20 recipients on the cart page and pay once. Postal code autofill, shipping priced per destination before checkout, one fulfillment order per destination, Yamato B2 Cloud CSV export, and tracking number import. Built for stores in Japan (JPY); English and Japanese.
+- [Best Store Locator](https://gemify-ecom.github.io/apps/best-store-locator): A searchable map of stores, stockists, or dealers as a theme block, with built-in maps and address lookup (no API key), CSV import with a full preview, search by city or ZIP, open-now status, and a saved favorite store.
+- [Checkout Probe](https://gemify-ecom.github.io/apps/checkout-probe): Gets a Shopify checkout ready for WebMCP, the WebMCP tools for checkout that Shopify added on 2026-09-28 for AI agents in the buyer's browser. Runs a test checkout the way an AI shopping agent would, shows each point where an agent would get stuck with a fix and a settings link, and lists what the test cannot check. Read-only; the test checkout is always cancelled and no order is placed.
+
+## Services
+
+- [Shopify app development services](https://gemify-ecom.github.io/services): Custom app development (private apps for one store, public apps for the Shopify App Store, admin/checkout/theme app extensions, ERP and CRM integrations), customization of Gemify apps or apps built by other developers, Shopify API version upgrades and REST to GraphQL migration, and bug fixes and maintenance. Free quote; every project includes a post-launch support period for bugs in the delivered work. Request a quote through the contact form or by email.
+
+## Documentation
+
+- [FAQ](https://gemify-ecom.github.io/faq): 45 questions covering each app, pricing, billing, privacy, security, and technical compatibility. Sections: [Bulk Delete Orders](https://gemify-ecom.github.io/faq#bulk-delete-orders), [Default Address Lock](https://gemify-ecom.github.io/faq#default-address-lock), [LLMs-full.txt](https://gemify-ecom.github.io/faq#llms-full-txt), [Pricing & Billing](https://gemify-ecom.github.io/faq#pricing), [Privacy & Security](https://gemify-ecom.github.io/faq#privacy).
+- [Privacy Policy](https://gemify-ecom.github.io/privacy-policy): Data collection, usage, retention, GDPR/CPRA compliance, and merchant rights.
+
+## Install
+
+- [Bulk Delete Orders on the Shopify App Store](https://apps.shopify.com/bulk-delete-orders)
+- [Default Address Lock on the Shopify App Store](https://apps.shopify.com/default-address-lock)
+- [LLMs-full.txt on the Shopify App Store](https://apps.shopify.com/llms-full-txt)
+- [All Gemify apps on the Shopify App Store](https://apps.shopify.com/partners/gemify4): Every app with its current rating and reviews
+
+## Optional
+
+- [Home page](https://gemify-ecom.github.io/): Company overview, app lineup, merchant testimonials, and contact form.
+- [llms-full.txt](https://gemify-ecom.github.io/llms-full.txt): Expanded version of this file with full app details, pricing tables, and FAQ answers inline.
+- [Sitemap](https://gemify-ecom.github.io/sitemap.xml): Every indexable page in all five languages.
