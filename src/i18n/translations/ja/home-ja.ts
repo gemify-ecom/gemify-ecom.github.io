@@ -9,7 +9,7 @@ export const homeJa: HomeDictionary = {
       emphasis: 'ひとつの仕事',
     },
     subheadline:
-      'どのアプリもストアの課題をひとつだけ解決します。無料プランから始められ、開発した本人がサポートします。',
+      'インストール無料。Shopifyのために作られ、開発した本人がサポートします。',
     primaryCta: 'アプリを見る',
     secondaryCta: 'お問い合わせ →',
     ratingBadge: 'Shopify App Storeで5つ星の評価',

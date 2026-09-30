@@ -9,7 +9,7 @@ export const homeDe: HomeDictionary = {
       emphasis: 'eine Aufgabe',
     },
     subheadline:
-      'Jede App löst genau eine Aufgabe in Ihrem Shopify-Shop, startet kostenlos und wird von dem Entwickler betreut, der sie gebaut hat.',
+      'Kostenlos zu installieren, für Shopify gemacht und betreut vom Entwickler, der sie gebaut hat.',
     primaryCta: 'Unsere Apps entdecken',
     secondaryCta: 'Kontakt aufnehmen →',
     ratingBadge: '5 Sterne im Shopify App Store',

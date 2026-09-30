@@ -9,7 +9,7 @@ export const homeEn = {
       emphasis: 'one job',
     } satisfies EmphasisedText,
     subheadline:
-      'Each app fixes one thing in your Shopify store, starts free, and is supported by the developer who built it.',
+      'Free to install, made for Shopify, and supported by the developer who built it.',
     primaryCta: 'Explore Our Apps',
     secondaryCta: 'Get in Touch →',
     ratingBadge: '5-star rated on Shopify App Store',

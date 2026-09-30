@@ -10,7 +10,7 @@ export const homeFr: HomeDictionary = {
       emphasis: 'une seule chose',
     },
     subheadline:
-      'Chaque app règle une seule chose dans votre boutique Shopify, commence gratuitement et est suivie par le développeur qui l’a créée.',
+      'Installation gratuite, conçues pour Shopify et suivies par le développeur qui les a créées.',
     primaryCta: 'Découvrir nos applications',
     secondaryCta: 'Nous contacter →',
     ratingBadge: 'Noté 5 étoiles sur le Shopify App Store',

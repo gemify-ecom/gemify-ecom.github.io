@@ -10,7 +10,7 @@ export const homeEs: HomeDictionary = {
       emphasis: 'una sola tarea',
     },
     subheadline:
-      'Cada app resuelve una sola tarea en su tienda Shopify, empieza gratis y la atiende el desarrollador que la creó.',
+      'Instalación gratuita, hechas para Shopify y con el soporte del desarrollador que las creó.',
     primaryCta: 'Explorar nuestras apps',
     secondaryCta: 'Contáctenos →',
     ratingBadge: '5 estrellas en la Shopify App Store',
