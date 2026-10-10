@@ -152,7 +152,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Data:',
-          text: 'Your test settings (the test product and test shipping address) and your last 50 test reports',
+          text: 'Your test setups (up to 5 test products and test shipping addresses on the Complete plan, one on the Free plan), the daily test schedule, and your last 50 test reports',
         },
         {
           label: 'Why:',

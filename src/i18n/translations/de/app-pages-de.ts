@@ -450,6 +450,7 @@ export const appPagesDe: AppPagesDictionary = {
     ] satisfies FeatureCardContent[],
     goodToKnowHeading: 'Gut zu wissen',
     goodToKnow: [
+      'Kostenloser Tarif: unbegrenzte Tests mit einem Produkt und einer Adresse. Komplettplan (9,99 $/Monat): bis zu 5 Produkte und Adressen, ein täglicher Test von jedem und ein Hinweis in der App, wenn sich ein Ergebnis ändert.',
       'Für die WebMCP-Tools des Shopify-Checkouts gemacht. Der Test läuft über Shopifys Checkout MCP, daher erscheinen einige Schritte, die nur im Browser sichtbar sind, etwa manche Checkout-UI-Erweiterungen, möglicherweise nicht. Der Bericht listet auf, was der Test nicht prüfen kann.',
       'Nur lesend: Die App ändert nie Ihre Store-Einstellungen und gibt nie eine Bestellung auf.',
       'Erfordert mindestens ein aktives, kaufbares Produkt und eine Lieferadresse: die Store-Adresse oder eine Testadresse, die Sie in der App festlegen.',

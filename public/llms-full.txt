@@ -144,12 +144,14 @@ Features:
 - How the test ran: each call the test made, in order, with what came back and how long it took
 - Not checked by this test: rules that run only when the order is placed, checkout apps that ask the buyer for input, and carrier or app-provided shipping rates
 - Test history of recent runs, and test settings for the product and the shipping address (pick a country and fill a sample address in one click)
+- Complete plan: up to 5 test setups (product and shipping address each), a daily scheduled test of every setup, and an alert in the app when a result changes from that setup's previous test
 
 Requirements: at least one active product that can be bought, and a shipping address (the store address or a test address set in the app). Read-only access to products, shipping settings, and markets; no settings changes, no theme changes, no app blocks. App UI in English.
 
 Pricing:
 
-- Free
+- Free: unlimited on-demand tests of one product and address, with every report feature
+- Complete plan: $9.99/month (no trial) for up to 5 test setups, a daily test, and in-app change alerts
 
 ## Coming soon
 
@@ -160,14 +162,14 @@ These apps are not on the Shopify App Store yet. Their pages describe what each 
 
 ## Pricing & Billing (all apps)
 
-- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (up to 50 items per content type); Checkout Probe is free
+- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (up to 50 items per content type), Checkout Probe (one product and address, unlimited tests)
 - Billing is handled through Shopify and appears on the regular Shopify invoice
 - Cancel anytime by uninstalling the app through the Shopify admin
 - Refunds: contact support; refunds are issued where appropriate
 
 ## Privacy & Security
 
-- Minimum data collection: only what each app needs (order data and resource IDs for Bulk Delete Orders, which stores no customer personal information; customer/address IDs for Default Address Lock; store content for LLMs-full.txt; test settings and the last 50 test reports for Checkout Probe, which uses a fictional test buyer)
+- Minimum data collection: only what each app needs (order data and resource IDs for Bulk Delete Orders, which stores no customer personal information; customer/address IDs for Default Address Lock; store content for LLMs-full.txt; test setups, the daily test schedule and the last 50 test reports for Checkout Probe, which uses a fictional test buyer)
 - Data is never sold, rented, or traded to third parties
 - Encryption in transit and at rest, secure sign-in through Shopify, regular security audits, strict access controls
 - After uninstall, data is deleted within 30 days (sooner for some apps)

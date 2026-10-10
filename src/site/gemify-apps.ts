@@ -113,7 +113,10 @@ export const GEMIFY_APPS = {
     path: '/apps/checkout-probe',
     appStoreUrl: 'https://apps.shopify.com/checkout-probe',
     icon: '/resources/checkout_probe.png',
-    plans: [{ name: 'Free', price: 0 }],
+    plans: [
+      { name: 'Free', price: 0 },
+      { name: 'Complete plan', price: 9.99, interval: 'month' },
+    ],
   },
 } satisfies Record<AppId, GemifyApp>;
 

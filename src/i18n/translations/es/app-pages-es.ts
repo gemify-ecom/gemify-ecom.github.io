@@ -448,6 +448,7 @@ export const appPagesEs: AppPagesDictionary = {
     ] satisfies FeatureCardContent[],
     goodToKnowHeading: 'Conviene saber',
     goodToKnow: [
+      'Plan gratuito: pruebas ilimitadas con un producto y una dirección. Plan completo (9,99 $/mes): hasta 5 productos y direcciones, una prueba diaria de cada uno y un aviso en la app cuando cambia un resultado.',
       'Pensado para las herramientas WebMCP del checkout de Shopify. La prueba se hace a través de Checkout MCP de Shopify, por lo que algunos pasos que solo aparecen en el navegador, como ciertas extensiones de la interfaz del checkout, pueden no detectarse. El informe indica lo que la prueba no puede comprobar.',
       'Solo lectura: la app nunca cambia la configuración de su tienda y nunca realiza un pedido.',
       'Requiere al menos un producto activo que se pueda comprar y una dirección de envío: la dirección de la tienda o una dirección de prueba que usted configure en la app.',

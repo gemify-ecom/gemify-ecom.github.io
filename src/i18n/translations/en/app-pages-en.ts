@@ -440,6 +440,7 @@ export const appPagesEn = {
     ] satisfies FeatureCardContent[],
     goodToKnowHeading: 'Good to Know',
     goodToKnow: [
+      'Free plan: unlimited tests of one product and address. Complete plan ($9.99/month): up to 5 products and addresses, a daily test of each, and an alert in the app when a result changes.',
       'Made for Shopify’s WebMCP tools for checkout. The test runs through Shopify’s Checkout MCP, so a few steps that only show in the browser, such as some checkout UI extensions, may not appear. The report lists what the test cannot check.',
       'Read-only: the app never changes your store settings and never places an order.',
       'Needs at least one active product that can be bought, and a shipping address: the store address or a test address you set in the app.',

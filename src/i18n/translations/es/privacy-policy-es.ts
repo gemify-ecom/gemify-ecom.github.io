@@ -155,7 +155,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Datos:',
-          text: 'Sus ajustes de prueba (el producto de prueba y la dirección de envío de prueba) y sus últimos 50 informes de prueba',
+          text: 'Sus configuraciones de prueba (producto y dirección de envío de prueba, hasta 5 con el Plan completo, una con el plan gratuito), el horario de la prueba diaria y sus últimos 50 informes de prueba',
         },
         {
           label: 'Para qué:',

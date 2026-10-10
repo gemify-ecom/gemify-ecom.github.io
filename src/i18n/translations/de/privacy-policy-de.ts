@@ -154,7 +154,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Daten:',
-          text: 'Ihre Testeinstellungen (das Testprodukt und die Test-Lieferadresse) und Ihre letzten 50 Testberichte',
+          text: 'Ihre Test-Setups (Testprodukt und Test-Lieferadresse, bis zu 5 im Komplettplan, eines im kostenlosen Tarif), den Zeitplan des täglichen Tests und Ihre letzten 50 Testberichte',
         },
         {
           label: 'Zweck:',

@@ -111,6 +111,22 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
     ],
   },
   {
+    id: 'complete-plan',
+    heading: 'Test setups, daily tests and alerts (Complete plan)',
+    blocks: [
+      {
+        kind: 'list',
+        items: [
+          'Click "Upgrade to Complete plan" in the app, or "Pricing" in the footer, to choose the plan on Shopify\'s pricing page. "Manage plan" changes or cancels it.',
+          'Test setups: "Add test setup" saves up to 5 products and shipping addresses. "Run checkout test" then opens and cancels one test checkout per setup, and "Setups in this test" links each report.',
+          'Daily test: with "Run the test every day" on, every setup is tested once a day without opening the app. The next time shows under the switch, and Test history marks those runs "Daily".',
+          'Alerts: with "Show an alert when a result changes" on, a daily test whose result differs from that setup\'s previous test (a new problem, a fixed one, or a test that could not run) shows "Your daily test found a change" at the top of the app until you dismiss it.',
+          'Back on the Free plan, your setups stay saved but only the first one runs; the others show as "Paused".',
+        ],
+      },
+    ],
+  },
+  {
     id: 'data-and-privacy',
     heading: 'Data and privacy',
     blocks: [
@@ -118,7 +134,7 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
         kind: 'list',
         items: [
           'Read-only access: the app only reads your products, shipping settings, and markets.',
-          'The app keeps your test settings and the last 50 test reports for your store. It holds no customer data: the test buyer is fictional.',
+          'The app keeps your test setups, the daily test schedule, and the last 50 test reports for your store. It holds no customer data: the test buyer is fictional.',
           'The app contains no third-party analytics or tracking.',
           'Uninstalling the app deletes your settings and test reports.',
           'Full details: see the {privacyPolicy}.',
@@ -132,7 +148,7 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
     blocks: [
       {
         kind: 'paragraph',
-        text: 'Checkout Probe is free. The app is available in English.',
+        text: 'The Free plan tests one product and address, as often as you like. The Complete plan ($9.99 every 30 days, no trial) adds up to 5 test setups, a daily test and in-app alerts. Billing goes through Shopify. The app is available in English.',
       },
     ],
   },

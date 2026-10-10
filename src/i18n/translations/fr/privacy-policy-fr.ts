@@ -166,7 +166,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Données :',
-          text: 'Vos réglages de test (le produit de test et l’adresse de livraison de test) et vos 50 derniers rapports de test',
+          text: 'Vos configurations de test (produit et adresse de livraison de test, jusqu’à 5 avec le Plan complet, une avec le plan gratuit), le calendrier du test quotidien et vos 50 derniers rapports de test',
         },
         {
           label: 'Pourquoi :',
