@@ -23,7 +23,7 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
         items: [
           'Add locations: in the app, open Locations and click Add location. Fill in the name, address, city, and country (the rest is optional). The address is placed on the map automatically. A "Needs attention" badge means it could not be placed: check the spelling and save again, click "Retry address verification", or enter the store\'s latitude and longitude and save. In Google Maps, right-click the store and click the numbers to copy them; you can paste that "latitude, longitude" pair straight into the Latitude field. An entered pin is used as-is, stays put when you later edit the address, and is never replaced by an address lookup. Clear both fields and save to place the pin from the address again.',
           'Add the map to your theme: on the app home, click "Open theme editor" and add the Best Store Locator block to any page (Online Store 2.0 themes). Position it like any other block.',
-          'Customize: in the block settings, set the heading, intro text, accent color, layout (map first or list first), distance unit, radius options, and default map position. Every text in the widget (search box placeholder, buttons, result count, messages, store card labels) has its own field under "Search texts", "Results texts", and "Store card texts". Leave a field blank to keep the default wording.',
+          'Customize: in the block settings, set the heading, intro text, accent color, layout (map first or list first), distance unit, radius options, and default map position. Every text in the widget (search box placeholder, buttons, result count, messages, store card labels) has its own field under "Search texts", "Results texts", and "Store card texts". Leave a field blank to keep the default wording. The default wording ships in English, French, German, Spanish, Italian, Dutch, Portuguese (Brazil and Portugal), Japanese, Chinese (Simplified and Traditional), Korean, Swedish, Danish, Norwegian, Finnish, Polish, Czech, and Turkish, and follows the language the shopper is browsing in. Text you type into a field is shown as-is in every language.',
           'Favorite store (optional): in the app, open Settings and turn on "Let signed-in customers save a favorite store". If the switch is disabled, approve the app\'s updated access request in your Shopify admin first.',
         ],
       },
@@ -37,10 +37,11 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
         kind: 'list',
         items: [
           'Where: Locations > Import CSV opens a dialog. Drop your file on it or click Add files, then Upload and preview. The dialog links a sample CSV you can start from.',
-          'Required columns: `name`, `address`, `city`, `country`. Optional: `address 2`, `state/province`, `zip`, `phone`, `email`, `website`, `description`, `image url`, `tags` (separate several with `;`), `id`, and `latitude` + `longitude` (both or neither). Rows with both coordinates skip the address lookup and go live at that pin; both blank removes an entered pin so the address is looked up again; leaving the columns out keeps pins as they are.',
+          'Required columns: `name`, `address`, `city`, `country`. Optional: `address 2`, `state/province`, `zip`, `phone`, `email`, `website`, `description`, `image url`, `tags` (separate several with `;`), `id`, `monday` to `sunday` (opening hours, see below), and `latitude` + `longitude` (both or neither). Rows with both coordinates skip the address lookup and go live at that pin; both blank removes an entered pin so the address is looked up again; leaving the columns out keeps pins as they are.',
           'Large files: address lookup runs at about one row per second, so a 1,000-row file without coordinates takes about 17 minutes. Include `latitude` and `longitude` columns to import instantly. The CSV export fills them for pins you entered, so an export re-imports without moving any pin.',
           'Preview first: uploading shows exactly what will happen (new, update, possible match, conflict, invalid) before anything is written.',
-          'Updates are partial: only the columns present in your file change; everything else keeps its current value. Opening hours and visibility are managed in the app, not by CSV.',
+          'Updates are partial: only the columns present in your file change; everything else keeps its current value. Visibility is managed in the app, not by CSV.',
+          'Opening hours: one column per day, `monday` to `sunday` (`mon`, `monday hours` and similar headers also work). Write `09:00-17:00`, `9am-5pm`, `closed`, or `24h`; overnight ranges such as `20:00-02:00` are fine. Put am/pm on both times or neither: `9:00-5:00` is rejected because it could mean overnight, so write `09:00-17:00` or `9am-5pm`. A blank cell in a day column you included means closed that day. Leave a day\'s column out of the file to keep that day\'s current hours. A cell that cannot be read marks the row invalid in the preview, with the expected format. The export includes the seven day columns, so an export re-imports without changing any hours.',
           'Re-imports are safe: importing the same file twice updates stores instead of duplicating them.',
           'The `id` column wins: if a row\'s `id` matches an existing store (from the export, or the store\'s own ID), that row always updates that store, even when the name or address changed. This is how two stores can share one address, such as mall kiosks, each with its own `id`.',
           'Without an `id`, rows match by name and address. If your file has no ZIP column, matching uses name, address, city, and country instead, so a partial update without ZIPs still finds the right store.',
@@ -80,6 +81,7 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
           '"Use my location" uses the browser\'s location only to sort results; nothing is stored.',
           'Distance units follow the store\'s country (miles in the US), or force km or mi in the block settings.',
           'Opening hours support overnight ranges (for example 20:00 to 02:00) and show "Open now" in each store\'s local time zone.',
+          'Set hours for many stores at once: in Locations, tick the stores, click "Set hours for N locations", enter one week of hours, and save. This replaces the hours of every selected store (days left blank become closed). Selection covers the stores on the current page; for larger changes, use the day columns in CSV import.',
         ],
       },
     ],
@@ -90,7 +92,7 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
     blocks: [
       {
         kind: 'paragraph',
-        text: 'Every visible store gets its own page on your domain at `/apps/store-locator/locations/<store-slug>`, rendered in your theme with structured data for search engines, plus a directory of all stores at `/apps/store-locator/locations`.',
+        text: 'Every visible store gets its own page on your domain at `/apps/store-locator/locations/<store-slug>`, rendered in your theme with structured data for search engines, plus a directory of all stores at `/apps/store-locator/locations`. Page labels (opening hours, weekdays, directions) follow the shopper\'s language, in the same languages as the widget.',
       },
       {
         kind: 'paragraph',
