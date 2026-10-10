@@ -1,22 +1,16 @@
 import {
-  CircleAlert,
-  EyeOff,
   FileSpreadsheet,
   Flag,
   Globe,
   LayoutTemplate,
   Mailbox,
   Map as MapIcon,
-  MousePointerClick,
   Package,
   ScanBarcode,
   Search,
-  ShieldCheck,
-  SlidersHorizontal,
   Truck,
   Upload,
   Users,
-  Wrench,
   type LucideIcon,
 } from 'lucide-react';
 import { Layout } from '../components/layout';
@@ -37,7 +31,6 @@ export type ComingSoonAppId = Exclude<AppId, ListedAppId>;
 const FEATURE_ICONS: Record<ComingSoonAppId, LucideIcon[]> = {
   japanMultiship: [Users, Mailbox, Truck, Package, FileSpreadsheet, ScanBarcode],
   bestStoreLocator: [MapIcon, Upload, Flag, LayoutTemplate, Search, Globe],
-  checkoutProbe: [MousePointerClick, CircleAlert, Wrench, EyeOff, SlidersHorizontal, ShieldCheck],
 };
 
 /**

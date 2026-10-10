@@ -34,19 +34,21 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/apps/default-address-lock/screencast', kind: 'screencast', app: 'defaultAddressLock', indexable: false },
   { path: '/apps/llms-txt', kind: 'app', app: 'llmsTxt', indexable: true },
   { path: '/apps/llms-txt/screencast', kind: 'screencast', app: 'llmsTxt', indexable: false },
-  // Japan Multiship, Best Store Locator, and Checkout Probe are not on the App
-  // Store yet. Their detail pages are public (no install link or prices, and
-  // no JSON-LD app entry; see `comingSoon` in gemify-apps.ts). Their reviewer
-  // screencasts (the submission's screencast URL) and merchant help (the
-  // listing's FAQ link) stay unlisted until each listing is approved.
+  // Checkout Probe's merchant help (the listing's FAQ link) stays unlisted: its
+  // copy is English in every locale, so indexing it would publish five copies.
+  { path: '/apps/checkout-probe', kind: 'app', app: 'checkoutProbe', indexable: true },
+  { path: '/apps/checkout-probe/screencast', kind: 'screencast', app: 'checkoutProbe', indexable: false },
+  { path: '/apps/checkout-probe/help', kind: 'help', app: 'checkoutProbe', indexable: false },
+  // Japan Multiship and Best Store Locator are not on the App Store yet. Their
+  // detail pages are public (no install link or prices, and no JSON-LD app
+  // entry; see `comingSoon` in gemify-apps.ts). Their reviewer screencasts (the
+  // submission's screencast URL) and merchant help (the listing's FAQ link)
+  // stay unlisted until each listing is approved.
   { path: '/apps/japan-multiship', kind: 'app', app: 'japanMultiship', indexable: true },
   { path: '/apps/japan-multiship/screencast', kind: 'screencast', app: 'japanMultiship', indexable: false },
   { path: '/apps/best-store-locator', kind: 'app', app: 'bestStoreLocator', indexable: true },
   { path: '/apps/best-store-locator/screencast', kind: 'screencast', app: 'bestStoreLocator', indexable: false },
   { path: '/apps/best-store-locator/help', kind: 'help', app: 'bestStoreLocator', indexable: false },
-  { path: '/apps/checkout-probe', kind: 'app', app: 'checkoutProbe', indexable: true },
-  { path: '/apps/checkout-probe/screencast', kind: 'screencast', app: 'checkoutProbe', indexable: false },
-  { path: '/apps/checkout-probe/help', kind: 'help', app: 'checkoutProbe', indexable: false },
 ];
 
 /** Looks up a page by its locale-agnostic path; `undefined` means "not found". */

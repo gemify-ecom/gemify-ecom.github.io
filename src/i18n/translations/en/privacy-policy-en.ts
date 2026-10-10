@@ -10,7 +10,7 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyEn: PrivacyPolicyDictionary = {
   title: 'Privacy Policy',
-  lastUpdated: 'Last Updated: September 29, 2026',
+  lastUpdated: 'Last Updated: October 10, 2026',
 
   blocks: [
     {
@@ -152,7 +152,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Data:',
-          text: 'Your test settings (the test product and test shipping address) and your last 10 test reports',
+          text: 'Your test settings (the test product and test shipping address) and your last 50 test reports',
         },
         {
           label: 'Why:',
@@ -160,9 +160,9 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         },
         {
           label: 'No customer data:',
-          text: 'Every test uses a fictional test buyer, not a real person. The App only reads your products and shipping settings',
+          text: 'Every test uses a fictional test buyer, not a real person. The App only reads your products, shipping settings, and markets',
         },
-        { label: 'How long:', text: 'Only the last 10 reports are kept. Everything is deleted when you uninstall the App' },
+        { label: 'How long:', text: 'Only the last 50 reports are kept. Everything is deleted when you uninstall the App' },
       ],
     },
 
@@ -334,7 +334,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'This Privacy Policy was last updated on September 29, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
+      text: 'This Privacy Policy was last updated on October 10, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
     },
   ],
 };

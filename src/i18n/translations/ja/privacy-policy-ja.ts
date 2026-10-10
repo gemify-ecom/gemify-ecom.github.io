@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyJa: PrivacyPolicyDictionary = {
   title: 'プライバシーポリシー',
-  lastUpdated: '最終更新日: 2026年9月29日',
+  lastUpdated: '最終更新日: 2026年10月10日',
 
   blocks: [
     {
@@ -154,7 +154,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'データ:',
-          text: 'お客様のテスト設定(テスト用の商品とテスト用の配送先住所)と、直近10件のテストレポート',
+          text: 'お客様のテスト設定(テスト用の商品とテスト用の配送先住所)と、直近50件のテストレポート',
         },
         {
           label: '目的:',
@@ -162,9 +162,9 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
         },
         {
           label: '顧客データなし:',
-          text: 'すべてのテストは、実在の人物ではない架空のテスト用購入者を使用します。本アプリが読み取るのは、お客様の商品と配送設定のみです',
+          text: 'すべてのテストは、実在の人物ではない架空のテスト用購入者を使用します。本アプリが読み取るのは、お客様の商品、配送設定、マーケットのみです',
         },
-        { label: '保有期間:', text: '直近10件のレポートのみを保持します。アプリをアンインストールすると、すべて削除します' },
+        { label: '保有期間:', text: '直近50件のレポートのみを保持します。アプリをアンインストールすると、すべて削除します' },
       ],
     },
 
@@ -336,7 +336,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: '本プライバシーポリシーの最終更新日は2026年9月29日です。本アプリをご利用いただくことで、本プライバシーポリシーを読み、理解し、これに拘束されることに同意したものとみなされます。',
+      text: '本プライバシーポリシーの最終更新日は2026年10月10日です。本アプリをご利用いただくことで、本プライバシーポリシーを読み、理解し、これに拘束されることに同意したものとみなされます。',
     },
   ],
 };

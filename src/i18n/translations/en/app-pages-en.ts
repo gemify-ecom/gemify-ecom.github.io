@@ -445,8 +445,8 @@ export const appPagesEn = {
       'Needs at least one active product that can be bought, and a shipping address: the store address or a test address you set in the app.',
       'No theme changes and no app blocks.',
     ],
-    ctaHeading: 'Want Checkout Probe for Your Store?',
+    ctaHeading: 'Ready for AI Shopping Agents?',
     ctaBody:
-      'Checkout Probe is not on the Shopify App Store yet. Send us a message if you would like to use it in your store.',
+      'Install Checkout Probe for free and run your first test in one click. See what would stop an AI shopping agent and how to fix it.',
   },
 };

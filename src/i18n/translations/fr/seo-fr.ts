@@ -58,7 +58,7 @@ export const seoFr: SeoDictionary = {
     checkoutProbe: {
       title: 'Checkout Probe : test de paiement WebMCP pour Shopify | Gemify',
       description:
-        'Bientôt sur le Shopify App Store. Préparez votre paiement à WebMCP : testez-le comme un agent d’achat IA et obtenez une solution pour chaque problème.',
+        'Gratuit sur le Shopify App Store. Préparez votre paiement à WebMCP : testez-le comme un agent d’achat IA et obtenez une solution pour chaque problème.',
     },
     notFound: {
       title: 'Page introuvable | Gemify',

@@ -4,10 +4,9 @@ import { CHECKOUT_PROBE_HELP, CHECKOUT_PROBE_HELP_INTRO } from './checkout-probe
 
 /**
  * Merchant help for Checkout Probe, linked from its App Store listing as the
- * FAQ and documentation URL. The app is not on the App Store yet, so like Best
- * Store Locator's help it has no detail page, nav link, JSON-LD, or sitemap
- * entry. The content is English in every locale because the app UI is English
- * only (see the content module).
+ * FAQ and documentation URL. It has no nav link, JSON-LD, or sitemap entry:
+ * the content is English in every locale because the app UI is English only
+ * (see the content module), so indexing it would publish five copies.
  */
 export function CheckoutProbeHelpPage() {
   const { checkoutProbe } = useTranslations('appPages');

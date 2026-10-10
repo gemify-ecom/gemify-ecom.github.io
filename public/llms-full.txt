@@ -1,6 +1,6 @@
 # Gemify
 
-> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, and LLMs-full.txt. This file contains the full site content in plain markdown for AI assistants. A shorter index is available at /llms.txt.
+> Gemify builds simple, powerful Shopify apps for merchants: Bulk Delete Orders, Default Address Lock, LLMs-full.txt, and Checkout Probe. This file contains the full site content in plain markdown for AI assistants. A shorter index is available at /llms.txt.
 
 ## About Gemify
 
@@ -128,24 +128,46 @@ Pricing:
 - Free: up to 50 items per content type, with every feature (preview, manual and scheduled generation, template editor, generation history)
 - Complete: $9.99/month for unlimited products, collections, pages, and blog articles
 
+## Checkout Probe
+
+URL: https://gemify-ecom.github.io/apps/checkout-probe
+Install: https://apps.shopify.com/checkout-probe (listed as "Checkout Probe: AI Agent Test")
+Help: https://gemify-ecom.github.io/apps/checkout-probe/help
+
+Gets a Shopify checkout ready for WebMCP. Since 2026-09-28, Shopify checkout offers WebMCP tools (get_checkout, update_checkout, complete_checkout, navigate_to_storefront) to AI agents in the buyer's browser; when a checkout needs something an agent cannot give, the agent stops, and nothing in the orders shows why.
+
+Features:
+
+- One-click test: opens a checkout on the merchant's own store the way an AI shopping agent would, through Shopify's Checkout MCP, fills in a fictional test buyer and a shipping address, then cancels it; no order is placed and nothing is charged
+- Findings marked "Will stop agents" or "May stop agents": checkout rules that ask the buyer for input (quoting the checkout's own message), Shop Pay not offered, no delivery option, and shipping rates set up in the store but not offered
+- A fix for each finding, with a link to the matching settings page in the Shopify admin
+- How the test ran: each call the test made, in order, with what came back and how long it took
+- Not checked by this test: rules that run only when the order is placed, checkout apps that ask the buyer for input, and carrier or app-provided shipping rates
+- Test history of recent runs, and test settings for the product and the shipping address (pick a country and fill a sample address in one click)
+
+Requirements: at least one active product that can be bought, and a shipping address (the store address or a test address set in the app). Read-only access to products, shipping settings, and markets; no settings changes, no theme changes, no app blocks. App UI in English.
+
+Pricing:
+
+- Free
+
 ## Coming soon
 
 These apps are not on the Shopify App Store yet. Their pages describe what each app does; install links and prices appear once each listing is live.
 
 - [Japan Multiship](https://gemify-ecom.github.io/apps/japan-multiship): Buyers assign cart items to up to 20 recipients on the cart page and pay once. Postal code autofill with kana name fields, shipping priced per destination from the store's shipping zones and shown before checkout, one fulfillment order per destination, Yamato B2 Cloud CSV export (also for single-address orders), and tracking number import from the carrier CSV. Built for stores in Japan: the store currency must be JPY. Needs the Online Store sales channel; a checkout block for adding destinations is available on Shopify Plus. An "amount off order" discount also lowers the shipping fee and the app flags such orders. App UI in English and Japanese.
 - [Best Store Locator](https://gemify-ecom.github.io/apps/best-store-locator): A searchable map of stores, stockists, or dealers added as a theme block. Maps and address lookup are built in on every plan, with no map account or API key. CSV import with a full preview, safe re-imports, and duplicate detection; addresses that cannot be placed accurately are held for review. Shoppers search by city or ZIP, use their location, filter by tag, see which stores are open now, and signed-in customers can save a favorite store. Location pages with structured data on the Pro plan and above.
-- [Checkout Probe](https://gemify-ecom.github.io/apps/checkout-probe): Gets a Shopify checkout ready for WebMCP. Since 2026-09-28, Shopify checkout offers WebMCP tools (get_checkout, update_checkout, complete_checkout, navigate_to_storefront) to AI agents in the buyer's browser; when a checkout needs something an agent cannot give, the agent stops. Checkout Probe runs a test checkout the way an AI shopping agent would, through Shopify's Checkout MCP, filling in a test buyer and a shipping address, then cancels it; no order is placed. Steps that only show in the browser, such as some checkout UI extensions, may not appear in the test. The report shows each point where an agent would stop (such as a rule that needs buyer input, no Shop Pay, or no shipping rate for the address) with a fix and a link to the matching settings page, and lists what the test cannot check. Read-only: no settings changes, no theme changes, no app blocks.
 
 ## Pricing & Billing (all apps)
 
-- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (up to 50 items per content type)
+- Every app offers a free plan: Bulk Delete Orders (50 operations), Default Address Lock (30 orders/month), LLMs-full.txt (up to 50 items per content type); Checkout Probe is free
 - Billing is handled through Shopify and appears on the regular Shopify invoice
 - Cancel anytime by uninstalling the app through the Shopify admin
 - Refunds: contact support; refunds are issued where appropriate
 
 ## Privacy & Security
 
-- Minimum data collection: only what each app needs (order data and resource IDs for Bulk Delete Orders, which stores no customer personal information; customer/address IDs for Default Address Lock; store content for LLMs-full.txt)
+- Minimum data collection: only what each app needs (order data and resource IDs for Bulk Delete Orders, which stores no customer personal information; customer/address IDs for Default Address Lock; store content for LLMs-full.txt; test settings and the last 50 test reports for Checkout Probe, which uses a fictional test buyer)
 - Data is never sold, rented, or traded to third parties
 - Encryption in transit and at rest, secure sign-in through Shopify, regular security audits, strict access controls
 - After uninstall, data is deleted within 30 days (sooner for some apps)
@@ -155,7 +177,7 @@ These apps are not on the Shopify App Store yet. Their pages describe what each 
 ## Technical Compatibility
 
 - Works with all Shopify plans: Basic, Shopify, Advanced, and Shopify Plus
-- Bulk Delete Orders, Default Address Lock, and LLMs-full.txt operate on the backend and add no scripts to storefront pages, so store loading speed is unaffected
+- Bulk Delete Orders, Default Address Lock, LLMs-full.txt, and Checkout Probe operate on the backend and add no scripts to storefront pages, so store loading speed is unaffected
 - No technical knowledge required; anyone who can use the Shopify admin can use the apps
 - Multiple Gemify apps can be installed together without conflicts
 

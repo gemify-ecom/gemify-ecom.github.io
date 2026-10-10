@@ -21,7 +21,7 @@ export type AppId =
  * has a detail page; the others are marked `comingSoon` below. Remove an id
  * from the exclusion (and its `comingSoon` flag) once its listing is live.
  */
-export type ListedAppId = Exclude<AppId, 'japanMultiship' | 'bestStoreLocator' | 'checkoutProbe'>;
+export type ListedAppId = Exclude<AppId, 'japanMultiship' | 'bestStoreLocator'>;
 
 export interface AppPlan {
   /** Plan name exactly as the App Store lists it. */
@@ -109,10 +109,9 @@ export const GEMIFY_APPS = {
     ],
   },
   checkoutProbe: {
-    comingSoon: true,
-    // The listing will be named "Checkout Probe: AI Agent Test"; no App Store
-    // URL until the listing exists.
+    // Listed as "Checkout Probe: AI Agent Test" since 2026-10-10.
     path: '/apps/checkout-probe',
+    appStoreUrl: 'https://apps.shopify.com/checkout-probe',
     icon: '/resources/checkout_probe.png',
     plans: [{ name: 'Free', price: 0 }],
   },

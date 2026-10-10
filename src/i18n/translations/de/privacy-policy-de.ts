@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyDe: PrivacyPolicyDictionary = {
   title: 'Datenschutzerklärung',
-  lastUpdated: 'Zuletzt aktualisiert: 29. September 2026',
+  lastUpdated: 'Zuletzt aktualisiert: 10. Oktober 2026',
 
   blocks: [
     {
@@ -154,7 +154,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Daten:',
-          text: 'Ihre Testeinstellungen (das Testprodukt und die Test-Lieferadresse) und Ihre letzten 10 Testberichte',
+          text: 'Ihre Testeinstellungen (das Testprodukt und die Test-Lieferadresse) und Ihre letzten 50 Testberichte',
         },
         {
           label: 'Zweck:',
@@ -162,9 +162,9 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         },
         {
           label: 'Keine Kundendaten:',
-          text: 'Jeder Test verwendet einen fiktiven Testkäufer, keine reale Person. Die App liest nur Ihre Produkte und Versandeinstellungen',
+          text: 'Jeder Test verwendet einen fiktiven Testkäufer, keine reale Person. Die App liest nur Ihre Produkte, Versandeinstellungen und Märkte',
         },
-        { label: 'Speicherdauer:', text: 'Nur die letzten 10 Berichte werden aufbewahrt. Alle Daten werden bei der Deinstallation der App gelöscht' },
+        { label: 'Speicherdauer:', text: 'Nur die letzten 50 Berichte werden aufbewahrt. Alle Daten werden bei der Deinstallation der App gelöscht' },
       ],
     },
 
@@ -336,7 +336,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'Diese Datenschutzerklärung wurde zuletzt am 29. September 2026 aktualisiert. Mit der Nutzung unserer Apps bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben und sich damit einverstanden erklären.',
+      text: 'Diese Datenschutzerklärung wurde zuletzt am 10. Oktober 2026 aktualisiert. Mit der Nutzung unserer Apps bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben und sich damit einverstanden erklären.',
     },
   ],
 };

@@ -56,7 +56,7 @@ export const seoEn = {
     checkoutProbe: {
       title: 'Checkout Probe: WebMCP Checkout Test for Shopify | Gemify',
       description:
-        'Coming soon to the Shopify App Store. Get your checkout ready for WebMCP: test it the way an AI shopping agent would and get a fix for each problem.',
+        'Free on the Shopify App Store. Get your checkout ready for WebMCP: test it the way an AI shopping agent would and get a fix for each problem.',
     },
     notFound: {
       title: 'Page Not Found | Gemify',

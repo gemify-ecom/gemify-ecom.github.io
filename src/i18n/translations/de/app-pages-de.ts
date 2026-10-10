@@ -455,8 +455,8 @@ export const appPagesDe: AppPagesDictionary = {
       'Erfordert mindestens ein aktives, kaufbares Produkt und eine Lieferadresse: die Store-Adresse oder eine Testadresse, die Sie in der App festlegen.',
       'Keine Theme-Änderungen und keine App-Blöcke.',
     ],
-    ctaHeading: 'Möchten Sie Checkout Probe in Ihrem Store nutzen?',
+    ctaHeading: 'Bereit für KI-Shopping-Agenten?',
     ctaBody:
-      'Checkout Probe ist noch nicht im Shopify App Store. Schreiben Sie uns eine Nachricht, wenn Sie die App in Ihrem Store nutzen möchten.',
+      'Installieren Sie Checkout Probe kostenlos und starten Sie Ihren ersten Test mit einem Klick. Sehen Sie, woran ein KI-Shopping-Agent scheitern würde und wie Sie es beheben.',
   },
 };

@@ -457,8 +457,8 @@ export const appPagesFr: AppPagesDictionary = {
       'Nécessite au moins un produit actif pouvant être acheté, ainsi qu’une adresse de livraison : l’adresse de la boutique ou une adresse de test que vous définissez dans l’application.',
       'Aucune modification du thème et aucun bloc d’application.',
     ],
-    ctaHeading: 'Checkout Probe vous intéresse pour votre boutique ?',
+    ctaHeading: 'Prêt pour les agents d’achat IA ?',
     ctaBody:
-      'Checkout Probe n’est pas encore disponible sur le Shopify App Store. Envoyez-nous un message si vous souhaitez l’utiliser dans votre boutique.',
+      'Installez Checkout Probe gratuitement et lancez votre premier test en un clic. Voyez ce qui bloquerait un agent d’achat IA et comment le corriger.',
   },
 };

@@ -13,6 +13,7 @@ import { LlmsTxtScreencastPage } from './pages/llms-txt-screencast-page';
 import { JapanMultishipScreencastPage } from './pages/japan-multiship-screencast-page';
 import { BestStoreLocatorHelpPage } from './pages/best-store-locator-help-page';
 import { BestStoreLocatorScreencastPage } from './pages/best-store-locator-screencast-page';
+import { CheckoutProbePage } from './pages/checkout-probe-page';
 import { CheckoutProbeHelpPage } from './pages/checkout-probe-help-page';
 import { CheckoutProbeScreencastPage } from './pages/checkout-probe-screencast-page';
 import { NotFoundPage } from './pages/not-found-page';
@@ -41,7 +42,7 @@ const APP_PAGES: Record<AppId, { detail: ReactElement; screencast?: ReactElement
     help: <BestStoreLocatorHelpPage />,
   },
   checkoutProbe: {
-    detail: <ComingSoonAppPage app="checkoutProbe" />,
+    detail: <CheckoutProbePage />,
     screencast: <CheckoutProbeScreencastPage />,
     help: <CheckoutProbeHelpPage />,
   },

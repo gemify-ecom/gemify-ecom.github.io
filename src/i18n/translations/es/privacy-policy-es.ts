@@ -13,7 +13,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyEs: PrivacyPolicyDictionary = {
   title: 'Política de privacidad',
-  lastUpdated: 'Última actualización: 29 de septiembre de 2026',
+  lastUpdated: 'Última actualización: 10 de octubre de 2026',
 
   blocks: [
     {
@@ -155,7 +155,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Datos:',
-          text: 'Sus ajustes de prueba (el producto de prueba y la dirección de envío de prueba) y sus últimos 10 informes de prueba',
+          text: 'Sus ajustes de prueba (el producto de prueba y la dirección de envío de prueba) y sus últimos 50 informes de prueba',
         },
         {
           label: 'Para qué:',
@@ -163,9 +163,9 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
         },
         {
           label: 'Sin datos de clientes:',
-          text: 'Todas las pruebas usan un comprador de prueba ficticio, no una persona real. La App solo lee sus productos y su configuración de envíos',
+          text: 'Todas las pruebas usan un comprador de prueba ficticio, no una persona real. La App solo lee sus productos, su configuración de envíos y sus mercados',
         },
-        { label: 'Cuánto tiempo:', text: 'Solo se conservan los últimos 10 informes. Todo se elimina al desinstalar la App' },
+        { label: 'Cuánto tiempo:', text: 'Solo se conservan los últimos 50 informes. Todo se elimina al desinstalar la App' },
       ],
     },
 
@@ -337,7 +337,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'Esta Política de privacidad se actualizó por última vez el 29 de septiembre de 2026. Al usar nuestras Apps, usted reconoce que ha leído y comprendido esta Política de privacidad y que acepta quedar vinculado por ella.',
+      text: 'Esta Política de privacidad se actualizó por última vez el 10 de octubre de 2026. Al usar nuestras Apps, usted reconoce que ha leído y comprendido esta Política de privacidad y que acepta quedar vinculado por ella.',
     },
   ],
 };

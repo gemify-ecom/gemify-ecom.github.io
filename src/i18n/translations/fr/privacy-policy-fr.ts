@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyFr: PrivacyPolicyDictionary = {
   title: 'Politique de confidentialité',
-  lastUpdated: 'Dernière mise à jour : 29 septembre 2026',
+  lastUpdated: 'Dernière mise à jour : 10 octobre 2026',
 
   blocks: [
     {
@@ -166,7 +166,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Données :',
-          text: 'Vos réglages de test (le produit de test et l’adresse de livraison de test) et vos 10 derniers rapports de test',
+          text: 'Vos réglages de test (le produit de test et l’adresse de livraison de test) et vos 50 derniers rapports de test',
         },
         {
           label: 'Pourquoi :',
@@ -174,11 +174,11 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
         },
         {
           label: 'Aucune donnée client :',
-          text: 'Chaque test utilise un acheteur de test fictif, et non une personne réelle. L’application lit uniquement vos produits et vos paramètres d’expédition',
+          text: 'Chaque test utilise un acheteur de test fictif, et non une personne réelle. L’application lit uniquement vos produits, vos paramètres d’expédition et vos marchés',
         },
         {
           label: 'Durée de conservation :',
-          text: 'Seuls les 10 derniers rapports sont conservés. Tout est supprimé lorsque vous désinstallez l’application',
+          text: 'Seuls les 50 derniers rapports sont conservés. Tout est supprimé lorsque vous désinstallez l’application',
         },
       ],
     },
@@ -369,7 +369,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'La présente politique de confidentialité a été mise à jour le 29 septembre 2026. En utilisant nos applications, vous reconnaissez avoir lu et compris la présente politique de confidentialité et acceptez d’être lié par ses dispositions.',
+      text: 'La présente politique de confidentialité a été mise à jour le 10 octobre 2026. En utilisant nos applications, vous reconnaissez avoir lu et compris la présente politique de confidentialité et acceptez d’être lié par ses dispositions.',
     },
   ],
 };

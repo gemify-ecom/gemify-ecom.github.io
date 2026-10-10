@@ -5,7 +5,7 @@ import type { HelpSection } from '../components/help-page-layout';
  * documentation link. English only on purpose: the app's admin UI ships in
  * English, so the help quotes the exact labels merchants see in the app
  * (`app/routes/app._index.tsx` and `app/components/` in the
- * agent-checkout-audit repo). Inline `code` is written with backticks.
+ * checkout-probe repo). Inline `code` is written with backticks.
  */
 
 export const CHECKOUT_PROBE_HELP_INTRO =
@@ -21,9 +21,9 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
         ordered: true,
         items: [
           'Open Checkout Probe from Apps in your Shopify admin.',
-          'If your store has no usable address and no test address is saved, the app shows "Add a test address to run the test". Enter an address under "Test shipping address" in "Test settings" and click "Save settings".',
+          'If your store has no usable address and no test address is saved, the app shows "Add a test address to run the test". In "Test settings", pick a country, click "Fill a sample address" or type an address, and click "Save settings".',
           'Click "Run checkout test". The report lists what would stop an agent, with a fix for each finding.',
-          'After you change a setting in your store, click "Run test again" to check the result.',
+          'After you change a setting in your store, click "Run checkout test" again to check the result. Every run is kept in "Test history".',
         ],
       },
     ],
@@ -67,6 +67,14 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
         kind: 'paragraph',
         text: 'Each finding has a fix ("How to fix") and a link to the matching settings page in your Shopify admin.',
       },
+      {
+        kind: 'paragraph',
+        text: '"How the test ran" shows each call the test made to your store, in order, with what came back and how long it took, ending with the cancelled test checkout. Click "Replay" to watch the steps again.',
+      },
+      {
+        kind: 'paragraph',
+        text: '"Test history" lists your recent tests with the product, the ship-to address, and the result. Click a date to open that report; "Show latest test" takes you back to the newest one.',
+      },
     ],
   },
   {
@@ -80,8 +88,9 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
       {
         kind: 'list',
         items: [
-          'Validations that run only when the order is placed.',
-          'Checkout UI extensions that ask the buyer for input.',
+          'Checkout rules that run only when the order is placed.',
+          'Checkout apps that ask the buyer for input, such as checkboxes, date pickers, or age gates.',
+          'Shipping rates from carriers and apps: they get their names at checkout, so the test cannot tell if one is missing.',
         ],
       },
     ],
@@ -95,6 +104,7 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
         items: [
           'Test product: click "Choose product" to pick the product the test checks out with. By default the test uses the first product that can be bought.',
           'Test shipping address: leave it empty to use your store address, or enter the address the test should ship to. Use your business address or another address you choose, not a customer\'s address.',
+          'Country: pick the country first. "Fill a sample address" fills in a public place in that country, such as a station or museum. The list shows the countries your store ships to; if a country has no sample yet, enter an address yourself.',
           'Click "Save settings" to keep your changes, or "Use defaults" to go back to the default product and your store address.',
         ],
       },
@@ -107,8 +117,8 @@ export const CHECKOUT_PROBE_HELP: HelpSection[] = [
       {
         kind: 'list',
         items: [
-          'Read-only access: the app only reads your products and shipping settings.',
-          'The app keeps your test settings and the last 10 test reports for your store. It holds no customer data: the test buyer is fictional.',
+          'Read-only access: the app only reads your products, shipping settings, and markets.',
+          'The app keeps your test settings and the last 50 test reports for your store. It holds no customer data: the test buyer is fictional.',
           'The app contains no third-party analytics or tracking.',
           'Uninstalling the app deletes your settings and test reports.',
           'Full details: see the {privacyPolicy}.',
