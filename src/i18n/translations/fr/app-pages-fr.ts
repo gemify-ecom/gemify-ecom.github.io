@@ -286,6 +286,21 @@ export const appPagesFr: AppPagesDictionary = {
           'Un code postal japonais remplit automatiquement la préfecture et la ville, avec des champs en kana pour les noms.',
       },
       {
+        title: 'Carnet d’adresses enregistré',
+        description:
+          'Les acheteurs connectés choisissent des destinataires ou des listes nommées déjà enregistrés, sans tout ressaisir. Ils sont enregistrés dans le propre profil client Shopify de l’acheteur.',
+      },
+      {
+        title: 'Un message cadeau par destinataire',
+        description:
+          'Les acheteurs ajoutent un message pour chaque destinataire. Vous le voyez sur la page de la commande ; il n’est jamais imprimé sur l’étiquette d’expédition.',
+      },
+      {
+        title: 'Liste de colisage CSV',
+        description:
+          'Exportez une liste de colisage avec les articles et le message cadeau de chaque colis, pour la personne qui prépare la commande et écrit les cartes.',
+      },
+      {
         title: 'Frais d’expédition par destination',
         description:
           'Les frais d’expédition sont calculés pour chaque destination à partir de vos zones d’expédition et affichés avant le paiement.',

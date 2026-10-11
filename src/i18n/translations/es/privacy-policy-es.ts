@@ -110,11 +110,11 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Datos:',
-          text: 'En los pedidos de regalo, el nombre, la dirección y el número de teléfono de cada destinatario que el comprador introduce en la página del carrito, la fecha y la franja horaria de entrega, y el número de seguimiento. Un destinatario puede no tener ninguna relación con la tienda',
+          text: 'En los pedidos de regalo, el nombre, la dirección y el número de teléfono de cada destinatario que el comprador introduce en la página del carrito, la fecha y la franja horaria de entrega, el número de seguimiento y un mensaje de regalo opcional que el comprador escribe para cada destinatario. Un destinatario puede no tener ninguna relación con la tienda',
         },
         {
           label: 'Para qué:',
-          text: 'Para dividir el pedido en un envío por destinatario, crear el archivo de envío de Yamato B2 Cloud y añadir los números de seguimiento para que se notifique al comprador. La App no utiliza los datos de los destinatarios para ningún otro fin',
+          text: 'Para dividir el pedido en un envío por destinatario, crear el archivo de envío de Yamato B2 Cloud y añadir los números de seguimiento para que se notifique al comprador. El mensaje de regalo solo lo ve el comerciante, en la página del pedido y en una lista de empaque, para incluirlo en el paquete; nunca se imprime en la etiqueta de envío. La App no utiliza los datos de los destinatarios para ningún otro fin',
         },
         {
           label: 'Protección:',
@@ -122,7 +122,11 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
         },
         {
           label: 'Cuánto tiempo:',
-          text: 'Los datos del destinatario se eliminan automáticamente 90 días después del envío o la cancelación del pedido. El comerciante puede elegir un plazo más corto. Nada se conserva más de 180 días',
+          text: 'Los datos del destinatario y los mensajes de regalo se eliminan automáticamente 90 días después del envío o la cancelación del pedido. El comerciante puede elegir un plazo más corto. Nada se conserva más de 180 días',
+        },
+        {
+          label: 'Libreta de direcciones (para compradores):',
+          text: 'Un comprador con sesión iniciada puede guardar destinatarios y listas de destinatarios con nombre para reutilizarlos en un pedido posterior. Se guardan en el propio perfil de cliente de Shopify del comprador en la tienda, no en nuestros servidores, y se eliminan junto con ese perfil. Los mensajes de regalo nunca se guardan ahí',
         },
         {
           label: 'APPI japonesa:',

@@ -1,9 +1,12 @@
 import {
+  BookUser,
+  ClipboardList,
   FileSpreadsheet,
   Flag,
   Globe,
   LayoutTemplate,
   Mailbox,
+  MessageSquareHeart,
   Map as MapIcon,
   Package,
   ScanBarcode,
@@ -29,7 +32,7 @@ export type ComingSoonAppId = Exclude<AppId, ListedAppId>;
 
 /** One plain line icon per feature, in the order of `features` in the dictionaries. */
 const FEATURE_ICONS: Record<ComingSoonAppId, LucideIcon[]> = {
-  japanMultiship: [Users, Mailbox, Truck, Package, FileSpreadsheet, ScanBarcode],
+  japanMultiship: [Users, Mailbox, BookUser, MessageSquareHeart, ClipboardList, Truck, Package, FileSpreadsheet, ScanBarcode],
   bestStoreLocator: [MapIcon, Upload, Flag, LayoutTemplate, Search, Globe],
 };
 

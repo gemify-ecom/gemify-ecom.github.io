@@ -107,11 +107,11 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Data:',
-          text: 'For gift orders, the name, address, and phone number of each recipient the buyer enters on the cart page, the delivery date and time, and the tracking number. A recipient may have no relationship with the store',
+          text: 'For gift orders, the name, address, and phone number of each recipient the buyer enters on the cart page, the delivery date and time, the tracking number, and an optional gift message the buyer writes for each recipient. A recipient may have no relationship with the store',
         },
         {
           label: 'Why:',
-          text: 'To split the order into one shipment per recipient, create the Yamato B2 Cloud shipping file, and add tracking numbers so the buyer is notified. The App uses recipient data for no other purpose',
+          text: 'To split the order into one shipment per recipient, create the Yamato B2 Cloud shipping file, and add tracking numbers so the buyer is notified. A gift message is shown only to the merchant, on the order page and in a packing list, so it can go in the parcel; it is never printed on the shipping label. The App uses recipient data for no other purpose',
         },
         {
           label: 'Protection:',
@@ -119,7 +119,11 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         },
         {
           label: 'How long:',
-          text: 'Recipient details are deleted automatically 90 days after the order ships or is cancelled. The merchant can choose a shorter period. Nothing is kept longer than 180 days',
+          text: 'Recipient details and gift messages are deleted automatically 90 days after the order ships or is cancelled. The merchant can choose a shorter period. Nothing is kept longer than 180 days',
+        },
+        {
+          label: 'Address book (for buyers):',
+          text: "A signed-in buyer can save recipients and named recipient lists to reuse on a later order. They are saved on the buyer's own Shopify customer profile in the store, not on our servers, and are deleted with that profile. Gift messages are never saved there",
         },
         {
           label: "Japan's APPI:",

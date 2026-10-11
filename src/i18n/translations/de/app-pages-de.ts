@@ -283,6 +283,21 @@ export const appPagesDe: AppPagesDictionary = {
         description: 'Eine japanische PLZ füllt Präfektur und Stadt aus, mit Kana-Feldern für Namen.',
       },
       {
+        title: 'Gespeichertes Adressbuch',
+        description:
+          'Angemeldete Käufer wählen gespeicherte Empfänger oder ganze benannte Listen aus, statt sie neu einzugeben. Gespeichert wird im eigenen Shopify-Kundenprofil des Käufers.',
+      },
+      {
+        title: 'Geschenknachricht pro Empfänger',
+        description:
+          'Käufer fügen für jeden Empfänger eine Nachricht hinzu. Sie sehen sie auf der Bestellseite; sie wird nie auf das Versandetikett gedruckt.',
+      },
+      {
+        title: 'Packliste als CSV',
+        description:
+          'Exportieren Sie eine Packliste mit den Artikeln und der Geschenknachricht jedes Pakets, für alle, die packen und Karten schreiben.',
+      },
+      {
         title: 'Versandkosten pro Ziel',
         description:
           'Die Versandkosten werden für jedes Ziel anhand Ihrer Versandzonen berechnet und vor dem Checkout angezeigt.',

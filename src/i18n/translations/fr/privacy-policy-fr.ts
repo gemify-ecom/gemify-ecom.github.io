@@ -118,11 +118,11 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Données :',
-          text: 'Pour les commandes cadeaux, le nom, l’adresse et le numéro de téléphone de chaque destinataire que l’acheteur saisit sur la page du panier, la date et le créneau de livraison, ainsi que le numéro de suivi. Un destinataire peut n’avoir aucun lien avec la boutique',
+          text: 'Pour les commandes cadeaux, le nom, l’adresse et le numéro de téléphone de chaque destinataire que l’acheteur saisit sur la page du panier, la date et le créneau de livraison, le numéro de suivi, ainsi qu’un message cadeau facultatif que l’acheteur rédige pour chaque destinataire. Un destinataire peut n’avoir aucun lien avec la boutique',
         },
         {
           label: 'Pourquoi :',
-          text: 'Pour scinder la commande en une expédition par destinataire, créer le fichier d’expédition Yamato B2 Cloud et ajouter les numéros de suivi afin que l’acheteur soit notifié. L’application n’utilise les données des destinataires à aucune autre fin',
+          text: 'Pour scinder la commande en une expédition par destinataire, créer le fichier d’expédition Yamato B2 Cloud et ajouter les numéros de suivi afin que l’acheteur soit notifié. Un message cadeau n’est montré qu’au marchand, sur la page de la commande et dans une liste de colisage, pour être glissé dans le colis ; il n’est jamais imprimé sur l’étiquette d’expédition. L’application n’utilise les données des destinataires à aucune autre fin',
         },
         {
           label: 'Protection :',
@@ -130,7 +130,11 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
         },
         {
           label: 'Durée de conservation :',
-          text: 'Les informations des destinataires sont supprimées automatiquement 90 jours après l’expédition ou l’annulation de la commande. Le marchand peut choisir un délai plus court. Rien n’est conservé plus de 180 jours',
+          text: 'Les informations des destinataires et les messages cadeaux sont supprimés automatiquement 90 jours après l’expédition ou l’annulation de la commande. Le marchand peut choisir un délai plus court. Rien n’est conservé plus de 180 jours',
+        },
+        {
+          label: 'Carnet d’adresses (pour les acheteurs) :',
+          text: 'Un acheteur connecté peut enregistrer des destinataires et des listes nommées de destinataires pour les réutiliser lors d’une prochaine commande. Ils sont enregistrés dans le propre profil client Shopify de l’acheteur dans la boutique, et non sur nos serveurs, et sont supprimés avec ce profil. Les messages cadeaux n’y sont jamais enregistrés',
         },
         {
           label: 'APPI japonaise :',

@@ -109,11 +109,11 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Daten:',
-          text: 'Bei Geschenkbestellungen Name, Adresse und Telefonnummer jedes Empfängers, die der Käufer auf der Warenkorbseite eingibt, dazu Lieferdatum und Lieferzeit sowie die Sendungsverfolgungsnummer. Ein Empfänger steht möglicherweise in keiner Beziehung zum Store',
+          text: 'Bei Geschenkbestellungen Name, Adresse und Telefonnummer jedes Empfängers, die der Käufer auf der Warenkorbseite eingibt, dazu Lieferdatum und Lieferzeit, die Sendungsverfolgungsnummer und eine optionale Geschenknachricht, die der Käufer für jeden Empfänger schreibt. Ein Empfänger steht möglicherweise in keiner Beziehung zum Store',
         },
         {
           label: 'Zweck:',
-          text: 'Um die Bestellung in eine Sendung je Empfänger aufzuteilen, die Yamato B2 Cloud-Versanddatei zu erzeugen und Sendungsverfolgungsnummern hinzuzufügen, damit der Käufer benachrichtigt wird. Die App verwendet Empfängerdaten zu keinem anderen Zweck',
+          text: 'Um die Bestellung in eine Sendung je Empfänger aufzuteilen, die Yamato B2 Cloud-Versanddatei zu erzeugen und Sendungsverfolgungsnummern hinzuzufügen, damit der Käufer benachrichtigt wird. Eine Geschenknachricht sieht nur der Händler, auf der Bestellseite und in einer Packliste, damit sie dem Paket beigelegt werden kann; sie wird nie auf das Versandetikett gedruckt. Die App verwendet Empfängerdaten zu keinem anderen Zweck',
         },
         {
           label: 'Schutz:',
@@ -121,7 +121,11 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         },
         {
           label: 'Speicherdauer:',
-          text: 'Empfängerdaten werden 90 Tage nach Versand oder Stornierung der Bestellung automatisch gelöscht. Der Händler kann eine kürzere Frist wählen. Nichts wird länger als 180 Tage aufbewahrt',
+          text: 'Empfängerdaten und Geschenknachrichten werden 90 Tage nach Versand oder Stornierung der Bestellung automatisch gelöscht. Der Händler kann eine kürzere Frist wählen. Nichts wird länger als 180 Tage aufbewahrt',
+        },
+        {
+          label: 'Adressbuch (für Käufer):',
+          text: 'Ein angemeldeter Käufer kann Empfänger und benannte Empfängerlisten speichern, um sie bei einer späteren Bestellung wiederzuverwenden. Sie werden im eigenen Shopify-Kundenprofil des Käufers im Store gespeichert, nicht auf unseren Servern, und mit diesem Profil gelöscht. Geschenknachrichten werden dort nie gespeichert',
         },
         {
           label: 'Japans APPI:',

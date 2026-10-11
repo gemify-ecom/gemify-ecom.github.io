@@ -283,6 +283,21 @@ export const appPagesEn = {
         description: 'A Japanese postal code fills in the prefecture and city, with kana fields for names.',
       },
       {
+        title: 'Saved Address Book',
+        description:
+          "Logged-in buyers pick recipients or whole named lists they saved before, instead of retyping. They are saved on the buyer's own Shopify customer profile.",
+      },
+      {
+        title: 'A Gift Message per Recipient',
+        description:
+          'Buyers add a message for each recipient. You see it on the order page; it is never printed on the shipping label.',
+      },
+      {
+        title: 'Packing List CSV',
+        description:
+          "Export a packing list with each parcel's items and gift message, for whoever packs the order and writes the cards.",
+      },
+      {
         title: 'Shipping per Destination',
         description:
           'Shipping is priced for each destination from your shipping zones and shown before checkout.',

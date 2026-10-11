@@ -286,6 +286,21 @@ export const appPagesEs: AppPagesDictionary = {
           'Un código postal japonés rellena la prefectura y la ciudad, con campos en kana para los nombres.',
       },
       {
+        title: 'Libreta de direcciones guardada',
+        description:
+          'Los compradores con sesión iniciada eligen destinatarios o listas con nombre que ya guardaron, sin volver a escribirlos. Se guardan en el propio perfil de cliente de Shopify del comprador.',
+      },
+      {
+        title: 'Un mensaje de regalo por destinatario',
+        description:
+          'Los compradores añaden un mensaje para cada destinatario. Lo ves en la página del pedido; nunca se imprime en la etiqueta de envío.',
+      },
+      {
+        title: 'Lista de empaque en CSV',
+        description:
+          'Exporta una lista de empaque con los artículos y el mensaje de regalo de cada paquete, para quien prepara el pedido y escribe las tarjetas.',
+      },
+      {
         title: 'Envío por destino',
         description:
           'El envío se calcula para cada destino a partir de sus zonas de envío y se muestra antes del checkout.',
