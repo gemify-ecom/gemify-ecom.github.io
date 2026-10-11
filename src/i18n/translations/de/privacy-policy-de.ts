@@ -17,7 +17,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
   blocks: [
     {
       kind: 'paragraph',
-      text: 'Bei Gemify ("wir", "uns" oder "unser") nehmen wir Ihren Datenschutz ernst. Diese Datenschutzerklärung beschreibt, wie unsere Shopify-Anwendungen, darunter Bulk Delete Orders, Default Address Lock, LLMs-full.txt, Japan Multiship, Best Store Locator und Checkout Probe (zusammen "unsere Apps"), Ihre Informationen erheben, verwenden, speichern und schützen, wenn Sie unsere Dienste nutzen.',
+      text: 'Bei Gemify ("wir", "uns" oder "unser") nehmen wir Ihren Datenschutz ernst. Diese Datenschutzerklärung beschreibt, wie unsere Shopify-Anwendungen, darunter Bulk Delete Orders, Default Address Lock, LLMs-full.txt, Japan Multiship, Simple Store Locator und Checkout Probe (zusammen "unsere Apps"), Ihre Informationen erheben, verwenden, speichern und schützen, wenn Sie unsere Dienste nutzen.',
     },
     {
       kind: 'highlight',
@@ -129,7 +129,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         },
       ],
     },
-    { kind: 'subheading', text: '2.5 Best Store Locator' },
+    { kind: 'subheading', text: '2.5 Simple Store Locator' },
     {
       kind: 'list',
       items: [
@@ -243,7 +243,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Dienstleister:',
-          text: 'Shopify (die Plattform, auf der unsere Apps laufen), Cloud-Hosting-Anbieter wie Fly.io und Amazon Web Services sowie Werkzeuge für Fehlerüberwachung und Support. Für Best Store Locator erhält die OpenStreetMap Foundation nur die Adressen der Geschäfte, um sie auf der Karte zu platzieren, und OpenFreeMap liefert die Kartenbilder an Besucher aus. Diese Dienstleister müssen die Daten schützen und dürfen sie ausschließlich für die von uns festgelegten Zwecke verwenden',
+          text: 'Shopify (die Plattform, auf der unsere Apps laufen), Cloud-Hosting-Anbieter wie Fly.io und Amazon Web Services sowie Werkzeuge für Fehlerüberwachung und Support. Für Simple Store Locator erhält die OpenStreetMap Foundation nur die Adressen der Geschäfte, um sie auf der Karte zu platzieren, und OpenFreeMap liefert die Kartenbilder an Besucher aus. Diese Dienstleister müssen die Daten schützen und dürfen sie ausschließlich für die von uns festgelegten Zwecke verwenden',
         },
         {
           label: 'Gesetzliche Anforderungen:',

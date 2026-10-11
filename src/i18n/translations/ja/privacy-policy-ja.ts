@@ -17,7 +17,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
   blocks: [
     {
       kind: 'paragraph',
-      text: 'Gemify(以下「当社」といいます)は、お客様のプライバシーを重視しています。本プライバシーポリシーは、Bulk Delete Orders、Default Address Lock、LLMs-full.txt、Japan Multiship、Best Store Locator、およびCheckout Probeを含む当社のShopifyアプリ(以下総称して「本アプリ」といいます)が、お客様が当社のサービスをご利用になる際に、どのように情報を収集、利用、保存、保護するかを説明するものです。',
+      text: 'Gemify(以下「当社」といいます)は、お客様のプライバシーを重視しています。本プライバシーポリシーは、Bulk Delete Orders、Default Address Lock、LLMs-full.txt、Japan Multiship、Simple Store Locator、およびCheckout Probeを含む当社のShopifyアプリ(以下総称して「本アプリ」といいます)が、お客様が当社のサービスをご利用になる際に、どのように情報を収集、利用、保存、保護するかを説明するものです。',
     },
     {
       kind: 'highlight',
@@ -129,7 +129,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
         },
       ],
     },
-    { kind: 'subheading', text: '2.5 Best Store Locator' },
+    { kind: 'subheading', text: '2.5 Simple Store Locator' },
     {
       kind: 'list',
       items: [
@@ -243,7 +243,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'サービス提供事業者:',
-          text: 'Shopify(本アプリが稼働するプラットフォーム)、Fly.ioやAmazon Web Servicesなどのクラウドホスティング事業者、エラー追跡およびサポートのツール。Best Store Locatorについては、OpenStreetMap Foundationが店舗を地図上に配置するために店舗の住所のみを受け取り、OpenFreeMapが訪問者に地図画像を配信します。これらの事業者は、データを保護し、当社が指定した目的にのみ使用する義務を負っています',
+          text: 'Shopify(本アプリが稼働するプラットフォーム)、Fly.ioやAmazon Web Servicesなどのクラウドホスティング事業者、エラー追跡およびサポートのツール。Simple Store Locatorについては、OpenStreetMap Foundationが店舗を地図上に配置するために店舗の住所のみを受け取り、OpenFreeMapが訪問者に地図画像を配信します。これらの事業者は、データを保護し、当社が指定した目的にのみ使用する義務を負っています',
         },
         {
           label: '法令上の要請:',

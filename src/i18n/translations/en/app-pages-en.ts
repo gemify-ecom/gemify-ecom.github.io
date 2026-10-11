@@ -313,7 +313,7 @@ export const appPagesEn = {
       'Japan Multiship is not on the Shopify App Store yet. Send us a message if you would like to use it in your store.',
   },
   bestStoreLocator: {
-    title: 'Best Store Locator',
+    title: 'Simple Store Locator',
     tagline:
       'Show your stores, stockists, or dealers on a searchable map on your storefront, with no API keys or map accounts to set up.',
     problemHeading: 'The Problem',
@@ -380,9 +380,9 @@ export const appPagesEn = {
       'Address lookup runs at about one row per second. Include latitude and longitude columns to import a large file instantly.',
       'Works for stores in any country.',
     ],
-    ctaHeading: 'Want Best Store Locator for Your Store?',
+    ctaHeading: 'Want Simple Store Locator for Your Store?',
     ctaBody:
-      'Best Store Locator is not on the Shopify App Store yet. Send us a message if you would like to use it in your store.',
+      'Simple Store Locator is not on the Shopify App Store yet. Send us a message if you would like to use it in your store.',
   },
   checkoutProbe: {
     title: 'Checkout Probe',

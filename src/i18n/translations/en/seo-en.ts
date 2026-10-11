@@ -49,7 +49,7 @@ export const seoEn = {
         'Coming soon to the Shopify App Store. Buyers send one order to up to 20 recipients in Japan and pay once, with shipping per destination and Yamato B2 Cloud CSV export.',
     },
     bestStoreLocator: {
-      title: 'Best Store Locator: Store Map for Shopify, No API Key | Gemify',
+      title: 'Simple Store Locator: Store Map for Shopify, No API Key | Gemify',
       description:
         'Coming soon to the Shopify App Store. A searchable map of your stores, stockists, or dealers with built-in maps, CSV import with preview, and open-now search.',
     },

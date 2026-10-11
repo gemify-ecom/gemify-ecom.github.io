@@ -51,7 +51,7 @@ export const seoJa: SeoDictionary = {
         'Shopifyアプリストアに近日公開予定。1件の注文を日本国内の最大20件のお届け先へ、1回の支払いで。お届け先ごとの送料表示とヤマト運輸B2クラウド向けCSV出力に対応。',
     },
     bestStoreLocator: {
-      title: 'Best Store Locator: APIキー不要のShopify店舗マップ | Gemify',
+      title: 'Simple Store Locator: APIキー不要のShopify店舗マップ | Gemify',
       description:
         'Shopifyアプリストアに近日公開予定。店舗、取扱店、販売代理店を検索可能な地図で表示。地図機能を内蔵し、プレビュー付きCSVインポート、営業中の店舗検索に対応。',
     },

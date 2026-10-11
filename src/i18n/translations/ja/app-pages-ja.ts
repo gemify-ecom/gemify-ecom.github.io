@@ -238,7 +238,7 @@ export const appPagesJa: AppPagesDictionary = {
   },
 
   // Shopifyアプリストアには未掲載: 各アプリに詳細ページ(掲載開始まではインストールリンクと
-  // 料金を表示しない)とスクリーンキャストページがあり、Best Store LocatorとCheckout Probeには
+  // 料金を表示しない)とスクリーンキャストページがあり、Simple Store LocatorとCheckout Probeには
   // ヘルプページもあります。内容は各アプリのアプリストア掲載用の下書きに基づき、アプリが
   // すでに備えている機能のみを記載します。
   japanMultiship: {
@@ -316,7 +316,7 @@ export const appPagesJa: AppPagesDictionary = {
       'Japan MultishipはまだShopifyアプリストアに掲載されていません。ストアでのご利用をご希望の場合は、メッセージでお知らせください。',
   },
   bestStoreLocator: {
-    title: 'Best Store Locator',
+    title: 'Simple Store Locator',
     tagline:
       '店舗、取扱店、販売代理店をオンラインストア上の検索可能な地図に表示します。APIキーの取得や地図サービスのアカウント設定は不要です。',
     problemHeading: '課題',
@@ -384,9 +384,9 @@ export const appPagesJa: AppPagesDictionary = {
       '住所検索は1秒あたり約1行の速さで処理されます。大きなファイルをすぐにインポートするには、緯度と経度の列を含めてください。',
       'どの国のストアでもご利用いただけます。',
     ],
-    ctaHeading: 'ストアでBest Store Locatorを使いませんか?',
+    ctaHeading: 'ストアでSimple Store Locatorを使いませんか?',
     ctaBody:
-      'Best Store LocatorはまだShopifyアプリストアに掲載されていません。ストアでのご利用をご希望の場合は、メッセージでお知らせください。',
+      'Simple Store LocatorはまだShopifyアプリストアに掲載されていません。ストアでのご利用をご希望の場合は、メッセージでお知らせください。',
   },
   checkoutProbe: {
     title: 'Checkout Probe',

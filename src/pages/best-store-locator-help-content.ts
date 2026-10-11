@@ -1,7 +1,7 @@
 import type { HelpSection } from '../components/help-page-layout';
 
 /**
- * Merchant help for Best Store Locator, the App Store listing's documentation
+ * Merchant help for Simple Store Locator, the App Store listing's documentation
  * link. English only on purpose: the app's admin and widget ship in English,
  * so the help uses the exact English labels merchants see in the app.
  *
@@ -10,7 +10,7 @@ import type { HelpSection } from '../components/help-page-layout';
  */
 
 export const BEST_STORE_LOCATOR_HELP_INTRO =
-  'Best Store Locator puts your stores, stockists, or dealers on a searchable map on your storefront. Maps and address lookup are built in: there is no API key or map account to set up.';
+  'Simple Store Locator puts your stores, stockists, or dealers on a searchable map on your storefront. Maps and address lookup are built in: there is no API key or map account to set up.';
 
 export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
   {
@@ -23,7 +23,7 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
         items: [
           'Add locations: in the app, open Locations and click Add location. Fill in the name, address, city, and country (the rest is optional). The address is placed on the map automatically. A "Needs attention" badge means it could not be placed: check the spelling and save again, click "Retry address verification", or enter the store\'s latitude and longitude and save. In Google Maps, right-click the store and click the numbers to copy them; you can paste that "latitude, longitude" pair straight into the Latitude field. An entered pin is used as-is, stays put when you later edit the address, and is never replaced by an address lookup. Clear both fields and save to place the pin from the address again.',
           'Add the store locator page: on the app home, click "Create store locator page". The first time, Shopify asks you to let the app manage online store pages (only used to create this one page). The app creates a published page at /pages/store-locator, then "Turn on in theme editor" opens your theme with the Store locator page app embed switched on. Save the theme. This works on every theme, including older (vintage) themes, and the store locator shows inside the page content under the page title.',
-          'Prefer another spot? "Add to home page instead" adds the Best Store Locator block to your home page. On Online Store 2.0 themes you can add that block to any section on any page, as many times as you like; each placement has its own settings.',
+          'Prefer another spot? "Add to home page instead" adds the Simple Store Locator block to your home page. On Online Store 2.0 themes you can add that block to any section on any page, as many times as you like; each placement has its own settings.',
           'Floating button: Theme settings, App embeds, Store locator button adds a "Find a store" button to every page that opens the store locator in a window. Set its text, position and colors there.',
           'Customize: in the theme editor, select the store locator (the block, or Theme settings, App embeds, Store locator page). Layout: list beside map, map beside list, map above list, list first (map on demand), or list only, plus the map height. Map: map style (Standard, Light, Bright, Dark, Blue grey), a custom pin image, up to 3 tag pins (a tag and its own pin image), pin colors per tag (one line per tag, or separated with ;, for example "Outlet: #d72c0d"), and the default map position (leave it blank to start on the shopper\'s country, with the nearest stores first). Store cards: show or hide open now, distance, directions, call, website, store image, description, email address and tags. Style: accent color, corner radius, spacing and custom CSS that applies only to that store locator.',
           'Texts: every text in the widget (search box placeholder, buttons, result count, messages, store card labels) has its own field under "Search texts", "Results texts", and "Store card texts". Leave a field blank to keep the default wording. The default wording ships in English, French, German, Spanish, Italian, Dutch, Portuguese (Brazil and Portugal), Japanese, Chinese (Simplified and Traditional), Korean, Swedish, Danish, Norwegian, Finnish, Polish, Czech, and Turkish, and follows the language the shopper is browsing in. Text you type into a field is shown as-is in every language.',
@@ -32,7 +32,7 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
           "Dealer applications (Pro plan and up): businesses can apply to sell your products through a \"Become a dealer\" form at /apps/store-locator/apply. Turn on \"Show a Become a dealer link\" in the store locator settings in the theme editor to link it under the store list. New applications show on the app home and under Applications; approving one adds the business as a hidden location so you can check it before showing it. Declined applications are deleted after 90 days, and applicants are not emailed: reply from your own email.",
           "Products sold here (Pro plan and up): on a location's page in the app, link the products or collections that store carries. The first time, Shopify asks you to let the app read your products (used only by the product picker). Then add the Find in store block to your product page template in the theme editor: shoppers see the stores carrying that product, nearest first after \"Use my location\".",
           "Google Sheets sync (Grow plan and up): keep your stores in a Google Sheet with the same columns as a CSV import, choose File, Share, Publish to web, pick the sheet and Comma-separated values (.csv), and paste the link in the app under Settings. The app imports it once a day when the sheet changed, and when you click Sync now. Rows that need a choice are skipped and counted, rows deleted from the sheet stay in the app, and the sheet wins over edits made in the app.",
-          "Sidekick: from any admin page other than the app itself, ask Shopify's Sidekick \"How many of my stores need attention?\" or \"Find my store in Lyon\". After you allow it to access your Best Store Locator data, the app's read-only tools answer with your counts, the matching stores and a link to edit each one.",
+          "Sidekick: from any admin page other than the app itself, ask Shopify's Sidekick \"How many of my stores need attention?\" or \"Find my store in Lyon\". After you allow it to access your Simple Store Locator data, the app's read-only tools answer with your counts, the matching stores and a link to edit each one.",
           'Favorite store (optional): in the app, open Settings and turn on "Let signed-in customers save a favorite store". If the switch is disabled, approve the app\'s updated access request in your Shopify admin first.',
         ],
       },
@@ -86,7 +86,7 @@ export const BEST_STORE_LOCATOR_HELP: HelpSection[] = [
         items: [
           'Your store list is public: the widget shows your visible locations to any storefront visitor. Hide any location you do not want shown.',
           'Tag filters match any selected tag: choosing "Bakery" and "Cafe" shows every store tagged Bakery or Cafe.',
-          'Keep the app proxy path as installed (`/apps/store-locator`). If you change it in your Shopify admin (Settings, Apps, Best Store Locator, App proxy), set the "App proxy path" block setting to match, or the widget and every store link stop working.',
+          'Keep the app proxy path as installed (`/apps/store-locator`). If you change it in your Shopify admin (Settings, Apps, Simple Store Locator, App proxy), set the "App proxy path" block setting to match, or the widget and every store link stop working.',
           '"Use my location" uses the browser\'s location only to sort results; nothing is stored.',
           'Distance units follow the store\'s country (miles in the US), or force km or mi in the block settings.',
           'Opening hours support overnight ranges (for example 20:00 to 02:00) and show "Open now" in each store\'s local time zone.',

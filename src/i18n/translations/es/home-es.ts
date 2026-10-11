@@ -81,7 +81,7 @@ export const homeEs: HomeDictionary = {
       ],
     },
     bestStoreLocator: {
-      title: 'Best Store Locator',
+      title: 'Simple Store Locator',
       tagline: 'Muestra tus tiendas y distribuidores en un mapa, sin claves de API',
       features: [
         'Mapas y verificación de direcciones integrados, sin clave de API de Google',
@@ -139,7 +139,7 @@ export const homeEs: HomeDictionary = {
       {
         title: 'Seguridad antes que rapidez',
         description: 'Nuestras apps le muestran lo que va a cambiar y guardan un registro de lo que cambió.',
-        proof: 'Historial de trabajos con informes CSV en Bulk Delete Orders, una vista previa completa antes de importar en Best Store Locator, y Checkout Probe nunca realiza un pedido.',
+        proof: 'Historial de trabajos con informes CSV en Bulk Delete Orders, una vista previa completa antes de importar en Simple Store Locator, y Checkout Probe nunca realiza un pedido.',
       },
       {
         title: 'Palabras claras, precios reales',

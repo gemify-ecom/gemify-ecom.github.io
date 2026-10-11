@@ -15,7 +15,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
   blocks: [
     {
       kind: 'paragraph',
-      text: 'At Gemify ("we," "us," or "our"), we take your privacy seriously. This Privacy Policy explains how our Shopify applications, including Bulk Delete Orders, Default Address Lock, LLMs-full.txt, Japan Multiship, Best Store Locator, and Checkout Probe (collectively, "our Apps"), collect, use, store, and protect your information when you use our services.',
+      text: 'At Gemify ("we," "us," or "our"), we take your privacy seriously. This Privacy Policy explains how our Shopify applications, including Bulk Delete Orders, Default Address Lock, LLMs-full.txt, Japan Multiship, Simple Store Locator, and Checkout Probe (collectively, "our Apps"), collect, use, store, and protect your information when you use our services.',
     },
     {
       kind: 'highlight',
@@ -127,7 +127,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         },
       ],
     },
-    { kind: 'subheading', text: '2.5 Best Store Locator' },
+    { kind: 'subheading', text: '2.5 Simple Store Locator' },
     {
       kind: 'list',
       items: [
@@ -241,7 +241,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
       items: [
         {
           label: 'Service providers:',
-          text: 'Shopify (the platform our Apps run on), cloud hosting providers such as Fly.io and Amazon Web Services, and error tracking and support tools. For Best Store Locator, the OpenStreetMap Foundation receives only store addresses to place them on the map, and OpenFreeMap serves the map images to visitors. These providers must protect the data and use it only for the purposes we specify',
+          text: 'Shopify (the platform our Apps run on), cloud hosting providers such as Fly.io and Amazon Web Services, and error tracking and support tools. For Simple Store Locator, the OpenStreetMap Foundation receives only store addresses to place them on the map, and OpenFreeMap serves the map images to visitors. These providers must protect the data and use it only for the purposes we specify',
         },
         {
           label: 'Legal requirements:',

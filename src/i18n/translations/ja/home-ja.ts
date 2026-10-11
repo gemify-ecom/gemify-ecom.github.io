@@ -80,7 +80,7 @@ export const homeJa: HomeDictionary = {
       ],
     },
     bestStoreLocator: {
-      title: 'Best Store Locator',
+      title: 'Simple Store Locator',
       tagline: '店舗や販売店を地図で表示、APIキーの設定は不要',
       features: [
         'Google APIキー不要の地図と住所確認を標準搭載',
@@ -138,7 +138,7 @@ export const homeJa: HomeDictionary = {
       {
         title: '速さより、安全を先に',
         description: '何が変わるかを先にお見せし、変わった内容は記録に残します。',
-        proof: 'Bulk Delete Ordersのジョブ履歴とCSVレポート、Best Store LocatorのCSV取り込み前の全件プレビュー、そしてCheckout Probeは注文を確定しません。',
+        proof: 'Bulk Delete Ordersのジョブ履歴とCSVレポート、Simple Store LocatorのCSV取り込み前の全件プレビュー、そしてCheckout Probeは注文を確定しません。',
       },
       {
         title: 'わかりやすい言葉、正直な価格',

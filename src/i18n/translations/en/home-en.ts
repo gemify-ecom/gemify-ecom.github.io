@@ -80,7 +80,7 @@ export const homeEn = {
       ],
     },
     bestStoreLocator: {
-      title: 'Best Store Locator',
+      title: 'Simple Store Locator',
       tagline: 'Show your stores and dealers on a map, no API keys needed',
       features: [
         'Built-in maps and address checks, with no Google API key',
@@ -140,7 +140,7 @@ export const homeEn = {
       {
         title: 'Safe before fast',
         description: 'Our apps show you what will change and keep a record of what did.',
-        proof: 'Job History with CSV reports in Bulk Delete Orders, a full preview before a Best Store Locator import, and Checkout Probe never places an order.',
+        proof: 'Job History with CSV reports in Bulk Delete Orders, a full preview before a Simple Store Locator import, and Checkout Probe never places an order.',
       },
       {
         title: 'Plain words, real prices',

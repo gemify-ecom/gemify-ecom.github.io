@@ -51,7 +51,7 @@ export const seoEs: SeoDictionary = {
         'Próximamente en la Shopify App Store. Envíe un pedido a hasta 20 destinatarios en Japón con un solo pago, envío por destino y CSV de Yamato B2 Cloud.',
     },
     bestStoreLocator: {
-      title: 'Best Store Locator: mapa de tiendas sin clave de API | Gemify',
+      title: 'Simple Store Locator: mapa de tiendas sin clave de API | Gemify',
       description:
         'Próximamente en la Shopify App Store. Mapa con búsqueda de sus tiendas o distribuidores: mapas integrados, importación CSV con vista previa y abiertas ahora.',
     },

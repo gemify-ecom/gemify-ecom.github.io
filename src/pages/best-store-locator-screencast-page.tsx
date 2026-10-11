@@ -1,7 +1,7 @@
 import { ScreencastPageLayout } from '../components/screencast-page-layout';
 import { useTranslations } from '../i18n/use-locale';
 
-/** Reviewer screencast for the Best Store Locator App Store listing submission. */
+/** Reviewer screencast for the Simple Store Locator App Store listing submission. */
 export function BestStoreLocatorScreencastPage() {
   const { bestStoreLocator } = useTranslations('appPages');
 

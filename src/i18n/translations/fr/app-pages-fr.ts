@@ -239,7 +239,7 @@ export const appPagesFr: AppPagesDictionary = {
 
   // Pas encore sur l’App Store : chaque application a une page de détail (sans
   // lien d’installation ni prix tant que la fiche n’est pas en ligne), une page
-  // de démonstration et, pour Best Store Locator et Checkout Probe, une page
+  // de démonstration et, pour Simple Store Locator et Checkout Probe, une page
   // d’aide. Les faits viennent du brouillon de fiche App Store de chaque
   // application ; n’affirmer que ce que l’application fait déjà.
   japanMultiship: {
@@ -318,7 +318,7 @@ export const appPagesFr: AppPagesDictionary = {
       'Japan Multiship n’est pas encore disponible sur le Shopify App Store. Envoyez-nous un message si vous souhaitez l’utiliser dans votre boutique.',
   },
   bestStoreLocator: {
-    title: 'Best Store Locator',
+    title: 'Simple Store Locator',
     tagline:
       'Affichez vos magasins, revendeurs ou distributeurs sur une carte avec recherche sur votre vitrine, sans clé API ni compte de cartographie à configurer.',
     problemHeading: 'Le problème',
@@ -387,9 +387,9 @@ export const appPagesFr: AppPagesDictionary = {
       'La vérification d’adresses traite environ une ligne par seconde. Ajoutez des colonnes de latitude et de longitude pour importer instantanément un fichier volumineux.',
       'Fonctionne pour les boutiques de tous les pays.',
     ],
-    ctaHeading: 'Best Store Locator vous intéresse pour votre boutique ?',
+    ctaHeading: 'Simple Store Locator vous intéresse pour votre boutique ?',
     ctaBody:
-      'Best Store Locator n’est pas encore disponible sur le Shopify App Store. Envoyez-nous un message si vous souhaitez l’utiliser dans votre boutique.',
+      'Simple Store Locator n’est pas encore disponible sur le Shopify App Store. Envoyez-nous un message si vous souhaitez l’utiliser dans votre boutique.',
   },
   checkoutProbe: {
     title: 'Checkout Probe',

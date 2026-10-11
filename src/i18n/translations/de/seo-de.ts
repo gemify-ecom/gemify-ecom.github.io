@@ -51,7 +51,7 @@ export const seoDe: SeoDictionary = {
         'Bald im Shopify App Store. Eine Bestellung an bis zu 20 Empfänger in Japan, einmal bezahlt, mit Versand pro Ziel und Yamato B2 Cloud CSV-Export.',
     },
     bestStoreLocator: {
-      title: 'Best Store Locator: Filialkarte für Shopify ohne API-Key | Gemify',
+      title: 'Simple Store Locator: Filialkarte für Shopify ohne API-Key | Gemify',
       description:
         'Bald im Shopify App Store. Durchsuchbare Karte Ihrer Filialen und Händler: integrierte Karten, CSV-Import mit Vorschau, Suche nach geöffneten Filialen.',
     },

@@ -20,7 +20,7 @@ Key facts:
 ### Coming soon (not on the Shopify App Store yet; no install link or prices yet)
 
 - [Japan Multiship](https://gemify-ecom.github.io/apps/japan-multiship): Buyers assign cart items to up to 20 recipients on the cart page and pay once. Postal code autofill, shipping priced per destination before checkout, one fulfillment order per destination, Yamato B2 Cloud CSV export, and tracking number import. Built for stores in Japan (JPY); English and Japanese.
-- [Best Store Locator](https://gemify-ecom.github.io/apps/best-store-locator): A searchable map of stores, stockists, or dealers as a theme block, with built-in maps and address lookup (no API key), CSV import with a full preview, search by city or ZIP, open-now status, and a saved favorite store.
+- [Simple Store Locator](https://gemify-ecom.github.io/apps/best-store-locator): A searchable map of stores, stockists, or dealers as a theme block, with built-in maps and address lookup (no API key), CSV import with a full preview, search by city or ZIP, open-now status, and a saved favorite store.
 
 ## Services
 

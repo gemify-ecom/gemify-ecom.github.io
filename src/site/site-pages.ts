@@ -39,7 +39,7 @@ export const SITE_PAGES: SitePage[] = [
   { path: '/apps/checkout-probe', kind: 'app', app: 'checkoutProbe', indexable: true },
   { path: '/apps/checkout-probe/screencast', kind: 'screencast', app: 'checkoutProbe', indexable: false },
   { path: '/apps/checkout-probe/help', kind: 'help', app: 'checkoutProbe', indexable: false },
-  // Japan Multiship and Best Store Locator are not on the App Store yet. Their
+  // Japan Multiship and Simple Store Locator are not on the App Store yet. Their
   // detail pages are public (no install link or prices, and no JSON-LD app
   // entry; see `comingSoon` in gemify-apps.ts). Their reviewer screencasts (the
   // submission's screencast URL) and merchant help (the listing's FAQ link)
