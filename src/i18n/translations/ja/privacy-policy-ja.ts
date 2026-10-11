@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyJa: PrivacyPolicyDictionary = {
   title: 'プライバシーポリシー',
-  lastUpdated: '最終更新日: 2026年10月11日',
+  lastUpdated: '最終更新日: 2026年10月12日',
 
   blocks: [
     {
@@ -117,7 +117,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
         },
         {
           label: '保護:',
-          text: 'お届け先情報は暗号化され、日本国内にのみ保存されます。不正な利用を発見するため、マーチャントのどのスタッフがいつお届け先情報を閲覧したかを記録します。この記録にはお届け先の情報は含まれず、1年後に削除します',
+          text: 'お届け先情報は暗号化され、米国内に保存されます。不正な利用を発見するため、マーチャントのどのスタッフがいつお届け先情報を閲覧したかを記録します。この記録にはお届け先の情報は含まれず、1年後に削除します',
         },
         {
           label: '保有期間:',
@@ -216,7 +216,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
     { kind: 'heading', text: '5. データの保管場所と保護方法' },
     {
       kind: 'paragraph',
-      text: 'お客様のデータは米国内のクラウドホスティング事業者に保管されます。ただし、Japan Multishipのデータは日本国内にのみ保管されます。',
+      text: 'お客様のデータは米国内のクラウドホスティング事業者に保管されます。',
     },
     {
       kind: 'paragraph',
@@ -344,7 +344,7 @@ export const privacyPolicyJa: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: '本プライバシーポリシーの最終更新日は2026年10月11日です。本アプリをご利用いただくことで、本プライバシーポリシーを読み、理解し、これに拘束されることに同意したものとみなされます。',
+      text: '本プライバシーポリシーの最終更新日は2026年10月12日です。本アプリをご利用いただくことで、本プライバシーポリシーを読み、理解し、これに拘束されることに同意したものとみなされます。',
     },
   ],
 };

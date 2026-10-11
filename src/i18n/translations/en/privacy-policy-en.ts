@@ -10,7 +10,7 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyEn: PrivacyPolicyDictionary = {
   title: 'Privacy Policy',
-  lastUpdated: 'Last Updated: October 11, 2026',
+  lastUpdated: 'Last Updated: October 12, 2026',
 
   blocks: [
     {
@@ -115,7 +115,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         },
         {
           label: 'Protection:',
-          text: "Recipient data is encrypted and stored only in Japan. The App records which of the merchant's staff viewed recipient data and when, to detect misuse. That record holds no recipient details and is deleted after one year",
+          text: "Recipient data is encrypted and stored in the United States. The App records which of the merchant's staff viewed recipient data and when, to detect misuse. That record holds no recipient details and is deleted after one year",
         },
         {
           label: 'How long:',
@@ -214,7 +214,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
     { kind: 'heading', text: '5. Where We Store Data and How We Protect It' },
     {
       kind: 'paragraph',
-      text: 'Your data is stored with cloud hosting providers in the United States, except Japan Multiship data, which is stored only in Japan.',
+      text: 'Your data is stored with cloud hosting providers in the United States.',
     },
     {
       kind: 'paragraph',
@@ -342,7 +342,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'This Privacy Policy was last updated on October 11, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
+      text: 'This Privacy Policy was last updated on October 12, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
     },
   ],
 };

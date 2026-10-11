@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyDe: PrivacyPolicyDictionary = {
   title: 'Datenschutzerklärung',
-  lastUpdated: 'Zuletzt aktualisiert: 11. Oktober 2026',
+  lastUpdated: 'Zuletzt aktualisiert: 12. Oktober 2026',
 
   blocks: [
     {
@@ -117,7 +117,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         },
         {
           label: 'Schutz:',
-          text: 'Empfängerdaten werden verschlüsselt und ausschließlich in Japan gespeichert. Die App zeichnet auf, welche Mitarbeitenden des Händlers Empfängerdaten angesehen haben und wann, um Missbrauch zu erkennen. Diese Aufzeichnung enthält keine Empfängerdaten und wird nach einem Jahr gelöscht',
+          text: 'Empfängerdaten werden verschlüsselt und in den Vereinigten Staaten gespeichert. Die App zeichnet auf, welche Mitarbeitenden des Händlers Empfängerdaten angesehen haben und wann, um Missbrauch zu erkennen. Diese Aufzeichnung enthält keine Empfängerdaten und wird nach einem Jahr gelöscht',
         },
         {
           label: 'Speicherdauer:',
@@ -216,7 +216,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
     { kind: 'heading', text: '5. Wo wir Daten speichern und wie wir sie schützen' },
     {
       kind: 'paragraph',
-      text: 'Ihre Daten werden bei Cloud-Hosting-Anbietern in den Vereinigten Staaten gespeichert, mit Ausnahme der Daten von Japan Multiship, die ausschließlich in Japan gespeichert werden.',
+      text: 'Ihre Daten werden bei Cloud-Hosting-Anbietern in den Vereinigten Staaten gespeichert.',
     },
     {
       kind: 'paragraph',
@@ -344,7 +344,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'Diese Datenschutzerklärung wurde zuletzt am 11. Oktober 2026 aktualisiert. Mit der Nutzung unserer Apps bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben und sich damit einverstanden erklären.',
+      text: 'Diese Datenschutzerklärung wurde zuletzt am 12. Oktober 2026 aktualisiert. Mit der Nutzung unserer Apps bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben und sich damit einverstanden erklären.',
     },
   ],
 };

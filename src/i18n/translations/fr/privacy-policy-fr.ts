@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyFr: PrivacyPolicyDictionary = {
   title: 'Politique de confidentialité',
-  lastUpdated: 'Dernière mise à jour : 11 octobre 2026',
+  lastUpdated: 'Dernière mise à jour : 12 octobre 2026',
 
   blocks: [
     {
@@ -126,7 +126,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
         },
         {
           label: 'Protection :',
-          text: 'Les données des destinataires sont chiffrées et stockées uniquement au Japon. L’application enregistre quels membres du personnel du marchand ont consulté des données de destinataires, et à quel moment, afin de détecter les abus. Ce registre ne contient aucune information sur les destinataires et est supprimé au bout d’un an',
+          text: 'Les données des destinataires sont chiffrées et stockées aux États-Unis. L’application enregistre quels membres du personnel du marchand ont consulté des données de destinataires, et à quel moment, afin de détecter les abus. Ce registre ne contient aucune information sur les destinataires et est supprimé au bout d’un an',
         },
         {
           label: 'Durée de conservation :',
@@ -237,7 +237,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
     { kind: 'heading', text: '5. Lieu de stockage et protection des données' },
     {
       kind: 'paragraph',
-      text: 'Vos données sont stockées chez des hébergeurs cloud situés aux États-Unis, à l’exception des données de Japan Multiship, qui sont stockées uniquement au Japon.',
+      text: 'Vos données sont stockées chez des hébergeurs cloud situés aux États-Unis.',
     },
     {
       kind: 'paragraph',
@@ -377,7 +377,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'La présente politique de confidentialité a été mise à jour le 11 octobre 2026. En utilisant nos applications, vous reconnaissez avoir lu et compris la présente politique de confidentialité et acceptez d’être lié par ses dispositions.',
+      text: 'La présente politique de confidentialité a été mise à jour le 12 octobre 2026. En utilisant nos applications, vous reconnaissez avoir lu et compris la présente politique de confidentialité et acceptez d’être lié par ses dispositions.',
     },
   ],
 };

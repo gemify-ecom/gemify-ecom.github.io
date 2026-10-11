@@ -13,7 +13,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyEs: PrivacyPolicyDictionary = {
   title: 'Política de privacidad',
-  lastUpdated: 'Última actualización: 11 de octubre de 2026',
+  lastUpdated: 'Última actualización: 12 de octubre de 2026',
 
   blocks: [
     {
@@ -118,7 +118,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
         },
         {
           label: 'Protección:',
-          text: 'Los datos de los destinatarios se cifran y se almacenan únicamente en Japón. La App registra qué miembros del personal del comerciante consultaron datos de destinatarios y cuándo, para detectar usos indebidos. Ese registro no contiene datos de los destinatarios y se elimina al cabo de un año',
+          text: 'Los datos de los destinatarios se cifran y se almacenan en los Estados Unidos. La App registra qué miembros del personal del comerciante consultaron datos de destinatarios y cuándo, para detectar usos indebidos. Ese registro no contiene datos de los destinatarios y se elimina al cabo de un año',
         },
         {
           label: 'Cuánto tiempo:',
@@ -217,7 +217,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
     { kind: 'heading', text: '5. Dónde almacenamos los datos y cómo los protegemos' },
     {
       kind: 'paragraph',
-      text: 'Sus datos se almacenan con proveedores de alojamiento en la nube en los Estados Unidos, salvo los datos de Japan Multiship, que se almacenan únicamente en Japón.',
+      text: 'Sus datos se almacenan con proveedores de alojamiento en la nube en los Estados Unidos.',
     },
     {
       kind: 'paragraph',
@@ -345,7 +345,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'Esta Política de privacidad se actualizó por última vez el 11 de octubre de 2026. Al usar nuestras Apps, usted reconoce que ha leído y comprendido esta Política de privacidad y que acepta quedar vinculado por ella.',
+      text: 'Esta Política de privacidad se actualizó por última vez el 12 de octubre de 2026. Al usar nuestras Apps, usted reconoce que ha leído y comprendido esta Política de privacidad y que acepta quedar vinculado por ella.',
     },
   ],
 };
