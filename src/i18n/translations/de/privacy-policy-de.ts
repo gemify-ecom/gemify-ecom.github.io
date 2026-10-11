@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyDe: PrivacyPolicyDictionary = {
   title: 'Datenschutzerklärung',
-  lastUpdated: 'Zuletzt aktualisiert: 10. Oktober 2026',
+  lastUpdated: 'Zuletzt aktualisiert: 11. Oktober 2026',
 
   blocks: [
     {
@@ -139,7 +139,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
         },
         {
           label: 'Besucher der Storefront:',
-          text: 'Suchanfragen und die Position aus "Meinen Standort verwenden" werden nur zur Beantwortung dieser Suche verwendet und nicht gespeichert. Die Karte fügt keine Cookies, Analyse-Tools oder Werbe-Tracker hinzu',
+          text: 'Die Position aus "Meinen Standort verwenden" wird nur zur Beantwortung dieser Suche verwendet und nicht gespeichert. Damit Sie sehen, welche Suchen und Filialen Kunden nutzen, speichern wir 100 Tage lang anonyme Tagessummen: wie oft der Store Locator geöffnet wurde, die gesuchten Begriffe, Tag-Filter und Gebiete (Gebiete auf etwa 10 km gerundet; Begriffe, die eine Person erkennbar machen könnten, etwa eine E-Mail- oder Straßenadresse, werden ohne den Wortlaut gezählt) sowie Klicks auf die Links jeder Filiale. Es werden keine IP-Adressen und keine Kundenidentitäten gespeichert, und die Karte fügt keine Cookies und keine Analyse- oder Werbe-Tracker Dritter hinzu',
         },
         {
           label: 'Lieblingsgeschäft (optional):',
@@ -336,7 +336,7 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'Diese Datenschutzerklärung wurde zuletzt am 10. Oktober 2026 aktualisiert. Mit der Nutzung unserer Apps bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben und sich damit einverstanden erklären.',
+      text: 'Diese Datenschutzerklärung wurde zuletzt am 11. Oktober 2026 aktualisiert. Mit der Nutzung unserer Apps bestätigen Sie, dass Sie diese Datenschutzerklärung gelesen und verstanden haben und sich damit einverstanden erklären.',
     },
   ],
 };

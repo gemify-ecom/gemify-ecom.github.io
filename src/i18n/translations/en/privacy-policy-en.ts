@@ -10,7 +10,7 @@ import type { PrivacyPolicyDictionary } from '../content-types';
  */
 export const privacyPolicyEn: PrivacyPolicyDictionary = {
   title: 'Privacy Policy',
-  lastUpdated: 'Last Updated: October 10, 2026',
+  lastUpdated: 'Last Updated: October 11, 2026',
 
   blocks: [
     {
@@ -137,7 +137,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
         },
         {
           label: 'Storefront visitors:',
-          text: 'Searches and the "Use my location" position are used only to answer that search and are not stored. The map adds no cookies, analytics, or advertising trackers',
+          text: 'The "Use my location" position is used only to answer that search and is not stored. To show you which searches and stores shoppers use, we keep anonymous daily totals for 100 days: how often the store locator opened, the search words, tag filters and areas searched (areas rounded to about 10 km; words that could identify a person, such as an email or street address, are counted without the words), and clicks on each store\'s links. No IP address or customer identity is stored, and the map adds no cookies or third-party analytics or advertising trackers',
         },
         {
           label: 'Favorite store (optional):',
@@ -334,7 +334,7 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'This Privacy Policy was last updated on October 10, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
+      text: 'This Privacy Policy was last updated on October 11, 2026. By using our Apps, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.',
     },
   ],
 };

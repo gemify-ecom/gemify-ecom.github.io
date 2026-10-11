@@ -12,7 +12,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyFr: PrivacyPolicyDictionary = {
   title: 'Politique de confidentialité',
-  lastUpdated: 'Dernière mise à jour : 10 octobre 2026',
+  lastUpdated: 'Dernière mise à jour : 11 octobre 2026',
 
   blocks: [
     {
@@ -148,7 +148,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
         },
         {
           label: 'Visiteurs de la vitrine :',
-          text: 'Les recherches et la position transmise via « Utiliser ma position » servent uniquement à répondre à cette recherche et ne sont pas conservées. La carte n’ajoute aucun cookie, outil d’analyse ni traceur publicitaire',
+          text: 'La position transmise via « Utiliser ma position » sert uniquement à répondre à cette recherche et n’est pas conservée. Pour vous montrer quelles recherches et quels magasins vos clients utilisent, nous conservons pendant 100 jours des totaux quotidiens anonymes : le nombre d’ouvertures du localisateur de magasins, les mots, filtres d’étiquettes et zones recherchés (zones arrondies à environ 10 km ; les mots qui pourraient identifier une personne, comme une adresse e-mail ou postale, sont comptés sans les mots) et les clics sur les liens de chaque magasin. Aucune adresse IP ni identité de client n’est conservée, et la carte n’ajoute aucun cookie ni traceur d’analyse ou publicitaire tiers',
         },
         {
           label: 'Magasin favori (facultatif) :',
@@ -369,7 +369,7 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'La présente politique de confidentialité a été mise à jour le 10 octobre 2026. En utilisant nos applications, vous reconnaissez avoir lu et compris la présente politique de confidentialité et acceptez d’être lié par ses dispositions.',
+      text: 'La présente politique de confidentialité a été mise à jour le 11 octobre 2026. En utilisant nos applications, vous reconnaissez avoir lu et compris la présente politique de confidentialité et acceptez d’être lié par ses dispositions.',
     },
   ],
 };

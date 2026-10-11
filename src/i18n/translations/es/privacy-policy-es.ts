@@ -13,7 +13,7 @@ import type { PrivacyPolicyDictionary } from '../dictionary-types';
  */
 export const privacyPolicyEs: PrivacyPolicyDictionary = {
   title: 'Política de privacidad',
-  lastUpdated: 'Última actualización: 10 de octubre de 2026',
+  lastUpdated: 'Última actualización: 11 de octubre de 2026',
 
   blocks: [
     {
@@ -140,7 +140,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
         },
         {
           label: 'Visitantes de la tienda online:',
-          text: 'Las búsquedas y la posición de "Usar mi ubicación" se usan solo para responder a esa búsqueda y no se almacenan. El mapa no añade cookies, herramientas de análisis ni rastreadores publicitarios',
+          text: 'La posición de "Usar mi ubicación" se usa solo para responder a esa búsqueda y no se almacena. Para mostrarle qué búsquedas y tiendas usan sus clientes, guardamos totales diarios anónimos durante 100 días: cuántas veces se abrió el localizador de tiendas, las palabras, filtros de etiquetas y zonas buscadas (zonas redondeadas a unos 10 km; las palabras que podrían identificar a una persona, como un correo electrónico o una dirección postal, se cuentan sin guardar las palabras) y los clics en los enlaces de cada tienda. No se guarda ninguna dirección IP ni identidad de cliente, y el mapa no añade cookies ni rastreadores de análisis o publicidad de terceros',
         },
         {
           label: 'Tienda favorita (opcional):',
@@ -337,7 +337,7 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
     { kind: 'divider' },
     {
       kind: 'closing',
-      text: 'Esta Política de privacidad se actualizó por última vez el 10 de octubre de 2026. Al usar nuestras Apps, usted reconoce que ha leído y comprendido esta Política de privacidad y que acepta quedar vinculado por ella.',
+      text: 'Esta Política de privacidad se actualizó por última vez el 11 de octubre de 2026. Al usar nuestras Apps, usted reconoce que ha leído y comprendido esta Política de privacidad y que acepta quedar vinculado por ella.',
     },
   ],
 };
