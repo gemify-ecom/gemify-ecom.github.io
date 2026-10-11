@@ -155,6 +155,10 @@ export const privacyPolicyFr: PrivacyPolicyDictionary = {
           text: 'Désactivé par défaut. Lorsque vous l’activez, le magasin choisi par un client connecté est enregistré dans son propre profil client Shopify, et non sur nos serveurs',
         },
         {
+          label: "Candidatures de revendeurs (facultatif) :",
+          text: "Désactivées par défaut, à partir du forfait Pro. Lorsque vous activez le formulaire « Devenir revendeur », nous enregistrons ce qu’une entreprise y envoie : nom de l’entreprise et du contact, e-mail, téléphone, adresse, site web et message. Vous seul voyez les candidatures, dans l’App, pour les examiner. Nous ne contactons jamais les candidats et ne partageons pas leurs données. Vous pouvez supprimer une candidature à tout moment, celles refusées sont supprimées après 90 jours, et une candidature envoyée avec l’adresse e-mail d’un client est supprimée lorsque Shopify nous demande d’effacer ce client",
+        },
+        {
           label: 'Durée de conservation :',
           text: 'Suppression environ 48 heures après la désinstallation de l’application',
         },

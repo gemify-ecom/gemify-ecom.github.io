@@ -145,6 +145,10 @@ export const privacyPolicyDe: PrivacyPolicyDictionary = {
           label: 'Lieblingsgeschäft (optional):',
           text: 'Standardmäßig ausgeschaltet. Wenn Sie die Funktion aktivieren, wird das gewählte Geschäft eines angemeldeten Kunden in dessen eigenem Shopify-Kundenprofil gespeichert, nicht auf unseren Servern',
         },
+        {
+          label: "Händlerbewerbungen (optional):",
+          text: "Standardmäßig ausgeschaltet, ab dem Pro-Tarif. Wenn Sie das Formular „Händler werden“ aktivieren, speichern wir, was ein Unternehmen darüber sendet: Firmen- und Kontaktname, E-Mail, Telefon, Adresse, Website und Nachricht. Nur Sie sehen die Bewerbungen in der App, um sie zu prüfen. Wir kontaktieren keine Bewerber und geben ihre Daten nicht weiter. Sie können eine Bewerbung jederzeit löschen, abgelehnte werden nach 90 Tagen gelöscht, und eine Bewerbung mit der E-Mail-Adresse eines Kunden wird gelöscht, wenn Shopify uns auffordert, diesen Kunden zu löschen",
+        },
         { label: 'Speicherdauer:', text: 'Löschung etwa 48 Stunden nach der Deinstallation der App' },
       ],
     },

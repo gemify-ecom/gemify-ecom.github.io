@@ -146,6 +146,10 @@ export const privacyPolicyEs: PrivacyPolicyDictionary = {
           label: 'Tienda favorita (opcional):',
           text: 'Desactivada por defecto. Si la activa, la tienda que elige un cliente con sesión iniciada se guarda en su propio perfil de cliente de Shopify, no en nuestros servidores',
         },
+        {
+          label: "Solicitudes de distribuidores (opcional):",
+          text: "Desactivadas por defecto, desde el plan Pro. Si activa el formulario «Hazte distribuidor», guardamos lo que una empresa envía con él: nombre de la empresa y de contacto, correo electrónico, teléfono, dirección, sitio web y mensaje. Solo usted ve las solicitudes, en la App, para revisarlas. Nunca contactamos a los solicitantes ni compartimos sus datos. Puede eliminar una solicitud en cualquier momento, las rechazadas se eliminan a los 90 días y una solicitud enviada con el correo electrónico de un cliente se elimina cuando Shopify nos pide borrar a ese cliente",
+        },
         { label: 'Cuánto tiempo:', text: 'Se eliminan unas 48 horas después de desinstalar la App' },
       ],
     },

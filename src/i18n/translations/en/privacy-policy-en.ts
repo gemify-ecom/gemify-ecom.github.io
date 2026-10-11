@@ -143,6 +143,10 @@ export const privacyPolicyEn: PrivacyPolicyDictionary = {
           label: 'Favorite store (optional):',
           text: "Off by default. When you turn it on, a signed-in customer's chosen store is saved on their own Shopify customer profile, not on our servers",
         },
+        {
+          label: "Dealer applications (optional):",
+          text: "Off by default, on the Pro plan and up. When you turn on the \"Become a dealer\" form, we store what a business sends through it: business and contact name, email, phone, address, website, and message. Only you see the applications, in the App, to review them. We never contact applicants or share their details. You can delete an application at any time, declined ones are deleted after 90 days, and an application sent with a customer's email address is deleted when Shopify asks us to erase that customer",
+        },
         { label: 'How long:', text: 'Deleted about 48 hours after you uninstall the App' },
       ],
     },
